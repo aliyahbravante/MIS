@@ -1,0 +1,468 @@
+/* Container for the review form */
+.pstudentprofile-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 40px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari) */
+.pstudentprofile-container::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff; /* White background */
+}
+
+.pstudentprofile-container::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Light grey color for the thumb */
+  border-radius: 1px;
+}
+
+.pstudentprofile-container::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.pstudentprofile-container h4 {
+  color: #1d563f;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+.pstudentprofile-title-psps {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  margin-bottom: 1.5rem;
+}
+
+/* Layout for image and form fields */
+.image-and-form-container-psp {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Left side image container */
+.image-upload-container-psp {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.box-decoration-psp {
+  border: 1px dashed #ffffff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.img-display-before-psp,
+.img-display-after-psp {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+}
+
+/* Right side form fields container */
+.form-fields-container-psp {
+  flex: 1.5;
+}
+
+/* Styling the form rows to align elements */
+.form-row-psp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Styling individual form groups */
+.form-group-psps {
+  flex: 1;
+}
+
+.form-group-psps label {
+  color: #333;
+  font-size: 10px;
+}
+
+.form-group-psps input,
+.form-group-psps select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: Inter;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #636161;
+}
+
+.loading-container-psp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #333;
+}
+
+.error-container-psp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #f44336;
+}
+
+.no-data-container-psp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #333;
+}
+
+.back-button-psp {
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.back-button-psp:hover {
+  background-color: #004d00;
+}
+
+.sibling-section-psp {
+  margin-bottom: 2rem;
+}
+
+.sibling-section-psp h5 {
+  color: #1d563f;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+@media (min-width: 320px) and (max-width: 419px) {
+  .pstudentprofile-container {
+    padding: 0.1rem;
+    margin-top: 7rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-psp {
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .pstudentprofile-container h4 {
+    margin-bottom: 1px;
+    padding: 0;
+  }
+
+  .pstudentprofile-title-psps {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .image-and-form-container-psp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-upload-container-psp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .box-decoration-psp {
+    margin-left: 0;
+  }
+
+  .img-display-before-psp,
+  .img-display-after-psp {
+    height: 250px;
+    width: 250px;
+    border-radius: 15%;
+    object-fit: cover;
+  }
+
+  .form-fields-container-psp {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .form-row-psp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-group-psps {
+    width: 100%;
+  }
+
+  .form-group-psps label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .form-group-psps input,
+  .form-group-psps select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 480px) {
+  .pstudentprofile-container {
+    padding: 0.1rem;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+  }
+
+  .header-psp {
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .pstudentprofile-container h4 {
+    margin-bottom: 1px;
+    padding: 0;
+  }
+
+  .pstudentprofile-title-psps {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .image-and-form-container-psp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-upload-container-psp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .box-decoration-psp {
+    margin-left: 0;
+  }
+
+  .img-display-before-psp,
+  .img-display-after-psp {
+    height: 250px;
+    width: 250px;
+    border-radius: 15%;
+    object-fit: cover;
+  }
+
+  .form-fields-container-psp {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .form-row-psp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-group-psps {
+    width: 100%;
+  }
+
+  .form-group-psps label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .form-group-psps input,
+  .form-group-psps select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+    font-size: 11px;
+  }
+}
+
+/* Tablet Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .pstudentprofile-container {
+    padding-top: 2rem;
+    padding: 2rem;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .header-psp {
+    margin-top: 2rem;
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .pstudentprofile-title-psps {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .image-and-form-container-psp {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  /* Left side image container */
+  .image-upload-container-psp {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+
+  .img-display-before-psp,
+  .img-display-after-psp {
+    height: 200px;
+    width: 200px;
+    border-radius: 15%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .form-row-psp {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .form-group-psps label {
+    color: #333;
+    font-size: 9px;
+  }
+    .form-group-psps input,
+  .form-group-psps select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+    font-size: 9px;
+  }
+}
+
+/* Small Laptop and larger tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pstudentprofile-container {
+    padding: 1.5rem;
+    width: 100vw;
+  }
+
+  .header-psp {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .pstudentprofile-title-psps {
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  .form-group-psps label {
+    font-size: 10px;
+  }
+    .form-group-psps input,
+  .form-group-psps select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+    font-size: 10px;
+  }
+}

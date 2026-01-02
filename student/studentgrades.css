@@ -1,0 +1,1080 @@
+/* ===========================
+   BASE STYLES
+   =========================== */
+
+.grades-container-sg {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.grades-container-sg::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: #ffffff;
+}
+
+.grades-container-sg::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 0px;
+  width: 0px;
+}
+
+.grades-container-sg::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.grades-title-sg {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+}
+
+/* ===========================
+   TOP CONTROLS
+   =========================== */
+
+.top-controls-student-grades-sg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.controls-right-sg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grade-filter-dropdown-sg {
+  padding: 0.5rem 1rem;
+  border: 1px solid #006400;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+}
+
+.grade-filter-dropdown-sg:hover {
+  background-color: #f8f8f8;
+}
+
+.buttons-group-student-grades-sg {
+  display: flex;
+  gap: 1rem;
+}
+
+.pdf-button-student-grades-sg,
+.xls-button-student-grades-sg {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-button-student-grades-sg:hover,
+.xls-button-student-grades-sg:hover {
+  background-color: #f8f8f8;
+  border: 1px solid #006400;
+}
+
+.pdf-button-student-grades-sg:disabled,
+.xls-button-student-grades-sg:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   TABLE STYLES
+   =========================== */
+
+.table-container-sg {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-container-sg::-webkit-scrollbar {
+  height: 3px;
+}
+
+.table-container-sg::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-container-sg::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.table-container-sg::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.grades-table-sg {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.grades-table-sg th,
+.grades-table-sg td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.grades-table-sg th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.grades-table-sg td {
+  color: #555555;
+  font-size: 10px;
+}
+
+.grades-table-sg td:last-child,
+.grades-table-sg td:nth-last-child(2) {
+  text-align: center;
+}
+
+.grades-table-sg tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* ===========================
+   SEMESTER & GRADE LEVEL SECTIONS
+   =========================== */
+
+.grade-level-section-sg {
+  margin-bottom: 3rem;
+}
+
+.grade-level-title-sg {
+  font-size: 28px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #006400;
+}
+
+.grade-level-separator {
+  border: none;
+  border-top: 3px solid #006400;
+  margin: 3rem 0;
+}
+
+.semester-section-sg {
+  margin-bottom: 2rem;
+}
+
+.semester-section-sg h3 {
+  color: #006400;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.semester-average-sg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+}
+
+.semester-average-sg span {
+  color: #333333;
+  font-weight: bold;
+}
+
+.average-input-sg {
+  width: 100px;
+  margin-left: 0.5rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+  color: red;
+  font-weight: bold;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+.final-grades-sg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 4rem;
+}
+
+.final-grades-sg span {
+  color: #333333;
+  font-weight: bold;
+}
+
+.final-grades-input-sg {
+  width: 100px;
+  margin-left: 0.5rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+  color: red;
+  font-weight: bold;
+}
+
+/* ===========================
+   NO DATA MESSAGE
+   =========================== */
+
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.no-grades-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.no-grades-message h3 {
+  font-size: 24px;
+  color: #006400;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.no-grades-message p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.no-grades-message-sg {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ===========================
+   LOADING & ERROR STATES
+   =========================== */
+
+.loading-container-sg {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-container-sg {
+  text-align: center;
+  padding: 2rem;
+  color: #e74c3c;
+}
+
+.error-container-sg h3 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   MODAL STYLES
+   =========================== */
+
+.modal-overlay-sg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-sg {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-sg h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content-sg p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.semester-selection-sg {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.semester-dropdown-sg {
+  padding: 8px 12px;
+  border: 1px solid #006400;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  width: 200px;
+}
+
+.modal-buttons-sg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.modal-yes-button-sg {
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.modal-no-button-sg {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.modal-yes-button-sg:hover {
+  background-color: #004d33;
+}
+
+.modal-no-button-sg:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+/* ===========================
+   RESPONSIVE STYLES
+   =========================== */
+
+/* Large Desktops (1025px and above) */
+@media (min-width: 1025px) {
+  .grades-container-sg {
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+
+  .grades-title-sg {
+    font-size: 35px;
+    margin-bottom: 1.5rem;
+  }
+
+  .top-controls-student-grades-sg {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttons-group-student-grades-sg {
+    gap: 1rem;
+  }
+
+  .pdf-button-student-grades-sg,
+  .xls-button-student-grades-sg {
+    font-size: 14px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    font-size: 13px;
+    padding: 12px;
+    white-space: nowrap;
+  }
+
+  .semester-average-sg,
+  .final-grades-sg {
+    font-size: 14px;
+  }
+
+  .average-input-sg,
+  .final-grades-input-sg {
+    font-size: 14px;
+    width: 100px;
+  }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grades-container-sg {
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+
+  .grades-title-sg {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+  }
+
+  .top-controls-student-grades-sg {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .controls-right-sg {
+    gap: 0.8rem;
+  }
+
+  .grade-filter-dropdown-sg {
+    font-size: 13px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .buttons-group-student-grades-sg {
+    gap: 0.8rem;
+  }
+
+  .pdf-button-student-grades-sg,
+  .xls-button-student-grades-sg {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    font-size: 12px;
+    padding: 10px 8px;
+    white-space: nowrap;
+  }
+
+  .semester-section-sg h3 {
+    font-size: 22px;
+  }
+
+  .semester-average-sg,
+  .final-grades-sg {
+    font-size: 13px;
+  }
+
+  .average-input-sg,
+  .final-grades-input-sg {
+    font-size: 13px;
+    width: 90px;
+  }
+
+  .modal-content-sg {
+    width: 85%;
+    padding: 2rem;
+    max-height: 85vh;
+  }
+
+  .modal-content-sg h3 {
+    font-size: 24px;
+    margin-bottom: 1.2rem;
+  }
+
+  .modal-buttons-sg {
+    gap: 2rem;
+  }
+
+  .loading-container-sg,
+  .error-container-sg,
+  .no-grades-message-sg {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+
+  .no-data-container {
+    min-height: 350px;
+  }
+
+  .no-grades-message {
+    padding: 2.5rem 1.8rem;
+    max-width: 450px;
+  }
+
+  .no-grades-message h3 {
+    font-size: 22px;
+  }
+
+  .no-grades-message p {
+    font-size: 15px;
+  }
+
+  .grade-level-title-sg {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .grade-level-separator {
+    margin: 2rem 0;
+    border-top: 2px solid #006400;
+  }
+
+  .grade-level-section-sg {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small Tablets & Mobile Landscape (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grades-container-sg {
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .grades-title-sg {
+    font-size: 26px;
+    margin-bottom: 1rem;
+  }
+
+  .top-controls-student-grades-sg {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .controls-right-sg {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .grade-filter-dropdown-sg {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+    flex: 1;
+    max-width: 150px;
+  }
+
+  .buttons-group-student-grades-sg {
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .pdf-button-student-grades-sg,
+  .xls-button-student-grades-sg {
+    font-size: 11px;
+    padding: 0.5rem 1rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    font-size: 10px;
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+
+  .semester-section-sg {
+    margin-bottom: 1.5rem;
+  }
+
+  .semester-section-sg h3 {
+    font-size: 20px;
+    margin-bottom: 0.8rem;
+  }
+
+  .semester-average-sg,
+  .final-grades-sg {
+    font-size: 12px;
+  }
+
+  .average-input-sg,
+  .final-grades-input-sg {
+    font-size: 12px;
+    width: 80px;
+  }
+
+  .modal-content-sg {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .modal-content-sg h3 {
+    font-size: 22px;
+  }
+
+  .semester-dropdown-sg {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .no-data-container {
+    min-height: 300px;
+    padding: 0 1rem;
+  }
+
+  .no-grades-message {
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+  }
+
+  .no-grades-message h3 {
+    font-size: 20px;
+  }
+
+  .no-grades-message p {
+    font-size: 14px;
+  }
+
+  .grade-level-title-sg {
+    font-size: 20px;
+    margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .grade-level-separator {
+    margin: 1.5rem 0;
+  }
+
+  .grade-level-section-sg {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile (450px to 480px) */
+@media (min-width: 420px) and (max-width: 480px) {
+  .grades-container-sg {
+    padding: 0.8rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .grades-title-sg {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+
+  .top-controls-student-grades-sg {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .controls-right-sg {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .grade-filter-dropdown-sg {
+    font-size: 11px;
+    padding: 0.5rem 0.7rem;
+    width: 100%;
+  }
+
+  .buttons-group-student-grades-sg {
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pdf-button-student-grades-sg,
+  .xls-button-student-grades-sg {
+    font-size: 10px;
+    padding: 0.5rem 0.8rem;
+    flex: 1;
+  }
+
+  .grades-table-sg {
+    margin-bottom: 1rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    font-size: 9px;
+    padding: 6px 4px;
+    white-space: nowrap;
+  }
+
+  .semester-section-sg {
+    margin-bottom: 1.2rem;
+  }
+
+  .semester-section-sg h3 {
+    font-size: 18px;
+    margin-bottom: 0.6rem;
+  }
+
+  .semester-average-sg,
+  .final-grades-sg {
+    font-size: 11px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .average-input-sg,
+  .final-grades-input-sg {
+    font-size: 11px;
+    width: 70px;
+    margin-left: 0;
+    padding: 4px;
+  }
+
+  .final-grades-sg {
+    margin-bottom: 1.5rem;
+  }
+
+  .separator {
+    margin: 1.2rem 0;
+  }
+
+  .modal-content-sg {
+    width: 92%;
+    padding: 1.8rem;
+  }
+
+  .modal-content-sg h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-sg p {
+    font-size: 12px;
+  }
+
+  .modal-buttons-sg {
+    gap: 1.2rem;
+  }
+
+  .modal-yes-button-sg,
+  .modal-no-button-sg {
+    font-size: 11px;
+    padding: 0.5rem 1rem;
+  }
+
+  .semester-dropdown-sg {
+    width: 160px;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .no-data-container {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+
+  .no-grades-message {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .no-grades-message h3 {
+    font-size: 18px;
+  }
+
+  .no-grades-message p {
+    font-size: 13px;
+  }
+
+  .grade-level-title-sg {
+    font-size: 18px;
+    margin-bottom: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .grade-level-separator {
+    margin: 1rem 0;
+  }
+
+  .grade-level-section-sg {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small Mobile (320px to 449px) */
+@media (min-width: 320px) and (max-width: 419px) {
+  .grades-container-sg {
+    padding: 0.5rem;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+  }
+
+  .grades-title-sg {
+    font-size: 20px;
+    margin-bottom: 0.7rem;
+  }
+
+  .top-controls-student-grades-sg {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .controls-right-sg {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .grade-filter-dropdown-sg {
+    font-size: 10px;
+    height: 30px;
+    padding: 0.6rem 0.6rem;
+    width: 100%;
+  }
+
+  .buttons-group-student-grades-sg {
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .pdf-button-student-grades-sg,
+  .xls-button-student-grades-sg {
+    font-size: 9px;
+    padding: 0.4rem 0.6rem;
+    flex: 1;
+  }
+
+  .grades-table-sg {
+    margin-bottom: 0.8rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    font-size: 8px;
+    padding: 5px 3px;
+    white-space: nowrap;
+  }
+
+  .semester-section-sg {
+    margin-bottom: 1rem;
+  }
+
+  .semester-section-sg h3 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .semester-average-sg,
+  .final-grades-sg {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+
+  .average-input-sg,
+  .final-grades-input-sg {
+    font-size: 10px;
+    width: 65px;
+    margin-left: 0;
+    padding: 3px;
+  }
+
+  .final-grades-sg {
+    margin-bottom: 1.2rem;
+  }
+
+  .separator {
+    margin: 1rem 0;
+  }
+
+  .modal-content-sg {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-content-sg h3 {
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-content-sg p {
+    font-size: 11px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-buttons-sg {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .modal-yes-button-sg,
+  .modal-no-button-sg {
+    width: 100%;
+    font-size: 11px;
+    padding: 0.5rem;
+  }
+
+  .semester-dropdown-sg {
+    width: 140px;
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  .loading-container-sg,
+  .error-container-sg,
+  .no-grades-message-sg {
+    font-size: 11px;
+    padding: 1rem;
+  }
+
+  .no-data-container {
+    min-height: 220px;
+    padding: 0 0.5rem;
+  }
+
+  .no-grades-message {
+    padding: 1.5rem 1rem;
+  }
+
+  .no-grades-message h3 {
+    font-size: 16px;
+    margin-bottom: 0.6rem;
+  }
+
+  .no-grades-message p {
+    font-size: 12px;
+  }
+
+  .grade-level-title-sg {
+    font-size: 16px;
+    margin-bottom: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .grade-level-separator {
+    margin: 1rem 0;
+  }
+
+  .grade-level-section-sg {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===========================
+   ORIENTATION & SPECIAL MEDIA QUERIES
+   =========================== */
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .grades-container-sg {
+    height: auto;
+    min-height: 100vh;
+    margin-top: 0.5rem;
+  }
+
+  .grades-title-sg {
+    margin-bottom: 0.6rem;
+  }
+
+  .top-controls-student-grades-sg {
+    margin-bottom: 0.6rem;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    padding: 5px;
+  }
+
+  .semester-section-sg {
+    margin-bottom: 0.8rem;
+  }
+
+  .final-grades-sg {
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .grades-table-sg {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .modal-content-sg {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .grades-container-sg {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .top-controls-student-grades-sg {
+    display: none;
+  }
+
+  .grades-table-sg {
+    font-size: 12px;
+  }
+
+  .grades-table-sg th,
+  .grades-table-sg td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+
+  .modal-overlay-sg {
+    display: none;
+  }
+}

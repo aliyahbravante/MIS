@@ -1,0 +1,941 @@
+/* Main container styling */
+.subject-schedule-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 10px;
+  overflow-y: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subject-schedule-container::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.subject-schedule-container::-webkit-scrollbar-thumb {
+  background-color: #ffff;
+  border-radius: 5px;
+}
+
+.subject-schedule-container::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* Header section */
+.header-subject-schedule {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject-schedule-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+  margin: 0;
+}
+
+.total-label-fpss {
+  font-size: 40px;
+  color: #333333;
+  margin: 0;
+}
+
+.total-count-fpss {
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+/* Top controls section */
+.top-controls-subject-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-and-add-subject-schedule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-input-subject-schedule {
+  flex: 1;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.pdf-subject-schedule,
+.excel-subject-schedule {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.pdf-subject-schedule:hover,
+.excel-subject-schedule:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.pdf-subject-schedule:disabled,
+.excel-subject-schedule:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+.export-icon {
+  font-size: 14px;
+}
+
+/* Table container for horizontal scrolling */
+.table-responsive {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Table styling */
+.subject-schedule-table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.subject-schedule-table th,
+.subject-schedule-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subject-schedule-table th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  border-top: 1px solid #ddd;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.subject-schedule-table td {
+  color: #555555;
+  font-size: 11px;
+}
+
+.subject-schedule-table td:last-child,
+.subject-schedule-table td:nth-last-child(2) {
+  text-align: center;
+}
+
+.subject-schedule-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Action buttons */
+.students-subject-schedule,
+.grades-subject-schedule {
+  background-color: #ffff;
+  color: #006400;
+  border: 1px solid #006400;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 9px;
+  width: 70px;
+  height: 32px;
+  transition: all 0.2s ease;
+}
+
+.students-subject-schedule:hover,
+.grades-subject-schedule:hover {
+  background-color: #006400;
+  color: #ffffff;
+  border: 2px solid #004d33;
+}
+
+/* Loading, Error, and No Data states */
+.loading-container,
+.error-container,
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+}
+
+.no-subjects-message,
+.no-search-results-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.no-subjects-message h3,
+.no-search-results-message h3 {
+  font-size: 24px;
+  color: #006400;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.no-subjects-message p,
+.no-search-results-message p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.error-container {
+  color: #f44336;
+}
+
+.error-container button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.error-container button:hover {
+  background-color: #004d00;
+}
+
+/* Confirmation Modal */
+.modal-overlay-fss {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-fss {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content-fss h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.modal-content-fss p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 16px;
+}
+
+.modal-action-fss {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-button-fss,
+.cancel-button-fss {
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 110px;
+}
+
+.confirm-button-fss {
+  background-color: #006400;
+  border: none;
+  color: #ffff;
+}
+
+.confirm-button-fss:hover {
+  background-color: #003800;
+}
+
+.cancel-button-fss {
+  background-color: #ffff;
+  border: 1px solid #006400;
+  color: #006400;
+}
+
+.cancel-button-fss:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .subject-schedule-container {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .header-subject-schedule {
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subject-schedule-title {
+    font-size: 30px;
+  }
+
+  .total-label-fpss {
+    font-size: 35px;
+  }
+
+  .total-count-fpss {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+
+  .top-controls-subject-schedule {
+    gap: 1rem;
+  }
+
+  .search-and-add-subject-schedule {
+    width: 100%;
+  }
+
+  .search-input-subject-schedule {
+    max-width: none;
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .export-buttons {
+    gap: 0.75rem;
+  }
+
+  .pdf-subject-schedule,
+  .excel-subject-schedule {
+    padding: 0.6rem 1.2rem;
+    font-size: 12px;
+  }
+
+  .subject-schedule-table {
+    min-width: 900px;
+  }
+
+  .subject-schedule-table th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+
+  .subject-schedule-table td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+
+  .students-subject-schedule,
+  .grades-subject-schedule {
+    width: 65px;
+    height: 30px;
+    font-size: 8px;
+  }
+
+  .modal-content-fss {
+    padding: 1.75rem;
+    width: 450px;
+  }
+
+  .modal-content-fss h3 {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+
+  .modal-content-fss p {
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+  }
+
+  .modal-action-fss {
+    gap: 1.5rem;
+  }
+
+  .confirm-button-fss,
+  .cancel-button-fss {
+    min-width: 100px;
+    padding: 0.5rem 1.2rem;
+    font-size: 13px;
+  }
+
+  .loading-container,
+  .error-container,
+  .no-data-container {
+    font-size: 14px;
+    padding: 1.5rem;
+    min-height: 350px;
+  }
+
+  .no-subjects-message,
+  .no-search-results-message {
+    padding: 2.5rem 1.8rem;
+    max-width: 450px;
+  }
+
+  .no-subjects-message h3,
+  .no-search-results-message h3 {
+    font-size: 22px;
+  }
+
+  .no-subjects-message p,
+  .no-search-results-message p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .subject-schedule-container {
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+  .subject-schedule-title {
+    font-size: 24px;
+  }
+
+  .total-label-fpss {
+    font-size: 20px;
+  }
+
+  .total-count-fpss {
+    font-size: 20px;
+  }
+
+  .top-controls-subject-schedule {
+    gap: 0.8rem;
+  }
+
+  .search-input-subject-schedule {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .export-buttons {
+    gap: 0.5rem;
+  }
+
+  .pdf-subject-schedule,
+  .excel-subject-schedule {
+    padding: 0.4rem 10px;
+    font-size: 12px;
+  }
+
+  .export-icon {
+    font-size: 14px;
+  }
+
+  .subject-schedule-table {
+    min-width: 800px;
+    font-size: 10px;
+  }
+
+  .subject-schedule-table th {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+
+  .subject-schedule-table td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+
+  .students-subject-schedule,
+  .grades-subject-schedule {
+    width: 60px;
+    height: 28px;
+    font-size: 8px;
+  }
+
+  .modal-content-fss {
+    padding: 1.5rem;
+    width: 350px;
+  }
+
+  .modal-content-fss h3 {
+    font-size: 18px;
+  }
+
+  .modal-content-fss p {
+    font-size: 13px;
+  }
+
+  .modal-action-fss {
+    gap: 0.8rem;
+  }
+
+  .confirm-button-fss,
+  .cancel-button-fss {
+    min-width: 90px;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+
+  .no-data-container {
+    min-height: 300px;
+    padding: 0 1rem;
+  }
+
+  .no-subjects-message,
+  .no-search-results-message {
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+  }
+
+  .no-subjects-message h3,
+  .no-search-results-message h3 {
+    font-size: 20px;
+  }
+
+  .no-subjects-message p,
+  .no-search-results-message p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Portrait (401px to 480px) */
+@media (max-width: 480px) and (min-width: 401px) {
+  .subject-schedule-container {
+    padding: 0.1rem;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .header-subject-schedule {
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .subject-schedule-title {
+    font-size: 20px;
+  }
+
+  .total-label-fpss {
+    font-size: 20px;
+  }
+
+  .total-count-fpss {
+    font-size: 20px;
+  }
+
+  .top-controls-subject-schedule {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .search-and-add-subject-schedule {
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-input-subject-schedule {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .search-input-subject-schedule::placeholder {
+    font-size: 12px;
+  }
+
+  .export-buttons {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .pdf-subject-schedule,
+  .excel-subject-schedule {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .export-icon {
+    font-size: 11px;
+  }
+
+  .subject-schedule-table {
+    min-width: 800px;
+    font-size: 10px;
+  }
+
+  .subject-schedule-table th {
+    font-size: 8px;
+    padding: 8px 4px;
+  }
+
+  .subject-schedule-table td {
+    font-size: 8px;
+    padding: 8px 4px;
+  }
+
+  .students-subject-schedule,
+  .grades-subject-schedule {
+    width: 60px;
+    height: 28px;
+    font-size: 8px;
+  }
+
+  .modal-content-fss {
+    padding: 1.8rem;
+    width: 92%;
+  }
+
+  .modal-content-fss h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-fss p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-action-fss {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  .confirm-button-fss,
+  .cancel-button-fss {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+
+  .no-data-container {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+
+  .no-subjects-message,
+  .no-search-results-message {
+    padding: 1.8rem 1.2rem;
+    max-width: 350px;
+  }
+
+  .no-subjects-message h3,
+  .no-search-results-message h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+
+  .no-subjects-message p,
+  .no-search-results-message p {
+    font-size: 13px;
+  }
+}
+
+/* Very Small Mobile (320px to 400px) */
+@media (max-width: 400px) and (min-width: 320px) {
+  .subject-schedule-container {
+    padding: 0.8rem;
+    margin-top: 6rem;
+  }
+
+  .header-subject-schedule {
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .subject-schedule-title {
+    font-size: 18px;
+  }
+
+  .total-label-fpss {
+    font-size: 18px;
+  }
+
+  .total-count-fpss {
+    font-size: 18px;
+  }
+
+  .top-controls-subject-schedule {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .search-and-add-subject-schedule {
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-input-subject-schedule {
+    width: 100%;
+    max-width: 100%;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .search-input-subject-schedule::placeholder {
+    font-size: 11px;
+  }
+
+  .export-buttons {
+    display: flex;
+    gap: 0.4rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .pdf-subject-schedule,
+  .excel-subject-schedule {
+    flex: 1;
+    padding: 0.4rem 0.6rem;
+    font-size: 10px;
+    justify-content: center;
+  }
+
+  .export-icon {
+    font-size: 10px;
+  }
+
+  .subject-schedule-table {
+    min-width: 700px;
+  }
+
+  .subject-schedule-table th {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+
+  .subject-schedule-table td {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+
+  .students-subject-schedule,
+  .grades-subject-schedule {
+    width: 50px;
+    height: 24px;
+    font-size: 7px;
+  }
+
+  .modal-content-fss {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .modal-content-fss h3 {
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-content-fss p {
+    font-size: 11px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-action-fss {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .confirm-button-fss,
+  .cancel-button-fss {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 11px;
+  }
+
+  .no-data-container {
+    min-height: 200px;
+    padding: 0 0.5rem;
+  }
+
+  .no-subjects-message,
+  .no-search-results-message {
+    padding: 1rem 0.8rem;
+    max-width: 300px;
+  }
+
+  .no-subjects-message h3,
+  .no-search-results-message h3 {
+    font-size: 16px;
+    margin-bottom: 0.6rem;
+  }
+
+  .no-subjects-message p,
+  .no-search-results-message p {
+    font-size: 12px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .subject-schedule-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .subject-schedule-title {
+    margin-bottom: 0.8rem;
+  }
+
+  .top-controls-subject-schedule {
+    margin-bottom: 0.8rem;
+  }
+
+  .subject-schedule-table th,
+  .subject-schedule-table td {
+    padding: 6px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .subject-schedule-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .modal-content-fss {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .subject-schedule-container {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .export-buttons {
+    display: none;
+  }
+
+  .subject-schedule-table {
+    font-size: 12px;
+  }
+
+  .subject-schedule-table th,
+  .subject-schedule-table td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+
+  .modal-overlay-fss {
+    display: none;
+  }
+}
+
+/* Extra Large screens (1440px and above) */
+@media (min-width: 1440px) {
+  .subject-schedule-container {
+    padding: 2rem;
+  }
+
+  .search-input-subject-schedule {
+    max-width: 800px;
+  }
+
+  .search-and-add-subject-schedule {
+    gap: 3rem;
+  }
+}

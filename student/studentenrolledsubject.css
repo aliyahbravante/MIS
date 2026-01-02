@@ -1,0 +1,895 @@
+/* Application Container */
+.subjects-container-ses {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 35px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.subjects-container-ses::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.subjects-container-ses::-webkit-scrollbar-thumb {
+  background-color: #ffff;
+  border-radius: 1px;
+}
+
+.subjects-container-ses::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+.subjects-container-sess {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 35px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.subjects-container-sess::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.subjects-container-sess::-webkit-scrollbar-thumb {
+  background-color: #ffff;
+  border-radius: 1px;
+}
+
+.subjects-container-sess::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.header-student-enrolled-subject-sess {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.subjects-title-sess {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+  margin: 0;
+}
+
+.total-label-student-enrolled-subject-sess {
+  font-size: 40px;
+  color: #333333;
+  margin: 0;
+}
+
+.total-count-student-enrolled-subject-sess {
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-student-enrolled-subject-ses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.search-bar-student-enrolled-subject-ses {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-bar-student-enrolled-subject-ses input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-bar-student-enrolled-subject-ses input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.export-buttons-ses {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.grade-filter-dropdown-ses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 130px;
+  box-sizing: border-box;
+}
+
+.grade-filter-dropdown-ses:hover {
+  background-color: #f8f8f8;
+}
+
+.pdf-button-student-enrolled-subject-ses,
+.xls-button-student-enrolled-subject-ses {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.pdf-button-student-enrolled-subject-ses:hover,
+.xls-button-student-enrolled-subject-ses:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.pdf-button-student-enrolled-subject-ses:disabled,
+.xls-button-student-enrolled-subject-ses:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+.pdf-button-student-enrolled-subject-ses:disabled:hover,
+.xls-button-student-enrolled-subject-ses:disabled:hover {
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+.export-icon-ses {
+  font-size: 14px;
+}
+
+.subjects-table-container-ss {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subjects-table-container-ss::-webkit-scrollbar {
+  height: 3px;
+}
+
+.subjects-table-container-ss::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.subjects-table-container-ss::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.subjects-table-container-ss::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.subjects-table-ses {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.subjects-table-ses th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.subjects-table-ses td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subjects-table-ses tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Modal styles */
+.modal-confirmation-ses {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-ses {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content-ses h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.modal-content-ses p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-group-button-ses {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-button-ses,
+.cancel-button-ses {
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 120px;
+  border: 1px solid #006400;
+}
+
+.confirm-button-ses {
+  background-color: #006400;
+  color: #ffffff;
+}
+
+.confirm-button-ses:hover {
+  background-color: #003800;
+}
+
+.cancel-button-ses {
+  background-color: #ffffff;
+  color: #006400;
+}
+
+.cancel-button-ses:hover {
+  background-color: #e7f3ec;
+}
+
+/* No data container */
+.no-data-container-ses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.no-subjects-message-styled {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.no-subjects-message-styled h3 {
+  font-size: 24px;
+  color: #006400;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.no-subjects-message-styled p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Loading and Error Messages */
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .subjects-container-ses {
+    padding: 1.5rem;
+    margin-top: 10px;
+  }
+    .subjects-container-sess {
+    padding: 1.5rem;
+    margin-top: 10px;
+  }
+  .header-student-enrolled-subject-sess {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subjects-title-sess {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  
+  .total-label-student-enrolled-subject-sess {
+    margin-top: 40px;
+    font-size: 35px;
+  }
+  
+  .total-count-student-enrolled-subject-sess {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+  
+  .top-controls-student-enrolled-subject-ses {
+    gap: 1rem;
+  }
+  
+  .search-bar-student-enrolled-subject-ses {
+    width: 100%;
+  }
+  
+  .search-bar-student-enrolled-subject-ses input {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .export-buttons-ses {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .pdf-button-student-enrolled-subject-ses,
+  .xls-button-student-enrolled-subject-ses {
+    font-size: 12px;
+  }
+  
+  .grade-filter-dropdown-ses {
+    width: auto;
+    min-width: 120px;
+    font-size: 12px;
+  }
+  
+  .subjects-table-ses th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .subjects-table-ses td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .modal-content-ses {
+    width: 450px;
+    padding: 1.5rem;
+  }
+  
+  .modal-content-ses h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-ses p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .confirm-button-ses,
+  .cancel-button-ses {
+    font-size: 13px;
+    padding: 0.5rem 1.2rem;
+    min-width: 100px;
+  }
+  
+  .no-data-container-ses {
+    min-height: 350px;
+  }
+  
+  .no-subjects-message-styled {
+    padding: 2.5rem 1.8rem;
+    max-width: 450px;
+  }
+  
+  .no-subjects-message-styled h3 {
+    font-size: 22px;
+  }
+  
+  .no-subjects-message-styled p {
+    font-size: 15px;
+  }
+  
+  .loading-message,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .subjects-container-ses {
+    padding: 1rem;
+    margin-top: 30px;
+  }
+    .subjects-container-sess {
+    padding: 1rem;
+    margin-top: 30px;
+  }
+  
+  
+  .subjects-title-sess {
+    font-size: 24px;
+  }
+  
+  .total-label-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .total-count-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .export-buttons-ses {
+    gap: 8px;
+  }
+  
+  .grade-filter-dropdown-ses {
+    font-size: 13px;
+    padding: 8px 10px;
+    min-width: 120px;
+  }
+  
+  .pdf-button-student-enrolled-subject-ses,
+  .xls-button-student-enrolled-subject-ses {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .subjects-table-ses th {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .subjects-table-ses td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .modal-content-ses {
+    width: 350px;
+    padding: 1.2rem;
+  }
+  
+  .modal-content-ses h3 {
+    font-size: 18px;
+  }
+  
+  .modal-content-ses p {
+    font-size: 13px;
+  }
+  
+  .modal-group-button-ses {
+    gap: 0.8rem;
+  }
+  
+  .confirm-button-ses,
+  .cancel-button-ses {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+  
+  .no-data-container-ses {
+    min-height: 300px;
+    padding: 0 1rem;
+  }
+  
+  .no-subjects-message-styled {
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+  }
+  
+  .no-subjects-message-styled h3 {
+    font-size: 20px;
+  }
+  
+  .no-subjects-message-styled p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) and (min-width: 420px) {
+  .subjects-container-ses {
+    padding: 0.1rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  
+  .header-student-enrolled-subject-sess {
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subjects-title-sess {
+    font-size: 20px;
+  }
+  
+  .total-label-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .total-count-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .top-controls-student-enrolled-subject-ses {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .search-bar-student-enrolled-subject-ses input {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .search-bar-student-enrolled-subject-ses input::placeholder {
+    font-size: 12px;
+  }
+  
+  .export-buttons-ses {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .grade-filter-dropdown-ses {
+    font-size: 12px;
+    padding: 0.5rem 0.6rem;
+    width: 45%;
+  }
+  
+  .pdf-button-student-enrolled-subject-ses,
+  .xls-button-student-enrolled-subject-ses {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+    width: 25%;
+  }
+  
+  .export-icon-ses {
+    font-size: 11px;
+  }
+  
+  .subjects-table-ses th {
+    font-size: 8px;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
+  
+  .subjects-table-ses td {
+    font-size: 8px;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
+  
+  .modal-content-ses {
+    width: 90%;
+    max-width: 300px;
+    padding: 2rem;
+  }
+  
+  .modal-content-ses h3 {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+  
+  .modal-content-ses p {
+    font-size: 10px;
+    margin-bottom: 1px;
+    padding: 1rem;
+  }
+  
+  .modal-group-button-ses {
+    gap: 0.5rem;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+  
+  .confirm-button-ses,
+  .cancel-button-ses {
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+    min-width: 80px;
+    width: 100%;
+  }
+  
+  .no-data-container-ses {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+  
+  .no-subjects-message-styled {
+    padding: 1.5rem 1rem;
+    max-width: 350px;
+  }
+  
+  .no-subjects-message-styled h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .no-subjects-message-styled p {
+    font-size: 13px;
+  }
+  
+  .loading-message,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Very Small Mobile (400px and below) */
+@media (max-width: 419px) and (min-width: 320px) {
+  .subjects-container-ses {
+    padding: 0.1rem;
+    margin-top: 2rem;
+  }
+    .subjects-container-sess {
+    padding: 0.1rem;
+    margin-top: 7rem;
+  }
+  
+  .header-student-enrolled-subject-sess {
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subjects-title-sess {
+    font-size: 20px;
+  }
+  
+  .total-label-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .total-count-student-enrolled-subject-sess {
+    font-size: 20px;
+  }
+  
+  .top-controls-student-enrolled-subject-ses {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .search-bar-student-enrolled-subject-ses input {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .search-bar-student-enrolled-subject-ses input::placeholder {
+    font-size: 12px;
+  }
+  
+  .export-buttons-ses {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .grade-filter-dropdown-ses {
+    font-size: 12px;
+    padding: 0.5rem 0.6rem;
+    width: 45%;
+    height: 30px;
+  }
+  
+  .pdf-button-student-enrolled-subject-ses,
+  .xls-button-student-enrolled-subject-ses {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+    width: 25%;
+    height: 32px;
+  }
+  
+  .export-icon-ses {
+    font-size: 11px;
+  }
+  
+  .subjects-table-ses th {
+    font-size: 8px;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
+  
+  .subjects-table-ses td {
+    font-size: 8px;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
+  
+  .modal-content-ses {
+    width: 90%;
+    max-width: 300px;
+    padding: 2rem;
+  }
+  
+  .modal-content-ses h3 {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+  
+  .modal-content-ses p {
+    font-size: 10px;
+    margin-bottom: 1px;
+    padding: 1rem;
+  }
+  
+  .modal-group-button-ses {
+    gap: 0.5rem;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+  
+  .confirm-button-ses,
+  .cancel-button-ses {
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+    min-width: 80px;
+    width: 100%;
+  }
+  
+  .no-data-container-ses {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+  
+  .no-subjects-message-styled {
+    padding: 1.5rem 1rem;
+    max-width: 350px;
+  }
+  
+  .no-subjects-message-styled h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .no-subjects-message-styled p {
+    font-size: 13px;
+  }
+  
+  .loading-message,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .subjects-container-ses {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .header-student-enrolled-subject-sess {
+    margin-top: 1rem;
+  }
+
+  .subjects-table-ses th,
+  .subjects-table-ses td {
+    padding: 6px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .subjects-table-ses {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .modal-content-ses {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .subjects-container-ses {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .top-controls-student-enrolled-subject-ses {
+    display: none;
+  }
+  
+  .subjects-table-ses {
+    font-size: 12px;
+  }
+  
+  .subjects-table-ses th,
+  .subjects-table-ses td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .modal-confirmation-ses {
+    display: none;
+  }
+}

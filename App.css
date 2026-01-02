@@ -1,0 +1,419 @@
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, Inter;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure body height fills the screen */
+  width: 100vw; /* Full width of the viewport */
+  overflow: hidden; /* Prevent the body from scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f0f0f0;
+  overflow: hidden; /* Prevent internal overflow */
+}
+/* Sidebar Styles */
+.sidebar-container {
+  width: 35vw; /* Sidebar takes 30% of the screen width */
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(180deg, #87B9AA, #3D534C);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem; /* Adjust padding for better proportions */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow */
+  min-width: 300px; /* Prevent sidebar from shrinking too much */
+  background-image: url('/src/assets/frontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative; /* Allows absolute positioning for buttons */
+}
+
+/* Form Container */
+.form-container {
+  width: 100%; /* Takes remaining 70% of the screen width */
+  height: 100vh; /* Full height to match sidebar */
+  background-color: #ffffff;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Add padding for better spacing */
+  overflow: hidden; /* Prevent overflow */
+  
+}
+
+.frontpage-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Admission Login Container */
+.admissionlogin-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+
+}
+
+/* Optional: Add styling specific to AdmissionLogin if needed */
+.admissionlogin-container .login-box {
+  width: 800px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  font-family: Poppins;
+}
+
+/* Admission Login Container */
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+
+}
+
+/* Optional: Add styling specific to AdmissionLogin if needed */
+.login-container .login-box {
+  width: 800px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  font-family: Poppins;
+}
+
+/* Account Registration Container */
+.accountregistration-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Add styling specific to AccountRegistration if needed */
+.accountregistration-container .registration-box {
+  width: 800px; /* Same width as admission login, adjust as needed */
+  height: 90vh;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+}
+/* Application Container */
+.second-container {
+  width: 100vw; /* 60% of the screen width */
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Disables horizontal scrolling */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+
+/* Top Controls */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.status-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.schedule-button {
+  padding: 0.5rem 1rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Table */
+.application-table, .application-table-se {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.application-table th,
+.application-table td, 
+.application-table-se th,
+.application-table-se td  {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.application-table th, .application-table-se th{
+  color: #333333;
+  font-weight: bold;
+}
+
+.application-table td, .application-table-se td {
+  color: #555555;
+  font-size: 14px;
+}
+
+/* Enrolled Students Container */
+.view-applicants-container {
+  width: 70w; /* Matches Application container width */
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Disables horizontal scrolling */
+}
+
+/* Styling elements within Enrolled Students */
+.view-applicants-container .top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.view-applicants-container .search-bar input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.view-applicants-container .status-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-applicants-container .schedule-button {
+  padding: 0.5rem 1rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Table in Enrolled Students */
+.view-applicants-container .application-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.view-applicants-container .application-table th,
+.view-applicants-container .application-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.view-applicants-container .application-table th {
+  color: #333333;
+  font-weight: bold;
+}
+
+.view-applicants-container .application-table td {
+  color: #555555;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 1px; /* Further reduce padding */
+    min-height: 100%;
+  }
+  .sidebar-container {
+    padding: 1px;
+  }
+  .sidebar-container {
+    width: 100%; /* Full width */
+    height: 22vh; /* Let the height adjust */
+    background: linear-gradient(180deg, #87B9AA, #3D534C);
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Make the items row-wise */
+    align-items: center;
+    padding: 10px 0; /* Less padding for top bar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    min-width: 270px;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above content */
+  }
+  
+  .adminsidebar-container {
+    padding: 1px;
+    width: 1%;
+
+  }
+  .form-container {
+    padding: 1px; /* Fur ther reduce padding */
+    min-height: 100%;
+  }
+  .frontpage-fullscreen {
+    min-height: 100%;
+  }
+  .admissionlogin-container {
+    min-height: 100%;
+  
+  }
+  .admissionlogin-container .login-box {
+    min-height: 100%;
+  }
+  .login-container {
+    min-height: 100%;
+  }
+  .login-container .login-box {
+    min-height: 100%;
+    width: 100%;
+  }
+  .applicants-container{
+    display: flex;
+    justify-content: flex-start; /* Aligns all child divs to the left */
+    align-items: center; /* Optional: Align items vertically */
+  }
+  .applicants-container::-webkit-scrollbar {
+    width: 1px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .applicants-container::-webkit-scrollbar-thumb {
+    background-color: #ffff; /* Light grey color for the thumb */
+    border-radius: 5px;
+  }
+  
+  .applicants-container::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .sidebar-container {
+    padding: 1px;
+  }
+  .sidebar-container {
+    width: 100%; /* Full width */
+    height: 28vh; /* Let the height adjust */
+    background: linear-gradient(180deg, #87B9AA, #3D534C);
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Make the items row-wise */
+    align-items: center;
+    padding: 10px 0; /* Less padding for top bar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    min-width: 350px;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above content */
+  }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+  .sidebar-container {
+    padding: 1px;
+  }
+  .sidebar-container {
+    width: 100%; /* Full width */
+    max-width: 400px;
+    height: 35.5vh; /* Let the height adjust */
+    background: linear-gradient(180deg, #87B9AA, #3D534C);
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Make the items row-wise */
+    align-items: center;
+    padding: 10px 0; /* Less padding for top bar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    min-width: 400px;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above content */
+  }
+}
+

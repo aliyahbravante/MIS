@@ -1,0 +1,176 @@
+.faculty-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background-image-faculty {
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .background-image-faculty::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    z-index: 1;
+  }
+  
+  .login-box-faculty {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 650px;
+  }
+  
+  .logo-img-al-faculty {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .system-title-faculty {
+    font-size: 32px;
+    font-weight: bold;
+    color: #006000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .sign-in-title-faculty {
+    font-size: 35px;
+    font-weight: bold;
+    color: #006000;
+    margin-bottom: 20px;
+  }
+  
+  .separator-faculty {
+    width: 80%;
+    height: 2px;
+    background-color: #006000;
+    border: none;
+    margin: 10px auto;
+  }
+  
+  .input-field-faculty {
+    width: 80%;
+    padding: 11px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+  }
+  
+  .password-container-faculty {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-input-faculty {
+    width: 80%;
+    padding: 11px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+  }
+  
+  .view-icon-button-faculty {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    height: 5vh;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #003300;
+  }
+  .view-icon-button-faculty:active {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .view-icon-button-faculty:focus {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .login-button-faculty {
+    width: 50%;
+    padding: 12px;
+    background-color: #004d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .login-button-faculty:hover {
+    background-color: #003300;
+  }
+  
+  @media (max-width: 480px) {
+    .login-box-faculty {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .system-title-faculty {
+      font-size: 20px;
+    }
+  
+    .sign-in-title-faculty {
+      font-size: 18px;
+    }
+  
+    .input-field-faculty {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .login-button-faculty {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .view-icon-button-faculty {
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      height: 5vh;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      color: #003300;
+    }
+  }
+  

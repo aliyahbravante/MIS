@@ -1,0 +1,576 @@
+.admin-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.regis-background-image {
+  background-image: url('/src/assets/frontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.regis-background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.registration-box-ar {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  min-height: auto;
+  box-sizing: border-box;
+}
+
+.logo-img-ar {
+  margin-top: 10px;
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
+  object-fit: contain;
+}
+
+.regis-system-title {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: bold;
+  color: #006000;
+  text-transform: uppercase;
+}
+
+.register-title-ar {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: bold;
+  color: #006000;
+  margin-bottom: 18px;
+}
+
+.welcome-title-ar {
+  font-size: clamp(16px, 3vw, 22px);
+  color: #12a712;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.separator-ar {
+  width: 90%;
+  height: 2px;
+  background-color: #006000;
+  border: none;
+  margin: 10px auto;
+}
+
+.input-field-ar {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 16px;
+  margin: 15px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: clamp(14px, 2vw, 16px);
+  background-color: white;
+  color: #333;
+  box-sizing: border-box;
+  display: block;
+  transition: border-color 0.3s ease;
+}
+
+.input-field-ar:focus {
+  outline: none;
+  border-color: #006000;
+}
+
+.password-container-arr {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+
+.password-container-arr input {
+  width: 100%;
+  padding: 8px 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: clamp(14px, 2vw, 16px);
+  background-color: white;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  margin: 0;
+}
+
+.password-container-arr input:focus {
+  outline: none;
+  border-color: #006000;
+}
+
+.eye-icon-arr {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #003300;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: color 0.3s ease;
+}
+
+.eye-icon-arr:hover {
+  color: #006000;
+}
+
+.eye-icon-arr:active,
+.eye-icon-arr:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+.regis-button-ar {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 20px;
+  background-color: #004d00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(15px, 2.5vw, 18px);
+  cursor: pointer;
+  margin: 20px auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.regis-button-ar:hover {
+  background-color: #003300;
+}
+
+.login-message-ar {
+  margin: 20px 0 15px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-link-ar {
+  color: #004d00;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: clamp(18px, 3vw, 24px);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-link-ar:hover {
+  color: #4a724a;
+}
+
+.highlight {
+  border: 2px solid red !important;
+}
+
+.inline-error {
+  color: #dc3545;
+  font-size: clamp(12px, 2vw, 14px);
+  margin: 10px auto;
+  text-align: center;
+  padding: 5px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.modal-overlay-ar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-ar {
+  background-color: white;
+  color: #067655;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content-ar h2 {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #067655;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.modal-close-button-ar {
+  background-color: #004d00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-button-ar:hover {
+  background-color: #006600;
+}
+
+/* Extra Small Devices (phones, 320px to 480px) */
+@media (max-width: 480px) {
+  .admin-container {
+    padding: 0;
+  }
+  
+  .regis-background-image {
+    background-attachment: scroll;
+    padding: 10px;
+  }
+  
+  .registration-box-ar {
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 90%;
+    min-height: auto;
+    max-height: none;
+  }
+  
+  .logo-img-ar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+  
+  .regis-system-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .welcome-title-ar {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .register-title-ar {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .separator-ar {
+    margin: 10px auto;
+  }
+  
+  .input-field-ar,
+  .password-container-arr {
+    max-width: 100%;
+    margin: 8px auto;
+  }
+  
+  .input-field-ar,
+  .password-container-arr input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .password-container-arr input {
+    padding-right: 45px;
+  }
+  
+  .eye-icon-arr {
+    right: 12px;
+    font-size: 14px;
+  }
+  
+  .regis-button-ar {
+    padding: 12px 16px;
+    margin: 15px auto;
+    max-width: 200px;
+    font-size: 14px;
+  }
+  
+  .login-message-ar {
+    margin: 15px 0 10px 0;
+  }
+  
+  .login-link-ar {
+    font-size: 18px;
+  }
+  
+  .inline-error {
+    font-size: 11px;
+    margin: 8px auto;
+    padding: 4px;
+  }
+  
+  .modal-content-ar {
+    padding: 20px;
+    margin: 15px;
+  }
+  
+  .modal-content-ar h2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-close-button-ar {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Small Devices (tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .admin-container {
+    padding: 0;
+  }
+  
+  .regis-background-image {
+    padding: 15px;
+  }
+  
+  .registration-box-ar {
+    padding: 10px;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .logo-img-ar {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .regis-system-title {
+    font-size: 22px;
+  }
+  
+  .welcome-title-ar {
+    font-size: 18px;
+  }
+  
+  .register-title-ar {
+    font-size: 22px;
+  }
+  
+  .input-field-ar,
+  .password-container-arr {
+    max-width: 350px;
+  }
+  
+  .regis-button-ar {
+    max-width: 250px;
+  }
+  
+  .login-message-ar {
+    font-size: 13px;
+  }
+  
+  .login-link-ar {
+    font-size: 20px;
+  }
+}
+
+/* Medium Devices (small laptops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .registration-box-ar {
+    padding: 10px;
+    max-width: 650px;
+  }
+  
+  .logo-img-ar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .regis-system-title {
+    font-size: 20px;
+  }
+  
+  .welcome-title-ar {
+    font-size: 18px;
+  }
+  
+  .register-title-ar {
+    font-size: 24px;
+  }
+  
+  .input-field-ar,
+  .password-container-arr {
+    max-width: 380px;
+  }
+  
+  .regis-button-ar {
+    max-width: 280px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .login-message-ar {
+    font-size: 14px;
+  }
+  
+  .login-link-ar {
+    font-size: 22px;
+  }
+}
+
+/* Large Devices (desktops, 1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .registration-box-ar {
+    max-width: 680px;
+  }
+  
+  .input-field-ar,
+  .password-container-arr {
+    max-width: 400px;
+  }
+}
+
+/* Extra Large Devices (large desktops, 1201px and up) */
+@media (min-width: 1201px) {
+  .registration-box-ar {
+    max-width: 700px;
+  }
+  
+  .regis-background-image {
+    background-attachment: fixed;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 600px) and (orientation: landscape) {
+  .regis-background-image {
+    background-attachment: scroll;
+  }
+  
+  .registration-box-ar {
+    padding: 15px 25px;
+    margin: 5px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .logo-img-ar {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+  }
+  
+  .regis-system-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .welcome-title-ar {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .register-title-ar {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .separator-ar {
+    margin: 5px auto;
+  }
+  
+  .input-field-ar,
+  .password-container-arr {
+    margin: 5px auto;
+  }
+  
+  .input-field-ar,
+  .password-container-arr input {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .password-container-arr input {
+    padding-right: 40px;
+  }
+  
+  .eye-icon-arr {
+    font-size: 12px;
+    right: 10px;
+  }
+  
+  .regis-button-ar {
+    margin: 10px auto;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .login-message-ar {
+    margin: 8px 0 5px 0;
+    font-size: 11px;
+  }
+  
+  .login-link-ar {
+    font-size: 16px;
+  }
+  
+  .inline-error {
+    font-size: 10px;
+    margin: 5px auto;
+    padding: 3px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .registration-box-ar {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+  }
+}

@@ -1,0 +1,785 @@
+.admin-sidebar {
+    width: 400px;
+    background: linear-gradient(to right, #004d40, #00695c);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    position: relative;
+    overflow-y: auto;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+
+.admin-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(0, 99, 23, 0.5);
+    z-index: 1;
+}
+.admin-sidebar::-webkit-scrollbar {
+  width: 1px;
+  background-color: #ffff; /* White background */
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background-color: #f8f8f8; /* Light grey color for the thumb */
+  border-radius: 2px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+/* Mobile Logo Section - Hidden on desktop */
+.mobile-logo-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.mobile-logo-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Desktop Logo Section */
+.logo-section-as {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 1rem;
+    gap: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-img-as {
+    width:  80%;
+    height: 80px;
+    background: none;
+    object-fit: contain;
+}
+
+.divider-line-as {
+    width: 20px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Logo Text */
+.logo-text-as h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Poppins;
+}
+
+.logo-text-as h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: Poppins;
+}
+
+.menu-link .icon {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Poppins;
+    margin: 20px 0 10px;
+    color: #4FA78D;
+    margin-left: 60px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Menu Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.h3 {
+    margin-left: 50px;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin-left: 90px;
+    transition: all 0.3s ease-in-out;
+}
+.menu-link span{
+    color: #fff;
+    font-size: 14px;
+}
+.menu-link span:hover{
+    color: #55ffcc;
+    font-weight: bold;
+}
+
+.menu-link:hover {
+    color: #55ffcc;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-link svg {
+    margin-right: 8px;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul li.active .menu-link span {
+    font-weight: bold;
+    color: #55ffcc;
+    text-decoration: underline;
+}
+ul li.active .icon {
+    font-weight: bold;
+    color: #55ffcc;
+    text-decoration: underline;
+}
+
+.menu-link:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #55ffcc;
+}
+
+/* Sidebar Container */
+.admin-sidebar-container {
+    position: relative;
+    height: 100vh;
+}
+
+/* Mobile Menu Button */
+.hamburger-menu-side {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #006400;
+}
+
+.logo-container-side {
+    display: none;
+}
+@media (max-width: 401px) and (min-width: 320px) {
+    .admin-sidebar {
+        margin-top: 100px;
+        z-index: 1100; 
+    }
+
+    
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 1200;
+    }
+
+    .logo-img-side {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+
+    .logo-container-side {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .logo-text-side h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .logo-text-side h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+        justify-content: flex-start;
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+
+    /* Show mobile logo, hide desktop logo */
+    .mobile-logo-section {
+        display: flex;
+        margin-top: 80px;
+        margin-bottom: -12px;
+    }
+
+    .mobile-logo-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo-section-as {
+        display: none;
+    }
+
+    .sidebar-section-1 {
+        margin-bottom: 10px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+
+    .section-title {
+        right: 40px;
+        font-size: 14px;
+    }
+
+    .menu-link {
+        right: 55px;
+        font-size: 12px;
+    }
+
+    .menu-link:hover {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+
+/* Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .admin-sidebar {
+        z-index: 1100; 
+    }
+
+    
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 1200;
+    }
+
+    .logo-img-side {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+
+    .logo-container-side {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .logo-text-side h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .logo-text-side h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+        justify-content: flex-start;
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+
+    /* Show mobile logo, hide desktop logo */
+    .mobile-logo-section {
+        display: flex;
+        margin-top: 80px;
+        margin-bottom: -12px;
+    }
+
+    .mobile-logo-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo-section-as {
+        display: none;
+    }
+
+    .sidebar-section-1 {
+        margin-bottom: 10px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+
+    .section-title {
+        right: 40px;
+        font-size: 14px;
+    }
+
+    .menu-link {
+        right: 55px;
+        font-size: 12px;
+    }
+
+    .menu-link:hover {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+/* Tablet Styles (481px - 786px) */
+@media (min-width: 481px) and (max-width: 786px) {
+    .admin-sidebar {
+        z-index: 1100;
+    }
+    
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 10vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 1200;
+    }
+
+    .logo-img-side {
+        width: 35px;
+        height: 35px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+
+    .logo-container-side {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .logo-text-side h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .logo-text-side h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+        justify-content: flex-start;
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+
+    /* Show mobile logo, hide desktop logo */
+    .mobile-logo-section {
+        display: flex;
+        margin-top: 60px;
+  
+    }
+
+    .mobile-logo-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo-section-as {
+        display: none;
+    }
+
+    .sidebar-section-1 {
+        margin-bottom: 130px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+
+    .section-title {
+        right: 40px;
+        font-size: 16px;
+    }
+
+    .menu-link {
+        right: 55px;
+        font-size: 14px;
+    }
+
+    .menu-link:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+/* Laptop size only - Sidebar toggle functionality */
+@media (min-width: 1025px) {
+    .admin-sidebar.sidebar-closed {
+        width: 100px;
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    .admin-sidebar.sidebar-closed .logo-section-as {
+        flex-direction: column;
+        gap: 0;
+        margin-left: 0;
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .admin-sidebar.sidebar-closed .logo-img-as {
+        width: 60px;
+        height: 60px;
+    }
+
+    .admin-sidebar.sidebar-closed .divider-line-as {
+        display: none;
+    }
+
+    .admin-sidebar.sidebar-closed .logo-text-as {
+        display: none;
+    }
+
+    .admin-sidebar.sidebar-closed .section-title {
+        display: none;
+    }
+
+    .admin-sidebar.sidebar-closed .menu-link {
+        justify-content: center;
+        margin-left: 0;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .admin-sidebar.sidebar-closed .menu-link .icon {
+        margin-right: 0;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .admin-sidebar.sidebar-closed .menu-link span {
+        display: none;
+    }
+
+    .admin-sidebar.sidebar-closed .sidebar-section-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-sidebar.sidebar-closed ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-sidebar.sidebar-closed .menu-link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .logo-toggle-btn:hover {
+        opacity: 0.8;
+    }
+
+    .logo-toggle-btn:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+}
+
+/* Larger Tablet Styles (481px - 1024px) */
+@media (min-width: 787px) and (max-width: 1024px) {
+    .admin-sidebar {
+        z-index: 1100;
+        position: fixed;
+    }
+    
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 1200;
+    }
+
+    .logo-img-side {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+
+    .logo-container-side {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .logo-text-side h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .logo-text-side h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+        width: 1px;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+
+    /* Show mobile logo, hide desktop logo */
+    .mobile-logo-section {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-logo-img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo-section-as {
+        display: none;
+    }
+
+    .sidebar-section-1 {
+        margin-top: 10px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+
+    .section-title {
+        right: 40px;
+        font-size: 16px;
+    }
+
+    .menu-link {
+        right: 55px;
+        font-size: 14px;
+    }
+
+    .menu-link:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

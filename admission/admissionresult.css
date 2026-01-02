@@ -1,0 +1,118 @@
+.content-ar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100vh;
+    padding: 16rem; 
+    margin-bottom: 10rem;
+  }
+  
+  .content-ar h2 {
+    color: #1d563f;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    font-size: 35px;
+    font-family: Poppins;
+  }
+  
+  .waiting-icon{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 120px;
+    text-align: center;
+    color: #006c4c;
+  }
+  p {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .ok-button-ar {
+    background-color: #006c4c;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ok-button-ar:hover {
+    background-color: #009523;
+  }
+  @media (min-width: 320px) and (max-width: 400px) { 
+    .content-ar {
+      padding: 2rem; /* Further reduce padding for mobile */
+      margin-top: 1px; 
+      margin-bottom: 10px;
+      }
+      .content-ar h2{
+        margin-top: 0;
+        font-size: 25px;
+        }
+      .waiting-icon{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin-right: 0px;
+        font-size: 100px;
+        text-align: center;
+        color: #006c4c;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 15px !important;
+      }
+  }
+  @media (min-width: 401px) and (max-width: 480px) { 
+    .content-ar {
+      padding: 3rem; /* Further reduce padding for mobile */
+      margin-top: 1px; 
+      margin-bottom: 10px;
+      }
+      .content-ar h2{
+        margin-top: 0;
+        font-size: 25px;
+        }
+      .waiting-icon{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin-right: 25px;
+        font-size: 100px;
+        text-align: center;
+        color: #006c4c;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 15px !important;
+      }
+  }
+  @media (min-width:481px) and (max-width: 768px) {
+    .content-ar {
+      padding: 2rem; /* Further reduce padding for mobile */
+      margin-top: 17rem;
+      }
+  }
+  @media (min-width:769px) and (max-width: 1024px) {
+    .content-ar {
+      padding: 5rem; /* Further reduce padding for mobile */
+      margin-top: 11rem; 
+      margin-bottom: 10px;
+      }
+      .waiting-icon{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 120px;
+        text-align: center;
+        color: #006c4c;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 16px;
+      }
+  }

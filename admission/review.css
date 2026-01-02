@@ -1,0 +1,502 @@
+/* Container for the review form */
+.review-form {
+  width: 100%;
+  height: 100vh; /* Adjust as needed to fit your layout */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari) */
+.review-form::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.review-form::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.review-form::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+/* Form Title */
+.review-form h2 {
+  text-align: center;
+  color: #1d563f;
+  margin-bottom: 1rem;
+  font-size: 35px;
+  font-family: Poppins;
+}
+
+/* Section Titles */
+.review-form h3 {
+  color: #1d563f;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+/* Section Titles */
+.review-form h4 {
+  color: #1d563f;
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Layout for image and form fields */
+.image-and-form-container-r {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+
+}
+
+/* Left side image container */
+.image-upload-container-r {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.box-decoration-r {
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 15%;
+
+}
+
+.img-display-before-r,
+/* review.css */
+.img-display-after-r {
+  width: 100%; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0; /* Remove rounding */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+
+/* Right side form fields container */
+.form-fields-container {
+  flex: 1.5;
+}
+
+/* Styling the form rows to align elements */
+.form-row-rv, .form-row-fb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling individual form groups */
+.form-group-rv {
+  flex: 1;
+}
+
+.form-group-rv-rv {
+  flex: 0.45;
+}
+.form-group-rv-bp {
+  flex: 1.5;
+}
+
+.form-group-fb-parents {
+  flex: 1.4;
+}
+
+.form-group-fb-pwdip-r {
+  flex: 1;
+}
+.form-group-rv label, .form-group-rv-rv label, .form-group-fb label, .form-group-fb-parents label, .form-group-fb-pwdip-r label, .form-group-rv-bp label {
+  color: #333;
+  font-size: 12px;
+}
+.form-group-rv input,
+.form-group-rv select, .form-group-rv-rv input,
+.form-group-rv-rv select, .form-group-fb input,
+.form-group-fb select, .form-group-fb-parents input,
+.form-group-fb-parents select, .form-group-fb-pwdip-r input,
+.form-group-fb-pwdip-r select, .form-group-rv-bp select, .form-group-rv-bp input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: Inter;
+}
+/* Form labels */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Input fields */
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.separator {
+  border: none;
+  border-top: 1px solid #636161;
+}
+/* Image upload label styling */
+.image-upload-label {
+  font-size: 1rem;
+  font-weight: bol
+  d;
+  background-color: #ffff;
+  color: #006400;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-family: Poppins;
+  display: flex;
+  justify-content: center;
+}
+
+/* Buttons section */
+/* Button group container */
+.button-group-rv {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Center the buttons vertically if needed */
+  gap: 5rem;               /* Optional: Adds space between buttons */
+  margin-top: 2rem;        /* Optional: Adds space above the buttons */
+}
+
+/* Discard button */
+.discard-button-rv {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  width: 130px;
+}
+
+/* Save button */
+.save-button-rv {
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 2.2rem;
+  cursor: pointer;
+  font-size: 14px;
+  width: 130px;
+}
+
+/* Centered button hover effects */
+.discard-button-rv:hover {
+  background-color: #d32f2f;
+}
+
+.save-button-rv:hover {
+  background-color: #144d32;
+}
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: #1d563f;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.modal-close-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-close-button:hover {
+  background-color: #144d32;
+}
+@media (min-width: 320px) and (max-width: 400px) {
+  .review-form {
+    padding: 2rem;
+    padding-top: 15rem;
+  }
+  .review-form h2 {
+    font-size: 20px;
+  }
+  .review-form h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .review-form h4 {
+    color: #1d563f;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .image-and-form-container-r {
+    flex-direction: column;
+    align-items: center; /* changed */
+    justify-content: center;
+    display: flex;
+
+  }
+  .image-upload-container-r {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 55px;
+  }
+  .box-decoration-r {
+    margin-right: 50px;
+  
+  }
+  .img-display-before-r,
+.img-display-after-r {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+}
+.form-fields-container {
+  width: 100%;
+}
+.form-row-rv, .form-row-fb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-group-rv {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.button-group-rv {   /* Center the buttons vertically if needed */
+  gap: 4rem;               /* Optional: Adds space between buttons */
+  margin-bottom: 2rem;        /* Optional: Adds space above the buttons */
+}
+.discard-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 12px;
+  width: 120px;
+}
+
+/* Save button */
+.save-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 12px;
+  width: 120px;
+}
+}
+@media (min-width: 401px) and (max-width: 480px) {
+  .review-form {
+    padding: 3rem;
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+  }
+  .review-form h2 {
+    font-size: 20px;
+  }
+  .review-form h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .review-form h4 {
+    color: #1d563f;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .image-and-form-container-r {
+    flex-direction: column;
+    align-items: center; /* changed */
+    justify-content: center;
+    display: flex;
+
+  }
+  .image-upload-container-r {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 55px;
+  }
+  .box-decoration-r {
+    margin-right: 50px;
+  
+  }
+  .img-display-before-r,
+.img-display-after-r {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+}
+.form-fields-container {
+  width: 100%;
+}
+.form-row-rv, .form-row-fb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-group-rv {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.button-group-rv {   /* Center the buttons vertically if needed */
+  gap: 4rem;               /* Optional: Adds space between buttons */
+  margin-bottom: 2rem;        /* Optional: Adds space above the buttons */
+}
+.discard-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 12px;
+  width: 120px;
+}
+
+/* Save button */
+.save-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 12px;
+  width: 120px;
+}
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .review-form {
+    padding: 3rem;
+    margin-top: 15rem;
+  }
+  .review-form h2 {
+    font-size: 25px;
+  }
+  .review-form h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .review-form h4 {
+    color: #1d563f;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .image-and-form-container-r {
+    flex-direction: column;
+    align-items: center; /* changed */
+    justify-content: center;
+    display: flex;
+
+  }
+  .image-upload-container-r {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 55px;
+  }
+  .box-decoration-r {
+    margin-right: 50px;
+  
+  }
+  .img-display-before-r,
+.img-display-after-r {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+}
+.form-fields-container {
+  width: 100%;
+}
+.form-row-rv, .form-row-fb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-group-rv {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form-group-rv label, .form-group-rv-rv label, .form-group-fb label, .form-group-fb-parents label, .form-group-fb-pwdip-r label, .form-group-rv-bp label {
+  font-size: 15px;
+}
+.button-group-rv {   /* Center the buttons vertically if needed */
+  gap: 4rem;               /* Optional: Adds space between buttons */
+  margin-bottom: 1rem;        /* Optional: Adds space above the buttons */
+}
+.discard-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 15px;
+  width: 120px;
+}
+
+/* Save button */
+.save-button-rv {
+  padding: 0.75rem 1.5rem;
+  font-size: 15px;
+  width: 120px;
+}
+}
+@media (min-width:769px) and (max-width: 1024px) {
+  .review-form {
+    padding: 1rem; /* Further reduce padding for mobile */
+    margin-top: 17rem;
+    }
+}

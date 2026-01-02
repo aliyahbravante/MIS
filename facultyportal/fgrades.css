@@ -1,0 +1,1388 @@
+.grades-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  color: #333333; /* Default text color for the container */
+}
+
+.grades-container::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff; /* White background */
+}
+
+.grades-container::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Light grey color for the thumb */
+  border-radius: 1px;
+}
+
+.grades-container::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.back-grades {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  color: #333333;
+}
+
+.grade-breadcrumb-button {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.grade-breadcrumb-button:hover {
+  color: #333;
+}
+
+.grade-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #333333;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.grade-details {
+  color: #000000; /* Black color for text */
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.grade-details p {
+  color: #000000; /* Ensure paragraph text is black */
+  line-height: 1.5;
+}
+
+.grade-details strong {
+  font-weight: bold;
+  color: #000000; /* Ensure strong elements are also black */
+}
+
+.grade-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  margin-left: 1rem;
+  margin-right: 6.2rem;
+}
+
+.total-label-grade {
+  font-size: 30px;
+  color: #333333;
+  margin-left: 280px;
+}
+
+.total-count-grade {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-grades {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.grades-searchbar-sses {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the search input and the add button */
+  width: 100%;
+}
+
+.grades-searchbar-sses input {
+  flex: 1;
+  max-width: 700px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.export-buttons-sses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.semester-dropdown {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 150px;
+}
+
+.semester-dropdown:hover {
+  background-color: #f8f8f8;
+}
+
+.pdf-button-grade, .excel-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pdf-button-grade:hover, .excel-button-sess:hover {
+  background-color: #f8f8f8;
+  border: 1px solid #006400;
+}
+
+.export-icon {
+  margin-right: 5px;
+}
+.grades-table-container-f {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.grades-table-container-f::-webkit-scrollbar {
+  height: 3px;
+}
+
+.grades-table-container-f::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.grades-table-container-f::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.grades-table-container-f::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: #000000; /* Ensure table text is black */
+}
+
+.grades-table th,
+.grades-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+  color: #000000; /* Ensure table cell text is black */
+}
+
+.grades-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #000000; /* Ensure header text is black */
+}
+
+.grades-table input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #000000; /* Ensure input text is black */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-grades-button {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-grades-button:hover {
+  background-color: #004d00;
+}
+
+.export-grades-button {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.export-grades-button:hover {
+  background-color: #f0f8f0;
+}
+
+.add-button-grade {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-button-grade:hover {
+  background-color: #f8f8f8;
+}
+
+.modal-grades {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-grade {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  height: 35vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-grade h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content-grade p {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content-grade label {
+  width: 90%;
+  font-size: 13px;
+  color: #006400;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: left;
+  height: 10vh;
+}
+
+.modal-content-grade input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
+}
+
+.button-group-grade {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-button-grade {
+  background-color: #006400;
+  border: 1px solid #006400;
+  color: #ffff;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 150px;
+}
+
+.save-button-grade:hover {
+  background-color: #003800;
+  border: 1px solid #006400;
+  color: #fff;
+}
+
+.discard-button-grade {
+  background-color: #ffff;
+  border: 1px solid #006400;
+  color: #006400;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 150px;
+}
+
+.discard-button-grade:hover {
+  background-color: #e7f3ec;
+  border: 1px solid #006400;
+  color: #006400;
+}
+
+/* Error message styling */
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* No data container styles */
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+.no-students-message,
+.no-search-results-message {
+  text-align: center;
+  color: #666;
+}
+
+.no-students-message h3,
+.no-search-results-message h3 {
+  color: #006400;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.no-students-message p,
+.no-search-results-message p {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.help-text {
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.critical-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.critical-error-container h3 {
+  color: #d32f2f;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.critical-error-container p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.back-button {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background-color: #004d00;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loading-container p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Styles for top-controls-enrolledstudents-ss */
+.top-controls-enrolledstudents-ss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-bar-sses {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-bar-sses input {
+  flex: 1;
+  max-width: 700px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.export-buttons-sses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.excel-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.excel-button-sses:hover {
+  background-color: #f8f8f8;
+  border: 1px solid #006400;
+}
+
+/* Large screens (1025px and above) - maintain desktop styles */
+@media (min-width: 1025px) {
+  .grades-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .grade-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: -30px;
+  }
+
+  .grade-title {
+    font-size: 30px;
+    margin-left: 1rem;
+    margin-right: 6.2rem;
+  }
+
+  .grade-details {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .top-controls-grades {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  .grades-searchbar input {
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .grades-searchbar input {
+   max-width: 700px;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .export-buttons-grades {
+    gap: 10px;
+  }
+
+  .pdf-button-grade, .excel-button-grade {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    height: 4.8vh;
+    gap: 5px;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 10px;
+  }
+
+  .grades-table input {
+    padding: 8px;
+  }
+
+  .save-grades-button {
+    padding: 10px 20px;
+  }
+
+  .modal-content-grade {
+    padding: 3rem;
+    width: 500px;
+    height: 35vh;
+  }
+
+  .modal-content-grade h3 {
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-content-grade input {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .save-button-grade, .discard-button-grade {
+    padding: 8px 25px;
+    font-size: 15px;
+    width: 150px;
+  }
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .grades-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .grade-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: -30px;
+  }
+
+  .grade-title {
+    font-size: 26px;
+    margin-left: 0.8rem;
+    margin-right: 5rem;
+  }
+
+  .grade-details {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .top-controls-grades {
+    margin-top: 0.8rem;
+    margin-bottom: 1.25rem;
+    gap: 0.8rem;
+  }
+  
+  .grades-searchbar {
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .grades-searchbar input {
+    max-width: 420px;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .export-buttons-grades {
+    gap: 8px;
+  }
+
+  .pdf-button-grade, .excel-button-grade {
+    padding: 0.45rem 0.9rem;
+    font-size: 13px;
+    height: auto;
+    gap: 4px;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 8px;
+  }
+
+  .grades-table input {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .save-grades-button {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+
+  .modal-content-grade {
+    padding: 2.5rem;
+    width: 450px;
+    height: 32vh;
+  }
+
+  .modal-content-grade h3 {
+    font-size: 22px;
+    margin-bottom: 1.25rem;
+  }
+
+  .modal-content-grade p {
+    font-size: 13px;
+  }
+
+  .modal-content-grade input {
+    padding: 0.7rem;
+    margin-bottom: 1.25rem;
+    font-size: 13px;
+  }
+
+  .save-button-grade, .discard-button-grade {
+    padding: 7px 22px;
+    font-size: 14px;
+    width: 130px;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .grades-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+
+  .grade-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: -30px;
+  }
+
+  .grade-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grade-title {
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .grade-details {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .top-controls-grades {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .grades-searchbar {
+    width: 100%;
+  }
+
+  .grades-searchbar input {
+     max-width: 700px;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .export-buttons-grades {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .pdf-button-grade, .excel-button-grade {
+    flex: 1;
+    padding: 0.4rem 1rem;
+    font-size: 12px;
+    justify-content: center;
+    height: auto;
+  }
+
+  .grades-table {
+    font-size: 12px;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+
+  .grades-table input {
+    padding: 4px;
+    font-size: 11px;
+  }
+
+  .button-group {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .save-grades-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .modal-content-grade {
+    padding: 2rem;
+    width: 85%;
+    height: auto;
+    min-height: 30vh;
+  }
+
+  .modal-content-grade h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-grade p {
+    font-size: 12px;
+  }
+
+  .modal-content-grade input {
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    font-size: 12px;
+  }
+
+  .button-group-grade {
+    gap: 1.5rem;
+  }
+
+  .save-button-grade, .discard-button-grade {
+    padding: 6px 18px;
+    font-size: 12px;
+    width: 110px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Small (401px to 480px) */
+@media (max-width: 480px) and (min-width: 401px) {
+  .grades-container {
+    padding: 0.1rem;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .grade-header {
+    gap: 0.3rem;
+    margin-bottom: 1px;
+  }
+
+  .grade-title {
+    font-size: 20px;
+  }
+
+  .grade-details {
+    font-size: 11px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .search-bar-sses {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-bar-sses input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .export-buttons-sses {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pdf-button-grade, .excel-button-sses {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 12px;
+    justify-content: center;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .grades-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .grade-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: -30px;
+  }
+
+  .grade-header {
+    gap: 0.3rem;
+  }
+
+  .grade-title {
+    font-size: 20px;
+  }
+
+  .grade-details {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .search-bar-sses {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-bar-sses input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .search-bar-sses input::placeholder {
+    font-size: 11px;
+  }
+
+  .export-buttons-sses {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pdf-button-grade, .excel-button-sses {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .export-icon {
+    font-size: 12px;
+    margin-right: 3px;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 4px 3px;
+    font-size: 9px;
+  }
+
+  .grades-table input {
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  .save-grades-button {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+
+  .modal-content-grade {
+    padding: 30px;
+    width: 95%;
+    height: auto;
+    min-height: 25vh;
+    max-height: 85vh;
+  }
+
+  .modal-content-grade h3 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-grade p {
+    font-size: 11px;
+  }
+
+  .modal-content-grade input {
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 11px;
+  }
+
+  .button-group-grade {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .save-button-grade, .discard-button-grade {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .error-message {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Extra Small (321px to 400px) */
+@media (max-width: 400px) and (min-width: 321px) {
+  .grades-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 3rem;
+  }
+
+  .grade-header {
+    gap: 0.25rem;
+  }
+
+  .grade-title {
+    font-size: 18px;
+  }
+
+  .grade-details {
+    font-size: 10px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .search-bar-sses {
+    gap: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-bar-sses input {
+    width: 100%;
+    max-width: 100%;
+    padding: 7px;
+    font-size: 11px;
+  }
+
+  .export-buttons-sses {
+    display: flex;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .pdf-button-grade, .excel-button-sses {
+    flex: 1;
+    padding: 0.45rem 0.7rem;
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .export-icon {
+    font-size: 11px;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .grades-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+  }
+
+  .grade-breadcrumb-button {
+    font-size: 10px;
+  }
+
+  .grade-header {
+    gap: 0.2rem;
+  }
+
+  .grade-title {
+    font-size: 18px;
+  }
+
+  .grade-details {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 5px;
+  }
+
+  .search-bar-sses {
+    gap: 8px;
+  }
+
+  .search-bar-sses input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .search-bar-sses input::placeholder {
+    font-size: 10px;
+  }
+
+  .export-buttons-sses {
+    gap: 0.4rem;
+  }
+
+  .pdf-button-grade, .excel-button-sses {
+    padding: 0.4rem 0.6rem;
+    font-size: 10px;
+  }
+
+  .export-icon {
+    font-size: 10px;
+    margin-right: 2px;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 3px 2px;
+    font-size: 8px;
+  }
+
+  .grades-table input {
+    padding: 2px;
+    font-size: 9px;
+  }
+
+  .save-grades-button {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .modal-content-grade {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .modal-content-grade h3 {
+    font-size: 14px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-content-grade p {
+    font-size: 10px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-content-grade input {
+    padding: 0.4rem;
+    margin-bottom: 0.6rem;
+    font-size: 10px;
+  }
+
+  .button-group-grade {
+    gap: 0.8rem;
+  }
+
+  .save-button-grade, .discard-button-grade {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .error-message {
+    font-size: 10px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .grades-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .grade-header {
+    margin-bottom: 0.8rem;
+  }
+
+  .top-controls-grades {
+    margin-bottom: 0.8rem;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    padding: 4px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .grades-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .modal-content-grade {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .grades-container {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .export-buttons-grades {
+    display: none;
+  }
+  
+  .back-grades {
+    display: none;
+  }
+  
+  .save-grades-button {
+    display: none;
+  }
+  
+  .grades-table {
+    font-size: 12px;
+  }
+  
+  .grades-table th,
+  .grades-table td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .modal-grades {
+    display: none;
+  }
+  
+  .export-buttons-sses {
+    display: none;
+  }
+  
+  .search-bar-sses {
+    display: none;
+  }
+  
+  .top-controls-enrolledstudents-ss {
+    display: none;
+  }
+}
+/* Status row styling */
+.status-dropped {
+  background-color: #ffebee !important;
+  color: #c62828;
+}
+
+.status-dropped td {
+  color: #c62828 !important;
+}
+
+.status-transferred {
+  background-color: #fff3e0 !important;
+  color: #e65100;
+}
+
+.status-transferred td {
+  color: #e65100 !important;
+}
+
+.status-graduated {
+  background-color: #e8f5e9 !important;
+  color: #2e7d32;
+}
+
+.status-graduated td {
+  color: #2e7d32 !important;
+}
+
+.status-potential-graduate {
+  background-color: #f1f8e9 !important;
+  color: #558b2f;
+}
+
+.status-potential-graduate td {
+  color: #558b2f !important;
+}
+
+/* Grade N/A styling */
+.grade-na {
+  background-color: #f5f5f5;
+  color: #757575;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Remarks styling for different statuses */
+.remarks-dropped {
+  color: #c62828 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.remarks-transferred {
+  color: #e65100 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.remarks-graduated {
+  color: #2e7d32 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments for status rows */
+@media (max-width: 768px) {
+  .status-dropped,
+  .status-transferred,
+  .status-graduated {
+    font-size: 10px;
+  }
+  
+  .remarks-dropped,
+  .remarks-transferred,
+  .remarks-graduated {
+    font-size: 9px;
+    font-weight: 600;
+  }
+  
+  .grade-na {
+    font-size: 9px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-dropped,
+  .status-transferred,
+  .status-graduated {
+    font-size: 9px;
+  }
+  
+  .remarks-dropped,
+  .remarks-transferred,
+  .remarks-graduated {
+    font-size: 8px;
+    font-weight: 600;
+  }
+  
+  .grade-na {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .status-dropped,
+  .status-transferred,
+  .status-graduated {
+    font-size: 8px;
+  }
+  
+  .remarks-dropped,
+  .remarks-transferred,
+  .remarks-graduated {
+    font-size: 7px;
+    font-weight: 600;
+  }
+  
+  .grade-na {
+    font-size: 7px;
+  }
+}
+
+/* Print styles for status rows */
+@media print {
+  .status-dropped {
+    background-color: #ffebee !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .status-transferred {
+    background-color: #fff3e0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .status-graduated {
+    background-color: #e8f5e9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

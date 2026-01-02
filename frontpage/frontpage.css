@@ -1,0 +1,1223 @@
+
+.frontpage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.frontpage-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.frontpage::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.frontpage::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.navbar-fp {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 18px;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Logo Container */
+.logo-container-fp {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image */
+.logo-img-fp {
+  width: 50px;
+  height: 50px;
+  margin-right: 4px;
+  margin-left: 15px;
+}
+
+.divider-line-fp {
+  width: 5px;
+  height: 55px;
+  background-color: #006400; /* Dark green */
+  margin: 0 15px;
+  border-radius: 5px;
+}
+
+/* Logo Text */
+.logo-text-fp h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  font-family: Poppins;
+}
+
+.logo-text-fp h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006400;
+  font-family: Poppins;
+}
+
+.nav-links-fp {
+display: flex;
+list-style: none;
+margin-left: 30rem;
+}
+
+
+.nav-links-fp li {
+  margin: 0 20px;
+}
+
+.nav-links-fp li a {
+  color: #006400;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 16px;
+  margin-right: 30px;
+
+}
+
+.nav-links-fp li a:hover {
+  border-bottom: 4px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.nav-links-fp li.active a {
+  border-bottom: 4px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* Styling for each nav-link button */
+.nav-links-fp li button {
+  background-color: transparent; /* No background for buttons */
+  border: none; /* Remove default button border */
+  outline: none; /* Remove focus outline */
+  color: #006400; /* Default text color */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 10px 15px; /* Add padding for clickable area */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Remove focus outline when clicked or focused */
+.nav-links-fp li button:focus {
+  outline: none; /* No focus outline */
+}
+/* Hover effect for nav-link buttons */
+.nav-links-fp li button:hover {
+  border-bottom: 4px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* Active state for the current section */
+.nav-links-fp li button.active {
+  border-bottom: 4px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.header-section {
+  margin-top: 80px; /* Adjust based on navbar height */
+  background-image: url('/src/assets/frontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  position: relative; /* Allows absolute positioning for buttons */
+}
+
+.header-content {
+  text-align: left;
+  margin-left: 8rem;
+  flex: 1;
+  z-index: 1; /* Ensures content is above the background image */
+}
+
+.header-content h1 {
+  margin-top: 80px; /* Adjust based on navbar height */
+  font-size: 5rem; /* Increase the font size */
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-family: Poppins;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.buttons-container {
+  position: absolute;
+  right: 50px; /* Position buttons to the right */
+  margin-right: 10rem;
+  margin-top: 80px; /* Adjust based on navbar height */
+  top: 100px;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Add spacing between buttons */
+}
+
+.buttons-container button {
+  margin-top: 80px; /* Adjust based on navbar height */
+  width: 20rem;
+  margin: 5px;
+  padding: 15px 25px;
+  background-color: white; /* Make the initial button background white */
+  color: #006400; /* Dark green text color */
+  border: none;
+  border-radius: 25px; /* More rounded for a pill shape */
+  font-size: 1rem;
+  font-family: Poppins;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+}
+
+.buttons-container button:hover {
+  background-color: #006400; /* Change background to dark green on hover */
+  color: white; /* White text on hover */
+  font-weight: bold;
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+
+.hamburger-menu div {
+width: 30px;
+height: 3px;
+background-color: #006400;
+margin: 5px 0;
+}
+
+/* Programs Offered Section */
+.programs-offered {
+  background-color: #fcfcfc;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.programs-offered h2 {
+  margin-top: 50px; 
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 70px;
+  font-family: Poppins, sans-serif;
+}
+
+.campus-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.campus-box {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 80px; 
+}
+
+.campus-box h3 {
+  font-size: 1.8rem;
+  color: #006400;
+  margin-bottom: 15px;
+}
+
+.program-category {
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.program-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.program-list li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 5px 0;
+  padding-left: 20px;
+  position: relative;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.program-list li::before {
+  content: "•";
+  color: #006400;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+
+/* Vision and Mission */
+.vision-mission {
+  background-color: #ffff;
+  border-top: 2px solid #eaeaea;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.vision-mission h2 {
+  margin-top: 50px; 
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 90px;
+  font-family: Poppins, sans-serif;
+}
+
+.vision-mission-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.vision-box, .mission-box {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 80px;
+}
+
+.vision-box h3, .mission-box h3 {
+  font-size: 1.8rem;
+  color: #006400;
+  margin-bottom: 15px;
+}
+
+.vision-box p, .mission-box p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+/* Why Choose Us Section */
+.why-choose-us {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  border-top: 2px solid #eaeaea;
+
+  
+}
+
+.why-choose-us h2 {
+  margin-top: 50px; 
+  font-size: 2rem;
+  color: #006400;
+  margin-bottom: 20px;
+}
+
+.why-slider-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.swiper-container {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  width: 100px; /* Controls slide width */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img {
+  width: 80rem;
+  height: 50vh;
+  border-radius: 5px;
+  object-fit: cover;
+  
+
+}
+
+/* Pagination styling */
+.swiper-pagination-bullet {
+  background: #006400 !important; /* Dark green pagination dots */
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #32cd32 !important; /* Brighter green for active dot */
+  transform: scale(1.2); /* Slightly larger active dot */
+}
+
+/* Navigation Arrow Styling */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #006400 !important; /* Dark green for the navigation arrows */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #32cd32 !important; /* Bright green on hover */
+}
+
+/* Text under the slider */
+.why-slider-container p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.footer-section {
+  background: linear-gradient(to bottom, #ffffff, #1a854c); /* Gradient background */
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo {
+  width: 100px; /* Adjust the size of the logo */
+  margin-bottom: 20px;
+}
+
+.footer-quote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  margin: 10px 0;
+}
+
+.footer-inquiry {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333333;
+}
+
+.footer-address {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+display: none;
+cursor: pointer;
+font-size: 30px;
+color: #006400;
+}
+.icon-menu {
+display: none;
+font-size: 12px;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+.frontpage {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.frontpage::-webkit-scrollbar {
+width: 1px;
+background-color: #ffffff;
+}
+
+.frontpage::-webkit-scrollbar-thumb {
+background-color: #b0b0b0; /* Light grey color for the thumb */
+border-radius: 5px;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-right: 1rem;
+}
+.icon-menu {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Navbar */
+.navbar-fp {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 8vh;
+  width: 100%;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 5px;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.logo-img-fp {
+    width: 35px;
+    height: 35px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.divider-line-fp {
+    height: 35px;
+    width: 3px;
+    background-color: #006400; /* Dark green */
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.logo-container-fp {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text-fp h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  font-family: Poppins;
+}
+
+.logo-text-fp h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #006400;
+  font-family: Poppins;
+}
+
+.nav-links-fp {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 40px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 50%;
+  height: 35vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links-fp.active {
+  display: flex;  
+  
+}
+
+.nav-links-fp li {
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.nav-links-fp li button {
+  width: 100%;
+  text-align: left;
+}
+
+.nav-links-fp li a {
+  color: #006400;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 20px;
+  margin-right: 30px;
+
+}
+
+.nav-links-fp li a:hover {
+  border-bottom: 2px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links-fp li button {
+display: flex; /* Enables flexbox */
+align-items: center; /* Aligns items (icon and text) vertically */
+gap: 8px; /* Adds spacing between icon and text */
+background-color: transparent;
+border: none;
+outline: none;
+color: #006400;
+font-size: 12px;
+font-weight: bold;
+cursor: pointer;
+padding: 10px 15px;
+transition: color 0.3s ease, background-color 0.3s ease;
+}
+/* Remove focus outline when clicked or focused */
+.nav-links-fp li button:focus {
+outline: none; /* No focus outline */
+}
+/* Hover effect for nav-link buttons */
+.nav-links-fp li button:hover {
+border-bottom: 2px solid #006400;
+background-color: #1a854c;
+color: #fcfcfc;
+border-radius: 1px;
+font-weight: bold;
+font-size: 12px;
+}
+
+/* Active state for the current section */
+.nav-links-fp li button.active {
+border-bottom: 2px solid #006400;
+border-radius: 1px;
+font-weight: bold;
+font-size: 8px;
+}
+
+/* Header Section */
+.header-section {
+  margin-top: 60px; /* Adjust based on navbar height */
+  background-image: url('/src/assets/frontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  position: relative; /* Allows absolute positioning for buttons */
+}
+
+.header-content {
+  text-align: left;
+  margin-left: 10px;
+  flex: 1;
+  z-index: 1; /* Ensures content is above the background image */
+}
+
+.header-content h1 {
+  font-size: 25px; /* Increase the font size */
+  font-weight: bold;
+  font-family: Poppins;
+  margin: 3%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.buttons-container {
+  position: absolute;
+    margin: 1px auto;
+    top: 50px;
+    text-align: center;
+    display: flex;
+   flex-direction: column; /* Stack buttons vertically */
+    gap: 1px;
+}
+
+.buttons-container button {
+  margin-top: 10px; /* Adjust based on navbar height */
+  width: 100%;
+  padding: 10px 25px;
+  background-color: white; /* Make the initial button background white */
+  color: #006400; /* Dark green text color */
+  border: none;
+  border-radius: 25px; /* More rounded for a pill shape */
+  font-size: 10px;
+  font-family: Poppins;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+}
+
+.hamburger-menu {
+  display: flex;
+}
+/* Programs Offered */
+
+.programs-offered {
+  background-color: #fcfcfc;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.programs-offered h2 {
+  margin-top: 5px; 
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 20px;
+  font-family: Poppins, sans-serif;
+}
+
+.campus-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.campus-box {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 20px; 
+}
+
+.campus-box h3 {
+  font-size: 18px;
+  color: #006400;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.program-category {
+font-weight: bold;
+color: #333;
+margin-top: 20px;
+margin-bottom: 20px;
+text-align: left;
+margin-left: 20px;
+font-size: 15px;
+}
+
+.program-list {
+list-style-type: none;
+padding: 0;
+margin: 0;
+color: #333;
+margin-bottom: 10px;
+}
+
+.program-list li {
+    font-size: 9px;
+    line-height: 1.6;
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+/* Vision and Mission */
+
+.vision-mission {
+  background-color: #fcfcfc;
+  border-top: 2px solid #eaeaea;
+  text-align: center;
+}
+
+.vision-mission h2 {
+  margin-top: 10px;
+  padding: 0 70px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 30px;
+  font-family: Poppins, sans-serif;
+}
+
+.vision-mission-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.vision-box, .mission-box {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 10px;
+}
+
+.vision-box h3, .mission-box h3 {
+  font-size: 15px;
+  color: #006400;
+  margin-bottom: 15px;
+}
+
+.vision-box p, .mission-box p {
+  font-size: 12px !important;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  text-align: center;
+  padding: 10px 5px;
+  background-color: #ffffff;
+  border-top: 2px solid #eaeaea;
+
+  
+}
+
+.why-choose-us h2 {
+  margin-top: 30px; 
+  font-size: 25px;
+  color: #006400;
+  margin-bottom: 2px;
+}
+
+.why-slider-container {
+  width: 100%;
+  height: 40vh;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.swiper-container {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  width: 50%; /* Controls slide width */
+  height: 20vh;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100vh;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+
+/* Footer */
+.why-slider-container p {
+  margin-top: 20px;
+  font-size: 10px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  background: linear-gradient(to bottom, #ffffff, #1a854c); /* Gradient background */
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo {
+  margin-top: 70px;
+  width: 50px; /* Adjust the size of the logo */
+  margin-bottom: 5px;
+}
+
+.footer-quote {
+  font-size: 15px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+}
+
+.footer-inquiry {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333333;
+}
+
+.footer-address {
+  font-size: 9px;
+  line-height: 2;
+  margin: 2%;
+  color: #ffffff;
+}
+}
+
+/* Tablet View (For screens between 481px and 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+.frontpage {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.hamburger-menu {
+  display: block;
+  margin-right: 1rem;
+}
+.icon-menu {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Navbar */
+.navbar-fp {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 8vh;
+  width: 100%;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 5px;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.logo-img-fp {
+    width: 35px;
+    height: 35px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.divider-line-fp {
+    height: 35px;
+    width: 3px;
+    background-color: #006400; /* Dark green */
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.logo-container-fp {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text-fp h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  font-family: Poppins;
+}
+
+.logo-text-fp h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #006400;
+  font-family: Poppins;
+}
+
+.nav-links-fp {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 61px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 25%;
+  height: 30vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links-fp.active {
+  display: flex;  
+  
+}
+
+.nav-links-fp li {
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.nav-links-fp li button {
+  width: 100%;
+  text-align: left;
+}
+
+.nav-links-fp li a {
+  color: #006400;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 20px;
+  margin-right: 30px;
+
+}
+
+.nav-links-fp li a:hover {
+  border-bottom: 2px solid #006400;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links-fp li button {
+display: flex; /* Enables flexbox */
+align-items: center; /* Aligns items (icon and text) vertically */
+gap: 8px; /* Adds spacing between icon and text */
+background-color: transparent;
+border: none;
+outline: none;
+color: #006400;
+font-size: 12px;
+font-weight: bold;
+cursor: pointer;
+padding: 10px 15px;
+transition: color 0.3s ease, background-color 0.3s ease;
+}
+/* Remove focus outline when clicked or focused */
+.nav-links-fp li button:focus {
+outline: none; /* No focus outline */
+}
+/* Hover effect for nav-link buttons */
+.nav-links-fp li button:hover {
+border-bottom: 2px solid #006400;
+background-color: #1a854c;
+color: #fcfcfc;
+border-radius: 1px;
+font-weight: bold;
+font-size: 12px;
+}
+
+/* Active state for the current section */
+.nav-links-fp li button.active {
+border-bottom: 2px solid #006400;
+border-radius: 1px;
+font-weight: bold;
+font-size: 8px;
+}
+
+/* Header Section */
+.header-section {
+  margin-top: 60px; /* Adjust based on navbar height */
+  background-image: url('/src/assets/frontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  position: relative; /* Allows absolute positioning for buttons */
+}
+
+/* Header Section */
+.header-section {
+    height: 680px;
+}
+
+.header-content {
+  text-align: left;
+  margin-left: 10px;
+  flex: 1;
+  z-index: 1; /* Ensures content is above the background image */
+}
+
+.header-content h1 {
+  font-size: 65px; /* Increase the font size */
+  font-weight: bold;
+  font-family: Poppins;
+  margin: 3%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.buttons-container {
+  position: absolute;
+    margin: 1px auto;
+    top: 150px;
+    text-align: center;
+    display: flex;
+   flex-direction: column; /* Stack buttons vertically */
+    gap: 1px;
+}
+
+.buttons-container button {
+    width: 18rem;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Campus Boxes */
+.campus-container {
+    flex-direction: column; /* Stack for better readability */
+    align-items: center;
+}
+
+.campus-box {
+    width: 90%;
+}
+
+/* Vision & Mission */
+.vision-mission-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.vision-box, .mission-box {
+    width: 90%;
+}
+
+/* Footer Adjustments */
+.footer-section {
+    padding: 30px;
+}
+
+.footer-quote {
+    font-size: 1.3rem;
+}
+
+.footer-inquiry {
+    font-size: 1rem;
+}
+}
+@media (min-width: 481px) and (max-width: 768px) {
+.header-content h1{
+font-size: 45px;
+}
+}
+
+/* Image Zoom Modal */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease-in-out;
+  cursor: default;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  transform: scale(1.2);
+  color: #32cd32;
+}
+
+/* Footer link styles */
+.footer-link {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #55ffcc;
+}
+

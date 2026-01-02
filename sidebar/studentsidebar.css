@@ -1,0 +1,655 @@
+.student-sidebar {
+    width: 400px;
+    background: linear-gradient(to right, #004d40, #00695c);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    position: relative;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.student-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 99, 23, 0.5); /* Adjust color and opacity as needed */
+    z-index: 1;
+}
+
+/* Logo Section */
+.logo-section-ss {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-img-sss {
+    width: 80px; /* Adjust image size */
+    height: 80px;
+    background: none; /* Ensure there's no background */
+    object-fit: contain; /* Ensure the image fits inside the given size */
+}
+
+.divider-line-ss {
+    width: 20px;
+    height: 70px;
+    background-color: #ffffff; /* Dark green */
+    border-radius: 5px;
+}
+
+/* Logo Text */
+.logo-text-ss h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Dark green */
+    font-family: Poppins;
+}
+
+.logo-text-ss h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: Poppins;
+}
+
+.menu-link-ss .icon-ss {
+    margin-right: 20px;
+    font-size: 24px;
+}
+  
+/* Section Titles */
+.section-title-ssss {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Poppins;
+    margin: 20px 0 10px;
+    color: #4FA78D;
+    margin-left: 60px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+}
+
+/* Menu Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.h3 {
+    margin-left: 50px;
+}
+
+.menu-link-ss {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+    margin-left: 90px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-link-ss span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.menu-link-ss span:hover {
+    color: #55ffcc;
+    font-weight: bold;
+}
+
+.menu-link-ss:hover {
+    color: #55ffcc;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-link-ss svg {
+    margin-right: 8px;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link-ss {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link-ss span {
+    font-weight: bold;
+    color: #55ffcc;
+    text-decoration: underline;
+}
+
+ul li.active .icon-ss {
+    font-weight: bold;
+    color: #55ffcc;
+}
+  
+.menu-link-ss:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #55ffcc;
+}
+
+.sidebar-section-1-ss {
+    margin-bottom: 200px;
+}
+
+/* Sidebar Container */
+.student-sidebar-container {
+    position: relative;
+    height: 100vh;
+}
+  
+/* Mobile Menu Button */
+.hamburger-menu-side-ss {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #006400;
+}
+
+.logo-container-side-ss {
+    display: none;
+}
+  
+/* Mobile Menu (Hidden by Default) */
+@media (max-width: 480px) {
+    .student-sidebar {
+        z-index: 1100;
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0;
+        position: fixed;
+    } 
+    
+    .student-sidebar.active {
+        transform: translateX(0);
+        width: 300px;
+        padding: 0;
+        height: 100vh;
+    }
+    
+    .hamburger-menu-side-ss {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ss {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ss {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ss {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ss {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ss h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ss h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ss {
+        display: none;
+    }
+    
+    .sidebar-section-1-ss {
+        margin-bottom: 250px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ssss {
+        right: 40px;
+        font-size: 16px;
+    }
+    
+    .menu-link-ss {
+        right: 55px;
+        font-size: 14px;
+    }
+    
+    .menu-link-ss:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .icon-ss {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .student-sidebar {
+        z-index: 1100;
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0;
+        position: fixed;
+    } 
+    
+    .student-sidebar.active {
+        transform: translateX(0);
+        width: 300px;
+        padding: 0;
+        height: 100vh;
+    }
+    
+    .hamburger-menu-side-ss {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ss {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 10vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ss {
+        width: 35px;
+        height: 35px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ss {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ss {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ss h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ss h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ss {
+        display: none;
+    }
+    
+    .sidebar-section-1-ss {
+        margin-bottom: 130px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ssss {
+        right: 40px;
+        font-size: 16px;
+    }
+    
+    .menu-link-ss {
+        right: 55px;
+        font-size: 14px;
+    }
+    
+    .menu-link-ss:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .icon-ss {
+        right: 20px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .student-sidebar {
+        z-index: 1100;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0;
+        overflow: hidden;
+    } 
+    
+    .student-sidebar.active {
+        transform: translateX(0);
+        width: 300px;
+        padding: 0;
+    }
+    
+    .hamburger-menu-side-ss {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ss {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ss {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ss {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ss {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ss h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ss h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ss {
+        display: none;
+    }
+    
+    .sidebar-section-1-ss {
+        margin-top: 10px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ssss {
+        right: 40px;
+        font-size: 16px;
+    }
+    
+    .menu-link-ss {
+        right: 55px;
+        font-size: 14px;
+    }
+    
+    .menu-link-ss:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+/* Desktop and larger screens - keep default styles above 1024px */
+@media (min-width: 1025px) {
+    .student-sidebar {
+        position: relative;
+        transform: translateX(0);
+        width: 400px;
+        padding: 20px;
+    }
+    
+    .hamburger-menu-side-ss {
+        display: none;
+    }
+    
+    .navbar-side-ss {
+        display: none;
+    }
+    
+    .logo-container-side-ss {
+        display: none;
+    }
+    
+    .logo-section-ss {
+        display: flex;
+    }
+    
+    .sidebar-section-1-ss {
+        margin-bottom: 200px;
+    }
+    
+    .section-title-ssss {
+        font-size: 25px;
+        margin-left: 60px;
+    }
+    
+    .menu-link-ss {
+        font-size: 16px;
+        margin-left: 90px;
+    }
+    
+    .menu-link-ss:hover {
+        font-size: 16px;
+    }
+    
+    .icon-ss {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    /* Laptop size only - Sidebar toggle functionality */
+    .student-sidebar.sidebar-closed {
+        width: 100px;
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    .student-sidebar.sidebar-closed .logo-section-ss {
+        flex-direction: column;
+        gap: 0;
+        margin-left: 0;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .student-sidebar.sidebar-closed .logo-img-sss {
+        width: 60px;
+        height: 60px;
+    }
+
+    .student-sidebar.sidebar-closed .divider-line-ss {
+        display: none;
+    }
+
+    .student-sidebar.sidebar-closed .logo-text-ss {
+        display: none;
+    }
+
+    .student-sidebar.sidebar-closed .section-title-ssss {
+        display: none;
+    }
+
+    .student-sidebar.sidebar-closed .menu-link-ss {
+        justify-content: center;
+        margin-left: 0;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .student-sidebar.sidebar-closed .menu-link-ss .icon-ss {
+        margin-right: 0;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .student-sidebar.sidebar-closed .menu-link-ss span {
+        display: none;
+    }
+
+    .student-sidebar.sidebar-closed .sidebar-menu-side-ss {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-sidebar.sidebar-closed .sidebar-section-1-ss {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-sidebar.sidebar-closed ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-sidebar.sidebar-closed .menu-link-ss {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-toggle-btn-ss {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .logo-toggle-btn-ss:hover {
+        opacity: 0.8;
+    }
+
+    .logo-toggle-btn-ss:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+}

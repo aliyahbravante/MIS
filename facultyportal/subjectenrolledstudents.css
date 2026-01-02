@@ -1,0 +1,848 @@
+/* Application Container */
+.ss-enrolled-students-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff; /* White background */
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar-thumb {
+  background-color: #ffff; /* Light grey color for the thumb */
+  border-radius: 1px;
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.back-subject-schedule {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.subject-schedule-breadcrumb-button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.subject-schedule-breadcrumb-button:hover {
+  color: #3333;
+}
+
+.header-sses {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-title-sses {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.total-container-sses {
+  font-size: 40px;
+  color: #333333;
+  margin-left: auto;
+  white-space: nowrap;
+  margin-top: 30px;
+  flex-direction: row;
+  align-items: right;
+}
+
+.total-label-sses {
+  font-size: 40px;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.total-count-sses {
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-enrolledstudents-ss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-bar-sses {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the search input and the add button */
+  width: 100%;
+}
+
+.search-bar-sses input {
+  flex: 1;
+  max-width: 700px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.export-buttons-sses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pdf-button-sses, .excel-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pdf-button-sses:hover, .excel-button-sses:hover {
+  background-color: #f8f8f8;
+  border: 1px solid #006400;
+}
+
+.export-icon {
+  font-size: 16px;
+}
+
+.application-table-sses {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.application-table-sses th,
+.application-table-sses td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.application-table-sses th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.application-table-sses td {
+  color: #555555;
+  font-size: 11px;
+}
+
+.application-table-sses td:last-child,
+.application-table-sses td:nth-last-child(2) {
+  text-align: center;
+}
+
+.application-table-sses tr:hover {
+  background-color: #f9f9f9;
+}
+
+.add-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 1rem;
+}
+
+.add-button-sses:hover {
+  background-color: #f8f8f8;
+}
+
+.edit-icon-ses {
+  font-size: 16px;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+/* Updated Modal Styling */
+.modal-schedule-ses {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-ses {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  height: 35vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-ses h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content-ses p {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.modal-content-ses input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.button-group-ses {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.save-button-ses,
+.cancel-button-ses {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button-ses {
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.cancel-button-ses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-button-ses:hover {
+  background-color: #004d33;
+}
+
+.cancel-button-ses:hover {
+  background-color: #e6f5e9;
+}
+
+/* Large screens (1025px and above) - maintain desktop styles */
+@media (min-width: 1025px) {
+  .ss-enrolled-students-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .subject-schedule-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: -30px;
+  }
+
+  .application-title-sses {
+    font-size: 30px;
+    margin-left: 1rem;
+    margin-right: 6.2rem;
+  }
+
+  .total-container-sses {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .total-label-sses {
+    font-size: 40px;
+    margin-right: 8px;
+  }
+
+  .total-count-sses {
+    font-size: 40px;
+  }
+  .search-bar-sses{
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .search-bar-sses input {
+    max-width: 700px;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .pdf-button-sses, .excel-button-sses {
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 15px;
+  }
+
+  .application-table-sses th {
+    font-size: 11px;
+  }
+
+  .application-table-sses td {
+    font-size: 11px;
+  }
+
+  .modal-content-ses {
+    padding: 3rem;
+    width: 500px;
+    height: 35vh;
+  }
+
+  .modal-content-ses h3 {
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-content-ses p {
+    font-size: 14px;
+  }
+
+  .save-button-ses, .cancel-button-ses {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .ss-enrolled-students-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .subject-schedule-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: -30px;
+  }
+
+  .application-title-sses {
+    font-size: 26px;
+    margin-left: 0.8rem;
+    margin-right: 5rem;
+  }
+
+  .total-container-sses {
+    font-size: 32px;
+    margin-top: 25px;
+  }
+
+  .total-label-sses {
+    font-size: 32px;
+    margin-right: 6px;
+  }
+
+  .total-count-sses {
+    font-size: 32px;
+  }
+    .search-bar-sses{
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+
+  .search-bar-sses input {
+     max-width: 700px;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .pdf-button-sses, .excel-button-sses {
+    padding: 0.45rem 1.25rem;
+    font-size: 13px;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 12px;
+  }
+
+  .application-table-sses th {
+    font-size: 10px;
+  }
+
+  .application-table-sses td {
+    font-size: 10px;
+  }
+
+  .modal-content-ses {
+    padding: 2.5rem;
+    width: 450px;
+    height: 32vh;
+  }
+
+  .modal-content-ses h3 {
+    font-size: 22px;
+    margin-bottom: 1.25rem;
+  }
+
+  .modal-content-ses p {
+    font-size: 13px;
+  }
+
+  .save-button-ses, .cancel-button-ses {
+    font-size: 13px;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .ss-enrolled-students-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+
+  .subject-schedule-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: -30px;
+  }
+
+  .header-sses {
+    gap: 0.5rem;
+  }
+
+  .application-title-sses {
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .total-container-sses {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .total-label-sses {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .total-count-sses {
+    font-size: 24px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+     .search-bar-sses{
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .search-bar-sses input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .export-buttons-sses {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .pdf-button-sses, .excel-button-sses {
+    flex: 1;
+    padding: 0.4rem 1rem;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 10px 8px;
+  }
+
+  .application-table-sses th {
+    font-size: 9px;
+  }
+
+  .application-table-sses td {
+    font-size: 9px;
+  }
+
+  .modal-content-ses {
+    padding: 2rem;
+    width: 85%;
+    height: auto;
+    min-height: 30vh;
+  }
+
+  .modal-content-ses h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-ses p {
+    font-size: 12px;
+  }
+
+  .button-group-ses {
+    gap: 1.5rem;
+  }
+
+  .save-button-ses, .cancel-button-ses {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+    min-width: 90px;
+  }
+
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .ss-enrolled-students-container {
+    padding: 0.1rem;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+    margin-bottom: 6rem;
+  }
+
+  .subject-schedule-breadcrumb-button {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: -30px;
+  }
+
+  .header-sses {
+    gap: 0.5rem;
+  }
+
+  .application-title-sses {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .total-container-sses {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 0;
+    align-self: left;
+  }
+
+  .total-label-sses {
+    font-size: 20px;
+    margin-right: 4px;
+  }
+
+  .total-count-sses {
+    font-size: 20px;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    gap: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .search-bar-sses {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .search-bar-sses input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .export-buttons-sses {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .pdf-button-sses, .excel-button-sses {
+    flex: 1;
+    padding: 0.4rem 0.8rem;
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .export-icon {
+    font-size: 12px;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 8px 6px;
+  }
+
+  .application-table-sses th {
+    font-size: 8px;
+  }
+
+  .application-table-sses td {
+    font-size: 8px;
+  }
+
+  .modal-content-ses {
+    padding: 1.5rem;
+    width: 95%;
+    height: auto;
+    min-height: 25vh;
+  }
+
+  .modal-content-ses h3 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content-ses p {
+    font-size: 11px;
+  }
+
+  .button-group-ses {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .save-button-ses, .cancel-button-ses {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .error-message {
+    font-size: 11px;
+    padding: 0.75rem;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .ss-enrolled-students-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+  }
+
+  .subject-schedule-breadcrumb-button {
+    font-size: 10px;
+  }
+
+  .application-title-sses {
+    font-size: 14px;
+  }
+
+  .total-container-sses {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .total-label-sses {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+
+  .total-count-sses {
+    font-size: 16px;
+  }
+
+  .search-bar-sses input {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .pdf-button-sses, .excel-button-sses {
+    padding: 0.3rem 0.6rem;
+    font-size: 10px;
+  }
+
+  .export-icon {
+    font-size: 10px;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 6px 4px;
+  }
+
+  .application-table-sses th {
+    font-size: 7px;
+  }
+
+  .application-table-sses td {
+    font-size: 7px;
+  }
+
+  .modal-content-ses {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .modal-content-ses h3 {
+    font-size: 14px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-content-ses p {
+    font-size: 10px;
+    margin-bottom: 0.8rem;
+  }
+
+  .save-button-ses, .cancel-button-ses {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .error-message {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .ss-enrolled-students-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .application-title-sses {
+    margin-bottom: 0.5rem;
+  }
+
+  .top-controls-enrolledstudents-ss {
+    margin-bottom: 0.8rem;
+  }
+
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 6px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .application-table-sses {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .modal-content-ses {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .ss-enrolled-students-container {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .export-buttons-sses {
+    display: none;
+  }
+  
+  .back-subject-schedule {
+    display: none;
+  }
+  
+  .application-table-sses {
+    font-size: 12px;
+  }
+  
+  .application-table-sses th,
+  .application-table-sses td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .modal-schedule-ses {
+    display: none;
+  }
+}

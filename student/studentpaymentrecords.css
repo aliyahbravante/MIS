@@ -1,0 +1,1163 @@
+/* Main Container */
+.payment-records-container-spay {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.payment-records-container-spay::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.payment-records-container-spay::-webkit-scrollbar-thumb {
+  background-color: #ffff;
+  border-radius: 1px;
+}
+
+.payment-records-container-spay::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* Header Section */
+.payment-records-title-spay {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+}
+
+.top-controls-payment-records-spay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.buttons-group-payment-records-spay {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Button Styles */
+.xls-button-payment-records-spay,
+.pdf-button-payment-records-spay {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.xls-button-payment-records-spay:hover,
+.pdf-button-payment-records-spay:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.xls-button-payment-records-spay:disabled,
+.pdf-button-payment-records-spay:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+.xls-button-payment-records-spay:disabled:hover,
+.pdf-button-payment-records-spay:disabled:hover {
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+/* Pay Button Styles */
+.pay-button-payment-records-spay {
+  padding: 0.65rem 1.5rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.pay-button-payment-records-spay:hover {
+  background-color: #004d33;
+}
+
+.pay-button-payment-records-spay:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.pay-button-payment-records-spay:disabled:hover {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Table Container */
+.payment-records-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.payment-records-table-container::-webkit-scrollbar {
+  height: 1px;
+}
+
+.payment-records-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.payment-records-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1px;
+}
+
+.payment-records-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Table Styles */
+.payment-records-table-spay {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.payment-records-table-spay th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.payment-records-table-spay td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.payment-records-table-spay tr:hover {
+  background-color: #f9f9f9;
+}
+
+.payment-records-table-spay .amount-column {
+  text-align: right !important;
+  padding-right: 20px;
+}
+
+/* Balance Summary */
+.balance-summary-spay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.balance-summary-spay span {
+  font-weight: bold;
+  color: #333333;
+}
+
+.balance-input-spay {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* No Data Container */
+.no-data-container-spay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.no-records-message-styled {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.no-records-message-styled h3 {
+  font-size: 24px;
+  color: #006400;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.no-records-message-styled p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.no-records-message-spay {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Loading and Error States */
+.loading-container-spay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-size: 18px;
+  color: #333;
+}
+
+.error-container-spay {
+  background-color: #ffebee;
+  border: 1px solid #f5c6cb;
+  color: #d32f2f;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.error-container-spay h3 {
+  color: #d32f2f;
+  margin-top: 0;
+}
+
+/* Modal Styles */
+.modal-confirmation-spay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-spay {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content-spay h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.modal-content-spay p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Button Group */
+.button-group-spay {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-button-spay {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  padding: 0.6rem 1.5rem;
+}
+
+.confirm-button-spay:hover {
+  background-color: #003800;
+}
+
+.confirm-button-spay:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.cancel-button-spay {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.cancel-button-spay:hover {
+  background-color: #e7f3ec;
+}
+
+.cancel-button-spay:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Payment Modal Styles */
+.payment-modal .payment-content {
+  width: 600px;
+  max-width: 90%;
+}
+
+.payment-info {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.payment-info p {
+  margin: 8px 0;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.payment-amount-container {
+  margin-bottom: 20px;
+}
+
+.payment-amount-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+.payment-amount-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.payment-amount-container input:focus {
+  border-color: #006400;
+  outline: none;
+}
+
+.amount-shortcuts {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.amount-shortcuts button {
+  background-color: #f0f0f0;
+  border: 1px solid #ced4da;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.amount-shortcuts button:hover {
+  background-color: #e2e6ea;
+}
+
+.amount-shortcuts button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.payment-note {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Payment Result Modal Styles */
+.payment-result-modal .payment-result {
+  text-align: center;
+}
+
+.result-icon {
+  margin: 0 auto 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.success-icon {
+  background-color: #28a745;
+}
+
+.failed-icon {
+  background-color: #dc3545;
+}
+
+.payment-result h3 {
+  margin-bottom: 15px;
+}
+
+.success h3 {
+  color: #28a745;
+}
+
+.failed h3 {
+  color: #dc3545;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .payment-records-container-spay {
+    padding: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .payment-records-title-spay {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  
+  .top-controls-payment-records-spay {
+    gap: 1rem;
+  }
+  
+  .buttons-group-payment-records-spay {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .xls-button-payment-records-spay,
+  .pdf-button-payment-records-spay,
+  .pay-button-payment-records-spay {
+    font-size: 12px;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .payment-records-table-spay {
+    min-width: 1100px;
+  }
+  
+  .payment-records-table-spay th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .payment-records-table-spay td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .balance-summary-spay {
+    font-size: 13px;
+  }
+  
+  .balance-input-spay {
+    width: 140px;
+    font-size: 13px;
+  }
+  
+  .modal-content-spay {
+    width: 450px;
+    padding: 1.5rem;
+  }
+  
+  .modal-content-spay h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-spay p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .button-group-spay {
+    gap: 0.8rem;
+  }
+  
+  .confirm-button-spay,
+  .cancel-button-spay {
+    font-size: 13px;
+    padding: 0.5rem 1.2rem;
+    min-width: 100px;
+  }
+  
+  .payment-modal .payment-content {
+    width: 500px;
+    padding: 1.5rem;
+  }
+  
+  .no-data-container-spay {
+    min-height: 350px;
+  }
+  
+  .no-records-message-styled {
+    padding: 2.5rem 1.8rem;
+    max-width: 450px;
+  }
+  
+  .no-records-message-styled h3 {
+    font-size: 22px;
+  }
+  
+  .no-records-message-styled p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .payment-records-container-spay {
+    padding: 1rem;
+    margin-top: 30px;
+  }
+  
+  .payment-records-title-spay {
+    font-size: 24px;
+  }
+  
+  .top-controls-payment-records-spay {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+  }
+  
+  .buttons-group-payment-records-spay {
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+  
+  .xls-button-payment-records-spay,
+  .pdf-button-payment-records-spay,
+  .pay-button-payment-records-spay {
+    flex: 1;
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+    justify-content: center;
+  }
+  
+  .payment-records-table-spay {
+    min-width: 1000px;
+  }
+  
+  .payment-records-table-spay th {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .payment-records-table-spay td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .balance-summary-spay {
+    font-size: 12px;
+    justify-content: flex-end;
+  }
+  
+  .balance-input-spay {
+    width: 130px;
+    font-size: 12px;
+  }
+  
+  .modal-content-spay {
+    width: 350px;
+    padding: 1.2rem;
+  }
+  
+  .modal-content-spay h3 {
+    font-size: 18px;
+  }
+  
+  .modal-content-spay p {
+    font-size: 13px;
+  }
+  
+  .button-group-spay {
+    gap: 0.8rem;
+  }
+  
+  .confirm-button-spay,
+  .cancel-button-spay {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+  
+  .payment-modal .payment-content {
+    width: 90%;
+    padding: 1.2rem;
+  }
+  
+  .payment-info {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .payment-info p {
+    font-size: 12px;
+  }
+  
+  .payment-amount-container label {
+    font-size: 12px;
+  }
+  
+  .payment-amount-container input {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .amount-shortcuts {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .amount-shortcuts button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .payment-note {
+    font-size: 12px;
+  }
+  
+  .result-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .result-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .no-data-container-spay {
+    min-height: 300px;
+    padding: 0 1rem;
+  }
+  
+  .no-records-message-styled {
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+  }
+  
+  .no-records-message-styled h3 {
+    font-size: 20px;
+  }
+  
+  .no-records-message-styled p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) and (min-width: 420px) {
+  .payment-records-container-spay {
+    padding: 0.1rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  
+  .payment-records-title-spay {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .top-controls-payment-records-spay {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  
+  .buttons-group-payment-records-spay {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .xls-button-payment-records-spay,
+  .pdf-button-payment-records-spay,
+  .pay-button-payment-records-spay {
+    flex: 1;
+    font-size: 10px;
+    padding: 0.5rem 0.4rem;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .payment-records-table-spay {
+    min-width: 800px;
+  }
+  
+  .payment-records-table-spay th {
+    font-size: 10px;
+    padding: 10px;
+    white-space: nowrap;
+  }
+  
+  .payment-records-table-spay td {
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .balance-summary-spay {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 11px;
+  }
+  
+  .balance-input-spay {
+    width: 120px;
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .modal-content-spay {
+    width: 90%;
+    max-width: 300px;
+    padding: 2rem;
+  }
+  
+  .modal-content-spay h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content-spay p {
+    font-size: 10px;
+    margin-bottom: 1px;
+    padding: 1px;
+  }
+  
+  .button-group-spay {
+    gap: 0.5rem;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+  
+  .confirm-button-spay,
+  .cancel-button-spay {
+    width: 45%;
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+    min-width: 80px;
+  }
+  
+  .payment-modal .payment-content {
+    width: 95%;
+    padding: 1.5rem 2rem;
+  }
+  
+  .payment-info {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .payment-info p {
+    font-size: 11px;
+    margin: 4px 0;
+  }
+  
+  .payment-amount-container {
+    margin-bottom: 15px;
+  }
+  
+  .payment-amount-container label {
+    font-size: 11px;
+    margin-bottom: 6px;
+    color: #000;
+  }
+  
+  .payment-amount-container input {
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .amount-shortcuts {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .amount-shortcuts button {
+    padding: 8px;
+    font-size: 11px;
+  }
+  
+  .payment-note {
+    font-size: 11px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .result-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+  
+  .result-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .payment-result h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .no-data-container-spay {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+  
+  .no-records-message-styled {
+    padding: 1.5rem 1rem;
+    max-width: 350px;
+  }
+  
+  .no-records-message-styled h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .no-records-message-styled p {
+    font-size: 13px;
+  }
+  
+  .loading-container-spay,
+  .error-container-spay {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Very Small Mobile (400px and below) */
+@media (max-width: 419px) and (min-width: 320px) {
+ .payment-records-container-spay {
+    padding: 0.1rem;
+    margin-top: 7rem;
+  }
+  
+  .payment-records-title-spay {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .top-controls-payment-records-spay {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  
+  .buttons-group-payment-records-spay {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .xls-button-payment-records-spay,
+  .pdf-button-payment-records-spay,
+  .pay-button-payment-records-spay {
+    flex: 1;
+    font-size: 10px;
+    padding: 0.5rem 0.4rem;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .payment-records-table-spay {
+    min-width: 800px;
+  }
+  
+  .payment-records-table-spay th {
+    font-size: 10px;
+    padding: 10px;
+    white-space: nowrap;
+  }
+  
+  .payment-records-table-spay td {
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .balance-summary-spay {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 11px;
+  }
+  
+  .balance-input-spay {
+    width: 120px;
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .modal-content-spay {
+    width: 90%;
+    max-width: 300px;
+    padding: 2rem;
+  }
+  
+  .modal-content-spay h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content-spay p {
+    font-size: 10px;
+    margin-bottom: 1px;
+    padding: 1px;
+  }
+  
+  .button-group-spay {
+    gap: 0.5rem;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+  
+  .confirm-button-spay,
+  .cancel-button-spay {
+    width: 45%;
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+    min-width: 80px;
+  }
+  
+  .payment-modal .payment-content {
+    width: 95%;
+    padding: 1.5rem 2rem;
+  }
+  
+  .payment-info {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .payment-info p {
+    font-size: 11px;
+    margin: 4px 0;
+  }
+  
+  .payment-amount-container {
+    margin-bottom: 15px;
+  }
+  
+  .payment-amount-container label {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  
+  .payment-amount-container input {
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .amount-shortcuts {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .amount-shortcuts button {
+    padding: 8px;
+    font-size: 11px;
+  }
+  
+  .payment-note {
+    font-size: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .result-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+  
+  .result-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .payment-result h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .no-data-container-spay {
+    min-height: 250px;
+    padding: 0 0.8rem;
+  }
+  
+  .no-records-message-styled {
+    padding: 1.5rem 1rem;
+    max-width: 350px;
+  }
+  
+  .no-records-message-styled h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .no-records-message-styled p {
+    font-size: 13px;
+  }
+  
+  .loading-container-spay,
+  .error-container-spay {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .payment-records-container-spay {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .payment-records-title-spay {
+    margin-bottom: 0.8rem;
+  }
+
+  .top-controls-payment-records-spay {
+    margin-bottom: 0.8rem;
+  }
+
+  .payment-records-table-spay th,
+  .payment-records-table-spay td {
+    padding: 6px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .payment-records-table-spay {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .modal-content-spay {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .payment-records-container-spay {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .top-controls-payment-records-spay {
+    display: none;
+  }
+  
+  .payment-records-table-spay {
+    font-size: 12px;
+  }
+  
+  .payment-records-table-spay th,
+  .payment-records-table-spay td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .balance-summary-spay,
+  .modal-confirmation-spay {
+    display: none;
+  }
+}
