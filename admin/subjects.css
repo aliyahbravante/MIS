@@ -1,0 +1,875 @@
+.subjects-container-sub {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0px;
+  overflow-y: auto;
+  margin-top: 2rem;
+  
+}
+
+.subjects-container-sub::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.subjects-container-sub::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 1px;
+  height: 3px;
+}
+
+.subjects-container-sub::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.header-subjects-sub {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.subjects-title-sub {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-subjects-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-and-add-subjects-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.search-input-subjects-sub {
+  flex: 1;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+    font-family: poppins;
+}
+
+.add-button-subjects-sub {
+  padding: 0.6rem 2rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.add-button-subjects-sub:hover {
+  background-color: #004d33;
+}
+
+.subjects-filter-sub {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 130px;
+  box-sizing: border-box;
+}
+
+.subjects-filter-sub:hover {
+  background-color: #f8f8f8;
+}
+
+.subjects-pdf-button-sub,
+.subjects-excel-button-sub {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.subjects-pdf-button-sub:hover,
+.subjects-excel-button-sub:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.subjects-excel-button-sub {
+  color: #1D6F42;
+  border: 1px solid #1D6F42;
+}
+
+.subjects-excel-button-sub:hover {
+  background-color: #e8f4ea;
+  color: #1D6F42;
+  border: solid 1px #1D6F42;
+}
+
+.subjects-table-container-sub {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar {
+  height: 1px;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1px;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.subjects-table-sub {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.subjects-table-sub th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.subjects-table-sub td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subjects-table-sub td:last-child,
+.subjects-table-sub td:nth-last-child(2) {
+  text-align: center;
+}
+
+.subjects-table-sub tr:hover {
+  background-color: #f9f9f9;
+}
+
+.edit-icon-sub,
+.delete-icon-sub {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-icon-sub {
+  color: #006400;
+}
+
+.delete-icon-sub {
+  color: #B22222;
+}
+
+/* Modal styles */
+.subjects-modal-sub {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.subjects-modal-content-sub {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 700px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.subjects-modal-content-sub::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+.subjects-modal-content-sub::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.subjects-modal-content-sub::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+
+.subjects-export-modal-content-sub {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subjects-modal-title-sub {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.subjects-modal-form-sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.subjects-form-group-sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.subjects-form-group-sub label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.subjects-form-group-sub input,
+.subjects-form-group-sub select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.subjects-form-group-sub select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006400' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+}
+
+.subjects-form-group-sub select:hover {
+  border-color: #006400;
+}
+
+.subjects-form-group-sub select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+.subjects-form-group-sub select option {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.subjects-form-group-sub select option:disabled {
+  color: #999999;
+}
+
+.subjects-form-group-sub select option:hover {
+  background-color: #e8f5e9;
+}
+
+.subjects-form-group-sub input:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+
+.subjects-form-group-sub.full-width {
+  grid-column: span 2;
+}
+
+.subjects-button-group-sub {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subjects-save-button-sub,
+.subjects-discard-button-sub {
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 110px;
+}
+
+.subjects-save-button-sub {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+}
+
+.subjects-save-button-sub:hover {
+  background-color: #004d33;
+}
+
+.subjects-discard-button-sub {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.subjects-discard-button-sub:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.subjects-export-message-sub {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Loading and Error Messages */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .subjects-container-sub {
+    padding: 1.5rem;
+  }
+  
+  .header-subjects-sub {
+    margin-top: 40px;
+  }
+  
+  .subjects-title-sub {
+    font-size: 30px;
+  }
+  
+  .top-controls-subjects-sub {
+    gap: 1rem;
+  }
+  
+  .search-and-add-subjects-sub {
+    width: 100%;
+  }
+  
+  .search-input-subjects-sub {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .subjects-filter-sub {
+    width: auto;
+    min-width: 120px;
+    font-size: 12px;
+  }
+  
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+  .add-button-subjects-sub{
+    font-size: 12px;
+      padding: 0.6rem 1.2rem;
+  }
+  
+  .subjects-table-sub th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .subjects-table-sub td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .edit-icon-sub,
+  .delete-icon-sub {
+    font-size: 14px;
+  }
+  
+  .subjects-modal-content-sub {
+    width: 85%;
+    padding: 1.5rem;
+    margin-top: 40px;
+    max-height: 85vh;
+  }
+  
+  .subjects-export-modal-content-sub {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  
+  .subjects-modal-title-sub {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .subjects-modal-form-sub {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .subjects-form-group-sub label {
+    font-size: 14px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .subjects-form-group-sub input,
+  .subjects-form-group-sub select {
+    padding: 0.6rem;
+    font-size: 14px;
+  }
+  
+  .subjects-button-group-sub {
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+  
+  .subjects-save-button-sub,
+  .subjects-discard-button-sub {
+    font-size: 14px;
+    min-width: 100px;
+  }
+  
+  .subjects-export-message-sub {
+    font-size: 15px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .loading-indicator,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .subjects-container-sub {
+    padding: 1rem;
+  }
+  
+  .subjects-title-sub {
+    font-size: 24px;
+  }
+  
+  .top-controls-subjects-sub {
+    gap: 0.8rem;
+  }
+  
+    .search-input-subjects-sub {
+    max-width: 800px;
+  }
+  
+  .add-button-subjects-sub{
+    font-size: 12px;
+    padding: 0.35rem 1rem;
+  }
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub{
+    font-size: 12px;
+    padding: 0.4rem 10px;
+    width: 90px;
+  }
+  
+  .subjects-filter-sub {
+    font-size: 12px;
+    padding: 8px 10px;
+    min-width: 80px;
+  }
+  
+  
+  .subjects-table-sub th {
+    font-size: 9px;
+    padding: 10px 6px;
+    white-space: nowrap;
+  }
+  
+  .subjects-table-sub td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .edit-icon-sub,
+  .delete-icon-sub {
+    font-size: 12px;
+  }
+  
+  .subjects-modal-content-sub {
+    width: 90%;
+    padding: 1.2rem;
+  }
+  
+  .subjects-export-modal-content-sub {
+    width: 90%;
+    padding: 1.2rem;
+  }
+  
+  .subjects-modal-title-sub {
+    font-size: 18px;
+  }
+  
+  .subjects-form-group-sub label {
+    font-size: 13px;
+  }
+  
+  .subjects-form-group-sub input,
+  .subjects-form-group-sub select {
+    font-size: 13px;
+  }
+  
+  .subjects-button-group-sub {
+    gap: 0.8rem;
+  }
+  
+  .subjects-save-button-sub,
+  .subjects-discard-button-sub {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) and (min-width: 320px) {
+  .subjects-container-sub {
+    padding: 0.1rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  
+  .header-subjects-sub {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .subjects-title-sub {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: -5px;
+  }
+  
+  .top-controls-subjects-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  }
+  
+  .search-and-add-subjects-sub {
+    gap: 1px;
+  }
+  
+  .search-input-subjects-sub {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .search-input-subjects-sub::placeholder {
+    font-size: 12px;
+  }
+  
+  .add-button-subjects-sub {
+    font-size: 12px;
+    padding: 0.35rem 10px;
+    width: 100%;
+  }
+  
+  .subjects-filter-sub {
+    font-size: 12px;
+    padding: 0.4rem 10px;
+    width: 120px;
+    height: 30px;
+  }
+  
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub {
+    font-size: 12px;
+    padding: 5px 6px;
+    justify-content: center;
+  }
+  
+  .subjects-table-sub th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .subjects-table-sub td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .edit-icon-sub,
+  .delete-icon-sub {
+    font-size: 10px;
+  }
+  
+  .subjects-modal-content-sub {
+    width: 95%;
+    padding: 30px;
+    max-height: 75vh;
+  }
+  
+  .subjects-export-modal-content-sub {
+    width: 90%;
+    padding: 1rem;
+  }
+  
+  .subjects-modal-title-sub {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  
+  .subjects-modal-form-sub {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subjects-form-group-sub label {
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subjects-form-group-sub input,
+  .subjects-form-group-sub select {
+    padding: 0.5rem;
+    font-size: 12px;
+  }
+  
+  .subjects-button-group-sub {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .subjects-save-button-sub,
+  .subjects-discard-button-sub {
+    width: 100%;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .subjects-export-message-sub {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .loading-indicator,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 319px){
+  .subjects-container-sub {
+    padding: 0.2rem;
+  }
+  
+  .subjects-title-sub {
+    font-size: 18px;
+  }
+  
+  .search-input-subjects-sub {
+    padding: 6px;
+    font-size: 11px;
+  }
+  
+  .add-button-subjects-sub {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+    width: 50px;
+  }
+  
+  .subjects-filter-sub {
+    font-size: 10px;
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub {
+    font-size: 10px;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .subjects-table-sub th {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+  
+  .subjects-table-sub td {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+  
+  .edit-icon-sub,
+  .delete-icon-sub {
+    font-size: 9px;
+  }
+  
+  .subjects-modal-content-sub {
+    width: 90%;
+    height: 70vh;
+    padding: 20px;
+  }
+  
+  .subjects-export-modal-content-sub {
+    width: 95%;
+    padding: 0.8rem;
+  }
+  
+  .subjects-modal-title-sub {
+    font-size: 14px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .subjects-form-group-sub label {
+    font-size: 11px;
+    margin-bottom: 0.2rem;
+  }
+  
+  .subjects-form-group-sub input,
+  .subjects-form-group-sub select {
+    padding: 0.4rem;
+    font-size: 11px;
+  }
+  
+  .subjects-save-button-sub,
+  .subjects-discard-button-sub {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .subjects-export-message-sub {
+    font-size: 12px;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Additional responsive fixes for better alignment */
+@media (max-width: 768px) {
+  .search-and-add-subjects-sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub {
+    flex: 1;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-controls-subjects-sub {
+    align-items: stretch;
+  }
+  
+  .search-and-add-subjects-sub {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .subjects-pdf-button-sub,
+  .subjects-excel-button-sub {
+    max-width: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .subjects-container-sub {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .top-controls-subjects-sub {
+    display: none;
+  }
+  
+  .subjects-table-sub {
+    font-size: 12px;
+  }
+  
+  .subjects-table-sub th,
+  .subjects-table-sub td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .edit-icon-sub,
+  .delete-icon-sub {
+    display: none;
+  }
+}

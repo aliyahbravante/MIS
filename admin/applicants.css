@@ -1,0 +1,535 @@
+/* Application Container */
+.applicants-container-ap {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0px;
+  overflow-y: auto;
+}
+
+.applicants-container-ap::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.applicants-container-ap::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.applicants-container-ap::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.header-ap {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  justify-content: space-between;
+  align-items: center;
+    margin-top: 15px;
+}
+
+.application-title-ap {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-applicants-ap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.search-bar-applicants-ap input {
+  width: 700px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: poppins;
+}
+
+.total-label-ap {
+  font-size: 40px;
+  color: #333333;
+}
+
+.total-count-ap {
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.schedule-button-ap {
+  padding: 0.5rem 1rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.application-table-ap {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.application-table-ap th,
+.application-table-ap td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.application-table-ap th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  border-top: 1px solid #ddd;
+}
+
+.application-table-ap td {
+  color: #555555;
+  font-size: 11px;
+}
+
+.application-table-ap td:last-child,
+.application-table-ap td:nth-last-child(2) {
+  text-align: center;
+}
+
+.application-table-ap tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table-container-ap {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.view-icon-ap {
+  font-size: 15px;
+  text-align: center;
+}
+
+.application-table-container-ap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.application-table-container-ap::-webkit-scrollbar {
+  width: 0px;
+}
+
+.application-table-container-ap::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.application-table-container-ap::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.application-table-container-ap::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .applicants-container-ap {
+    padding: 0.1rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-ap {
+    margin-top: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .application-title-ap {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .total-label-ap {
+    font-size: 20px;
+    margin-left: -10px;
+    margin-right: 0;
+  }
+
+  .total-count-ap {
+    font-size: 20px;
+  }
+
+  .top-controls-applicants-ap {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    gap: 10px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  .search-bar-applicants-ap {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .search-bar-applicants-ap input {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 11px;
+  }
+
+  .schedule-button-ap {
+    font-size: 12px;
+    margin: 0;
+    padding: 0.4rem 1rem;
+    align-self: center;
+  }
+
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+
+  .application-table-ap td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+
+  .view-icon-ap {
+    font-size: 12px;
+  }
+}
+
+/* Large Mobile Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .applicants-container-ap {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .header-ap {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-ap h2,
+  .header-ap p {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .application-title-ap {
+    font-size: 24px;
+  }
+
+  .total-label-ap {
+    font-size: 20px;
+    margin-left: 100px;
+  }
+
+  .total-count-ap {
+    font-size: 20px;
+  }
+
+  .top-controls-applicants-ap {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-bar-applicants-ap {
+    flex: 1;
+    margin-right: 15px;
+  }
+
+  .search-bar-applicants-ap input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 12px;
+  }
+
+  .schedule-button-ap {
+    font-size: 14px;
+    margin: 0;
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+  }
+
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+
+  .application-table-ap td {
+    font-size: 11px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+
+  .view-icon-ap {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .applicants-container-ap {
+    padding: 2rem;
+    margin-top: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-ap {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-ap h2,
+  .header-ap p {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .application-title-ap {
+    font-size: 28px;
+  }
+
+  .total-label-ap {
+    font-size: 24px;
+    margin-left: 200px;
+  }
+
+  .total-count-ap {
+    font-size: 24px;
+  }
+
+  .top-controls-applicants-ap {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-bar-applicants-ap {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .search-bar-applicants-ap input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.7rem;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 13px;
+  }
+
+  .schedule-button-ap {
+    font-size: 15px;
+    margin: 0;
+    padding: 0.7rem 1.3rem;
+    white-space: nowrap;
+  }
+
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+
+  .application-table-ap td {
+    font-size: 12px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+
+  .view-icon-ap {
+    font-size: 15px;
+  }
+}
+
+/* Small Laptops (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .applicants-container-ap {
+    padding: 2rem;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .header-ap {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .application-title-ap {
+    margin-top: -20px;
+    font-size: 32px;
+  }
+
+  .total-label-ap {
+    font-size: 32px;
+    margin-left: 300px;
+  }
+
+  .total-count-ap {
+    font-size: 32px;
+  }
+
+  .top-controls-applicants-ap {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-bar-applicants-ap input {
+    width: 580px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .schedule-button-ap {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    margin-right: 0;
+  }
+
+  .application-table-ap th {
+    font-size: 12px;
+    padding: 13px;
+  }
+
+  .application-table-ap td {
+    font-size: 11px;
+    padding: 13px;
+  }
+
+  .view-icon-ap {
+    font-size: 15px;
+  }
+}
+
+/* Loading and Error Messages */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Responsive Loading and Error Messages */
+@media (max-width: 768px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}

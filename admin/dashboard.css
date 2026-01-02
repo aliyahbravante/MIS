@@ -1,0 +1,217 @@
+.dashboard-container-dh {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.dashboard-container-dh::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffff; /* White background */
+}
+
+.dashboard-container-dh::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Light grey color for the thumb */
+  border-radius: 1px;
+}
+
+.dashboard-container-dh::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.dashboard-header-dh {
+  display: flex;
+  color: #333333;
+  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-title-d {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.dash-time-d{
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.stats-container-dh {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+  gap: 2rem; /* Space between each card */
+  margin-bottom: 1rem;
+}
+
+.stat-card-dh {
+  margin-top: 30px;
+  flex: 1 1 calc(10% - 2rem); /* Maintain 25% width minus the gap */
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-icon-dh {
+  color: #006400;
+  font-size: 35px;
+  margin-top: 3rem;
+  margin-left: 12px;
+}
+
+.stattitle-dh {
+  font-size: 14px;
+  color: #888;
+  text-align: left;
+  margin-right: 12px;
+  margin-top: 0px;
+}
+
+.statvalue-dh{
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 30px;
+  color: #006400;
+  text-align: right;
+}
+
+.charts-container-dh {
+  display: flex;
+  flex-wrap: wrap; /* Allow charts to wrap if needed */
+  gap: 1.5rem; /* Adjust the space between charts */
+}
+
+.chart-dh {
+  margin-top: 2rem;
+  flex: 1;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: 50vh;
+}
+
+.chart-dh h3 {
+  color: #006400;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .dashboard-container-dh{
+    margin-top: 1rem;
+    padding: 0.1rem;
+    margin-bottom: 5rem;
+  }
+  .dashboard-header-dh{
+    margin-top: 4rem;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .dash-title-d {
+    font-size: 20px;
+  }
+  .dash-time-d {
+    font-size: 20px;
+  } 
+  .charts-container-dh{
+    display: flex;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  .chart-dh{
+    height: auto;
+  }
+  .chart-dh h3{
+    font-size: 16px;
+}
+}
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .dashboard-container-dh{
+    padding: 0%;
+    margin-top: 1rem;
+  }
+  .dashboard-container-dh::-webkit-scrollbar {
+    width: 0;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .dashboard-container-dh::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Light grey color for the thumb */
+    border-radius: 5px;
+  }
+  
+  .dashboard-container-dh::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  
+  .dashboard-header-dh{
+    margin-top: 4rem;
+
+  }
+  .dash-title, .dash-time {
+    font-size: 25px;
+
+  }
+
+  .stats-container-dh{
+    gap: 27px;
+  }
+  .stat-icon-dh{
+    font-size: 20px;
+  }
+  .stattitle-dh {
+    font-size: 10px;
+  }
+  
+  .statvalue-dh{
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #006400;
+    text-align: right;
+  }
+  
+  .charts-container-dh{
+    display: flex;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  .chart-dh h3{
+    font-size: 16px;
+    
+
+
+  }
+}
+@media (min-width: 769px) and  (max-width: 1024px) {
+.dashboard-header-dh{
+  margin-top: 75px;
+}
+.dash-title, .dash-time {
+  font-size: 30px;
+}
+.charts-container-dh{
+  display: flex;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+.stat-icon-dh{
+  font-size: 30px;
+}
+.stattitle-dh{
+  font-size: 12px;
+}
+}

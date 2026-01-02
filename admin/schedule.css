@@ -1,0 +1,1119 @@
+/* Container styling for full height and scroll */
+.schedule-container-sd {
+  width: 100%;
+  height: 100vh;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.schedule-container-sd::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.schedule-container-sd::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 1px;
+}
+
+.schedule-container-sd::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.schedule-header-sd {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.schedule-breadcrumb-sd {
+  background: none;
+  border: none;
+  color:  #555;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0%;
+  margin-bottom: 10px;
+}
+
+.schedule-breadcrumb-sd:hover {
+  color: #3333;
+}
+
+.breadcrumb-separator-sd {
+  margin: 0;
+  color: #555;
+}
+
+.schedule-title-sd {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-sd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Add button styling */
+.add-button-sd{
+  padding: 0.7rem 1.5rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+}
+
+.add-button-sd:hover {
+  background-color: #004d33;
+}
+
+/* Table styling */
+.schedule-table-sd {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table-sd th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.schedule-table-sd td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-table-sd td:last-child,
+.schedule-table-sd td:nth-last-child(2) {
+  text-align: left;
+}
+
+.schedule-table-sd tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Action icons */
+.edit-icon-sd,
+.delete-icon-sd, 
+.view-icon-sd {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.edit-icon-sd, 
+.view-icon-sd {
+  color: #006400;
+}
+
+.delete-icon-sd {
+  color: #B22222;
+  font-size: 14px;
+}
+
+.edit-icon-sd:hover, 
+.view-icon-sd:hover {
+  color: #004d33;
+}
+
+.delete-icon-sd:hover {
+  color: #8b0000;
+}
+
+/* Modal styles for schedule */
+.modal-sched {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-sched {
+  background-color: #ffffff;
+  border: 2px solid #1d563f;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-sched h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-content-sched label {
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.modal-content-sched input,
+.modal-content-sched select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-content-sched select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006400' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+}
+
+.modal-content-sched select:hover {
+  border-color: #006400;
+}
+
+.modal-content-sched select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+.modal-content-sched select option {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.modal-content-sched select option:disabled {
+  color: #999999;
+}
+
+.modal-content-sched select option:hover {
+  background-color: #e8f5e9;
+}
+
+.modal-content-sched input:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+/* Date picker styling */
+.date-picker-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.date-input {
+  flex: 1;
+  padding: 2rem;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333333;
+  cursor: text;
+  box-sizing: border-box;
+}
+
+.calendar-button {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  border: none;
+  transform: translateY(-50%);
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #006400;
+  border-radius: 4px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.calendar-button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.calendar-button:focus {
+  border-color: #004d00;
+  background-color: none;
+  outline: none;
+}
+
+.calendar-button:hover {
+  background-color: #fff;
+  border-color: #004d00;
+}
+
+.calendar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1010;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+.modal-buttons-schedule {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.cancel-button-schedule,
+.save-button-schedule {
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+
+.cancel-button-schedule {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.cancel-button-schedule:hover {
+  background-color: #e6f5e9;
+  border: solid 1px #006400;
+}
+
+.save-button-schedule {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+}
+
+.save-button-schedule:hover {
+  background-color: #004d33;
+}
+
+/* Confirmation Modal */
+.modal-confirmation-sd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-confirmation-sd .modal-content-sd {
+  width: 400px;
+  max-width: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #1d563f;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-sd h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-content-sd p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-confirmation-sd .confirmation-buttons-sd {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.modal-confirmation-sd .confirm-button-sd,
+.modal-confirmation-sd .cancel-button-sd {
+  padding: 0.6rem 1.5rem;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.modal-confirmation-sd .confirm-button-sd {
+  background-color: #006400;
+  color: #fff;
+}
+
+.modal-confirmation-sd .confirm-button-sd:hover {
+  background-color: #004d33;
+}
+
+.modal-confirmation-sd .cancel-button-sd {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.modal-confirmation-sd .cancel-button-sd:hover {
+  background-color: #e6f5e9;
+}
+
+/* Alert Modal */
+.alert-modal-sd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-content-sd {
+  background-color: #ffffff;
+  border: 2px solid #1d563f;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-content-sd h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.alert-content-sd p {
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.close-alert-sd {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+
+.close-alert-sd:hover {
+  background-color: #e6f5e9;
+}
+
+/* Table Container */
+.schedule-table-container-sd{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.schedule-table-container-sd::-webkit-scrollbar {
+  height: 3px;
+}
+
+.schedule-table-container-sd::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.schedule-table-container-sd::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.schedule-table-container-sd::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .schedule-container-sd {
+    padding: 0.1rem;
+    margin-top: 4rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+  }
+  
+  .schedule-header-sd {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .schedule-breadcrumb-sd {
+    font-size: 14px;
+    margin-bottom: -10px;
+    padding: 0;
+  }
+  
+  .top-controls-sd {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .schedule-title-sd {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .add-button-sd {
+    margin: 0;
+    font-size: 11px;
+    padding: 6px 12px;
+    margin-left: 0;
+  }
+  
+  .schedule-table-sd {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  
+  .schedule-table-sd th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .schedule-table-sd td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .edit-icon-sd,
+  .delete-icon-sd, 
+  .view-icon-sd {
+    font-size: 12px;
+  }
+  
+  .modal-content-sched {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .modal-content-sched h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-sched label {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-sched input,
+  .modal-content-sched select {
+    font-size: 12px;
+    padding: 0.4rem;
+    padding-left: 12px;
+  }
+  
+  .date-input {
+    font-size: 12px;
+    padding: 0.4rem;
+    padding-right: 35px;
+  }
+  
+  .calendar-button {
+    width: 28px;
+    height: 28px;
+    right: 6px;
+    font-size: 12px;
+  }
+  
+  .calendar-dropdown {
+    right: 0;
+    left: auto;
+    transform: translateX(20%);
+  }
+  
+  .modal-buttons-schedule {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .cancel-button-schedule,
+  .save-button-schedule {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 80px;
+  }
+  
+  .modal-confirmation-sd .modal-content-sd {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .modal-content-sd h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-sd p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-confirmation-sd .confirmation-buttons-sd {
+    gap: 1rem;
+  }
+  
+  .modal-confirmation-sd .confirm-button-sd,
+  .modal-confirmation-sd .cancel-button-sd {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    min-width: 80px;
+  }
+  
+  .alert-content-sd {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .alert-content-sd h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .alert-content-sd p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .close-alert-sd {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 80px;
+  }
+}
+
+/* Large Mobile Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .schedule-container-sd {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .schedule-header-sd {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .schedule-breadcrumb-sd {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .top-controls-sd {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .schedule-title-sd {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .add-button-sd {
+    margin: 0;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+  
+  .schedule-table-sd {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  .schedule-table-sd th {
+    font-size: 12px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+  
+  .schedule-table-sd td {
+    font-size: 11px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+  
+  .edit-icon-sd,
+  .delete-icon-sd, 
+  .view-icon-sd {
+    font-size: 14px;
+  }
+  
+  .modal-content-sched {
+    width: 85%;
+    padding: 2rem;
+  }
+  
+  .modal-content-sched h3 {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .modal-content-sched label {
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .modal-content-sched input,
+  .modal-content-sched select {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+  
+  .date-input {
+    font-size: 14px;
+  }
+  
+  .calendar-button {
+    font-size: 14px;
+  }
+  
+  .modal-buttons-schedule {
+    margin-top: 1.8rem;
+  }
+  
+  .cancel-button-schedule,
+  .save-button-schedule {
+    font-size: 14px;
+    min-width: 90px;
+  }
+  
+  .modal-confirmation-sd .modal-content-sd {
+    width: 80%;
+    padding: 2rem;
+  }
+  
+  .modal-content-sd h3 {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .modal-content-sd p {
+    font-size: 15px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .modal-confirmation-sd .confirm-button-sd,
+  .modal-confirmation-sd .cancel-button-sd {
+    font-size: 14px;
+    min-width: 90px;
+  }
+  
+  .alert-content-sd {
+    width: 80%;
+    padding: 2rem;
+  }
+  
+  .alert-content-sd h3 {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .alert-content-sd p {
+    font-size: 15px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .close-alert-sd {
+    font-size: 14px;
+    min-width: 90px;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .schedule-container-sd {
+    padding: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 5rem;
+  }
+  
+  .schedule-header-sd {
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .schedule-breadcrumb-sd {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .top-controls-sd {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .schedule-title-sd {
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .add-button-sd {
+    margin: 0;
+    font-size: 15px;
+    padding: 12px 24px;
+    margin-left: 0;
+  }
+  
+  .schedule-table-sd {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .schedule-table-sd th {
+    font-size: 13px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+  
+  .schedule-table-sd td {
+    font-size: 12px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+  
+  .edit-icon-sd,
+  .delete-icon-sd, 
+  .view-icon-sd {
+    font-size: 15px;
+  }
+  
+  .modal-content-sched {
+    width: 600px;
+    padding: 2.5rem;
+  }
+  
+  .modal-content-sched h3 {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content-sched label {
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content-sched input,
+  .modal-content-sched select {
+    font-size: 15px;
+    padding: 0.6rem;
+  }
+  
+  .date-input {
+    font-size: 15px;
+  }
+  
+  .calendar-button {
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .modal-buttons-schedule {
+    margin-top: 2rem;
+  }
+  
+  .cancel-button-schedule,
+  .save-button-schedule {
+    font-size: 15px;
+    padding: 0.7rem 1.8rem;
+    min-width: 110px;
+  }
+  
+  .modal-confirmation-sd .modal-content-sd {
+    width: 500px;
+    padding: 2.5rem;
+  }
+  
+  .modal-content-sd h3 {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content-sd p {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-confirmation-sd .confirm-button-sd,
+  .modal-confirmation-sd .cancel-button-sd {
+    font-size: 15px;
+    padding: 0.7rem 1.8rem;
+    min-width: 110px;
+  }
+  
+  .alert-content-sd {
+    width: 600px;
+    padding: 2.5rem;
+  }
+  
+  .alert-content-sd h3 {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .alert-content-sd p {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .close-alert-sd {
+    font-size: 15px;
+    padding: 0.7rem 1.8rem;
+    min-width: 110px;
+  }
+}
+
+/* Small Laptops (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .schedule-container-sd {
+    padding: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .schedule-header-sd {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .schedule-breadcrumb-sd {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .top-controls-sd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .schedule-title-sd {
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  .add-button-sd {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 0;
+  }
+  
+  .schedule-table-sd th {
+    font-size: 12px;
+    padding: 13px;
+  }
+  
+  .schedule-table-sd td {
+    font-size: 11px;
+    padding: 13px;
+  }
+  
+  .edit-icon-sd,
+  .delete-icon-sd, 
+  .view-icon-sd {
+    font-size: 15px;
+  }
+  
+  .modal-content-sched {
+    width: 550px;
+    padding: 2.2rem;
+  }
+  
+  .modal-content-sched h3 {
+    font-size: 24px;
+  }
+  
+  .modal-content-sched label {
+    font-size: 14px;
+  }
+  
+  .modal-content-sched input,
+  .modal-content-sched select {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+  
+  .cancel-button-schedule,
+  .save-button-schedule {
+    font-size: 14px;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .modal-confirmation-sd .modal-content-sd {
+    width: 450px;
+    padding: 2.2rem;
+  }
+  
+  .alert-content-sd {
+    width: 550px;
+    padding: 2.2rem;
+  }
+}
+
+/* Loading and Error Messages */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Responsive Loading and Error Messages */
+@media (max-width: 768px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}

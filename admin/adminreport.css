@@ -1,0 +1,1170 @@
+.admin-report-container-ar {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 30px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.admin-report-container-ar::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.admin-report-container-ar::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.admin-report-container-ar::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.header-report-ar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-report-ar h2 {
+  font-size: clamp(24px, 4vw, 35px);
+  font-weight: bold;
+  color: #006400;
+  margin: 0;
+}
+
+.header-actions-ar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.filter-dropdown-ar {
+  position: relative;
+}
+
+.filter-icon-ar {
+  font-size: clamp(20px, 3vw, 24px);
+  color: #006400;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.filter-icon-ar:hover {
+  color: #004d00;
+}
+
+.filter-options-ar {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 180px;
+  padding: 10px;
+  color: #004d00;
+}
+
+.filter-options-ar button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #006400;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.filter-options-ar button:last-child {
+  margin-bottom: 0;
+}
+
+.filter-options-ar button:hover {
+  background: #f0f8f0;
+}
+
+.pdf-button-ar,
+.excel-button-ar {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.pdf-button-ar:hover,
+.excel-button-ar:hover {
+  background-color: #dbffdb;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+/* FIXED MODAL OVERLAY */
+.modal-overlay-ar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* FIXED MODAL CONTAINER */
+.modal-ar {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+}
+
+.modal-ar::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+.modal-ar::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.modal-ar::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* Modal header container */
+.modal-header-ar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+/* Centered Title */
+.modal-header-ar h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Close button at top-right */
+.close-modal-x-btn {
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  color: #006400;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.close-modal-x-btn:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.close-icon-r {
+  font-size: 18px;
+}
+
+/* ALL STUDENTS CHECKBOX CONTAINER */
+.all-students-checkbox-container {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ALL STUDENTS CHECKBOX STYLING */
+.all-students-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.all-students-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #006400;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.all-students-checkbox input[type="checkbox"]:hover {
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 100, 0, 0.1);
+}
+
+.all-students-checkbox input[type="checkbox"]:checked {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.all-students-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.all-students-checkbox span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* IMPROVED FORM LAYOUT */
+.form-ar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group-ar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-ar label {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-group-ar input,
+.form-group-ar select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #ffff;
+  font-family: poppins;
+}
+
+.form-group-ar input::placeholder {
+  font-size: 14px;
+}
+
+.form-group-ar input:focus,
+.form-group-ar select:focus,
+.report-title-input:focus,
+.report-modal-input:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  background-color: #fff;
+}
+
+/* IMPROVED AGE GROUP STYLING */
+.age-group-ar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.age-group-ar select {
+  flex: 1;
+  min-width: 0;
+}
+
+.age-group-ar span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* School Year Range Styling */
+.school-year-range {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.school-year-select {
+  flex: 1;
+  min-width: 0;
+  padding: 0.875rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.school-year-select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  background-color: #fff;
+}
+
+.to-text {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* GRADES RANGE STYLING */
+.form-group-ar.grades-group {
+  grid-column: 1 / -1;
+}
+
+.grades-range {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Payment Date Input Group */
+.payment-date-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.payment-date-part {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  font-family: poppins;
+  max-width: 80px;
+}
+
+.payment-date-part:first-child {
+  max-width: 60px;
+}
+
+.payment-date-part:last-child {
+  max-width: 100px;
+}
+
+.payment-date-part:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  background-color: #fff;
+}
+
+.date-separator {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  user-select: none;
+}
+
+.grades-range select {
+  flex: 1;
+  min-width: 0;
+  padding: 0.875rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.grades-range select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  background-color: #fff;
+}
+
+.grades-range span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* IMPROVED BUTTON STYLING */
+.report-button-group-ar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.apply-filter-button-ar {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 160px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 100, 0, 0.2);
+}
+
+.apply-filter-button-ar:hover {
+  background-color: #004d00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 100, 0, 0.3);
+}
+
+.apply-filter-button-ar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Reset Button Styling */
+.reset-button-ar {
+  background-color: #fff;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.reset-button-ar:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+  color: #333;
+}
+
+.close-button-ar {
+  background-color: #fff;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.close-button-ar:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+  color: #333;
+}
+
+.report-table-container-ar {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.report-table-container-ar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.report-table-container-ar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.report-table-container-ar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.report-table-container-ar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.report-table-ar {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background-color: white;
+  padding: 20px;
+}
+
+.report-table-ar td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.report-table-ar th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd; 
+}
+
+.report-table-ar tr:hover {
+  background-color: #f0f8f0;
+}
+
+.generate-report-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.report-title-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.generate-report-button-ar {
+  padding: 12px 2rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  min-width: 180px;
+}
+
+.generate-report-button-ar:hover {
+  background-color: #004d00;
+}
+
+.generate-report-modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.subjects-modal-content-sub::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+.subjects-modal-content-sub::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.subjects-modal-content-sub::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.generate-report-modal h3 {
+  color: #006400;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 20px);
+  margin-top: 0;
+}
+
+.generate-report-form {
+  padding: 0;
+}
+
+.generate-report-form .form-group-ar {
+  margin-bottom: 20px;
+}
+
+.report-modal-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #888;
+  pointer-events: none;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.generate-report-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.generate-btn {
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 120px;
+}
+
+.generate-btn:hover {
+  background-color: #004d00;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.close-modal-btn:hover {
+  color: #333;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #006400;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* NEW SORTING BUTTONS STYLES */
+.sorting-buttons-ar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+.sort-btn-ar {
+  background-color: #ffffff;
+  color: #006400;
+  border: 2px solid #006400;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 44px;
+  height: 40px;
+}
+
+.sort-btn-ar:hover {
+  background-color: #f0f8f0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 100, 0, 0.2);
+  border: 1px solid #004d00;
+}
+
+.sort-btn-ar.active {
+  background-color: #006400;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 100, 0, 0.3);
+}
+
+.sort-btn-ar.active:hover {
+  background-color: #004d00;
+}
+
+/* RESPONSIVE DESIGN - IMPROVED */
+
+/* Large tablets and small laptops (1024px and above) */
+@media (max-width: 1024px) {
+  .admin-report-container-ar {
+    padding: 1.5rem 2rem;
+  }
+  .header-report-ar{
+    margin-top: 40px;
+  }
+  
+  .modal-ar {
+    max-width: 750px;
+    padding: 2.5rem;
+    margin-top: 60px;
+  }
+  
+  .form-ar {
+    gap: 1.25rem;
+  }
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 768px) {
+  .admin-report-container-ar {
+    padding: 1rem;
+    margin-top: 30px;
+  }
+  
+  .header-report-ar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .header-report-ar h2 {
+    font-size: 24px;
+  }
+  .header-actions-ar {
+    align-self: flex-end;
+  }
+  .filter-dropdown-ar{
+    margin-top: -60px;
+  }
+  
+  .modal-overlay-ar {
+    padding: 0.5rem;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .modal-ar {
+    max-width: 100%;
+    padding: 1.5rem;
+    max-height: 95vh;
+  }
+  
+  .form-ar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .report-button-group-ar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .apply-filter-button-ar,
+  .reset-button-ar,
+  .close-button-ar {
+    width: 100%;
+  }
+  
+  .sorting-buttons-ar {
+    gap: 6px;
+    margin-right: 8px;
+  }
+  
+  .sort-btn-ar {
+    padding: 6px 10px;
+    font-size: 14px;
+    min-width: 38px;
+    height: 36px;
+  }
+}
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 480px) {
+  .admin-report-container-ar {
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+  
+  .header-report-ar h2 {
+    font-size: 20px;
+  }
+  
+  .filter-dropdown-ar{
+    margin-top: -40px;
+  }
+  
+  .filter-options-ar {
+    right: 0;
+    width: 180px;
+  }
+  
+  .modal-overlay-ar {
+    padding: 0.25rem;
+    padding-top: 3rem;
+  }
+  
+  .modal-ar {
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 75vh;
+    width: 95%;
+  }
+  
+  .modal-header-ar {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .modal-ar h3 {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  
+  .close-modal-x-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .form-group-ar label{
+    font-size: 12px;
+  }
+  .form-group-ar input,
+  .form-group-ar select, .form-group-ar input::placeholder {
+    padding: 1px 15px;
+    font-size: 12px;
+    height: 35px;
+  }
+  
+  .age-group-ar {
+    gap: 0.5rem;
+  }
+  
+  .school-year-range {
+    gap: 0.5rem;
+  }
+  
+  .grades-range {
+    gap: 0.5rem;
+  }
+  
+  .all-students-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .all-students-checkbox input[type="checkbox"]:checked::after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+  }
+  
+  .all-students-checkbox span {
+    font-size: 13px;
+  }
+  
+  .report-button-group-ar {
+    margin-top: 1.5rem;
+    flex-direction: row;
+    padding: 10px 5px;
+    margin-bottom: -10px;
+    gap: 0.75rem;
+  }
+  
+  .apply-filter-button-ar,
+  .reset-button-ar,
+  .close-button-ar {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    min-width: 120px;
+  }
+  
+  .report-table-ar {
+    min-width: 600px;
+  }
+  
+  .report-table-ar td,
+  .report-table-ar th {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+  
+  .sorting-buttons-ar {
+    gap: 4px;
+    margin-right: 6px;
+  }
+  
+  .sort-btn-ar {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+/* Extra small devices (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .modal-ar {
+    padding: 15px;
+    width: 98%;
+  }
+  
+  .modal-header-ar {
+    padding-bottom: 0.5rem;
+  }
+  
+  .modal-ar h3 {
+    font-size: 16px;
+    padding-right: 5px;
+  }
+  
+  .close-modal-x-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    border-width: 1.5px;
+  }
+  
+  .form-group-ar input,
+  .form-group-ar select {
+    padding: 0.625rem;
+    font-size: 12px;
+  }
+  
+  .age-group-ar span,
+  .to-text,
+  .grades-range span {
+    font-size: 12px;
+  }
+  
+  .all-students-checkbox {
+    gap: 0.4rem;
+  }
+  
+  .all-students-checkbox input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .all-students-checkbox input[type="checkbox"]:checked::after {
+    left: 3px;
+    top: 0px;
+    width: 3px;
+    height: 7px;
+    border-width: 0 1.5px 1.5px 0;
+  }
+  
+  .all-students-checkbox span {
+    font-size: 12px;
+  }
+  
+  .report-button-group-ar {
+    gap: 0.5rem;
+    padding: 10px 0;
+  }
+  
+  .apply-filter-button-ar,
+  .reset-button-ar {
+    padding: 0.625rem 0.75rem;
+    font-size: 12px;
+    min-width: 100px;
+  }
+  
+  .sorting-buttons-ar {
+    gap: 3px;
+    margin-right: 4px;
+  }
+  
+  .sort-btn-ar {
+    padding: 3px 6px;
+    font-size: 10px;
+    min-width: 28px;
+    height: 28px;
+  }
+}
+
+/* Extra small devices - Original 320px */
+@media (max-width: 320px) {
+  .modal-ar {
+    padding: 12px;
+  }
+  
+  .modal-ar h3 {
+    font-size: 14px;
+  }
+  
+  .close-modal-x-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+  
+  .form-group-ar input,
+  .form-group-ar select {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  
+  .all-students-checkbox input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .all-students-checkbox input[type="checkbox"]:checked::after {
+    left: 2px;
+    top: 0px;
+    width: 3px;
+    height: 6px;
+  }
+  
+  .all-students-checkbox span {
+    font-size: 11px;
+  }
+  
+  .apply-filter-button-ar,
+  .reset-button-ar {
+    padding: 0.5rem 0.625rem;
+    font-size: 11px;
+    min-width: 90px;
+  }
+  
+  .age-group-ar span,
+  .to-text,
+  .grades-range span {
+    font-size: 11px;
+  }
+  
+  .sorting-buttons-ar {
+    gap: 2px;
+    margin-right: 3px;
+  }
+  
+  .sort-btn-ar {
+    padding: 2px 4px;
+    font-size: 9px;
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  .modal-overlay-ar {
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .modal-ar {
+    max-height: 85vh;
+  }
+}

@@ -1,0 +1,1209 @@
+.container-announce {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0px;
+  overflow-y: auto;
+  margin-top: 2rem;
+}
+
+.title-announce {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.filter-container-announce {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  margin-top: 1.4rem;
+  padding: 1px;
+}
+
+.search-input-announce-1 {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.date-filter-announce {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date-input-announce {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.date-input-announce::-webkit-calendar-picker-indicator {
+  filter: invert(38%) sepia(79%) saturate(433%) hue-rotate(73deg) brightness(90%) contrast(90%);
+  cursor: pointer;
+}
+
+.date-input-announce:focus {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  outline: none;
+}
+
+.add-btn-announce {
+  padding: 8px 15px;
+  background-color: #005b2e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100px;
+}
+
+.add-btn-announce:hover {
+  background-color: #004422;
+}
+
+/* Table container for horizontal scrolling */
+.announcement-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+}
+
+.announcement-table-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+.announcement-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.announcement-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1px;
+}
+
+.announcement-table-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Updated table styling */
+.announcement-table-announce {
+  width: 100%;
+  min-width: 800px; /* Ensures horizontal scrolling when needed */
+  border-collapse: collapse;
+  margin: 0; /* Remove margin since container has it */
+}
+
+.announcement-table-announce th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.announcement-table-announce td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Specific column widths */
+.announcement-table-announce th:nth-child(1),
+.announcement-table-announce td:nth-child(1) {
+  min-width: 200px; /* Title column */
+  max-width: 250px;
+  white-space: normal; /* Allow wrapping for title */
+}
+
+.announcement-table-announce th:nth-child(2),
+.announcement-table-announce td:nth-child(2) {
+  min-width: 120px; /* Date column */
+}
+
+.announcement-table-announce th:nth-child(3),
+.announcement-table-announce td:nth-child(3) {
+  min-width: 100px; /* Author column */
+}
+
+.announcement-table-announce th:nth-child(4),
+.announcement-table-announce td:nth-child(4) {
+  min-width: 100px; /* Category column */
+}
+
+.announcement-table-announce th:nth-child(5),
+.announcement-table-announce td:nth-child(5) {
+  min-width: 280px; /* Action column - wider to accommodate horizontal buttons */
+}
+
+.announcement-title-announce {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-title-announce td:last-child,
+.announcement-title-announce td:nth-last-child(1) {
+  text-align: center;
+}
+
+.announcement-title-announce tr:hover {
+  background-color: #f9f9f9;
+}
+
+.author-info-announce {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated action buttons - horizontal layout */
+.action-btn-announce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  flex-direction: row; /* Changed from column to row */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.view-btn-announce,
+.edit-btn-announce,
+.delete-btn-announce {
+  margin: 0; /* Remove margin */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.view-btn-announce {
+  background-color: #e7f3ec;
+  color: #005b2e;
+}
+
+.view-btn-announce:hover {
+  background-color: #d0e9d9;
+}
+
+.edit-btn-announce {
+  background-color: #e8e8f9;
+  color: #4338ca;
+}
+
+.edit-btn-announce:hover {
+  background-color: #d6d6f5;
+}
+
+.delete-btn-announce {
+  background-color: #fde8e8;
+  color: #b91c1c;
+}
+
+.delete-btn-announce:hover {
+  background-color: #fbd5d5;
+}
+
+/* Modal */
+.modal-announce {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-announce {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content-announce::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+.modal-content-announce::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.modal-content-announce::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.modal-content-announce h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-form-announce {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-form-group-announce {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.modal-form-group-announce.full-width {
+  flex-basis: 100%;
+}
+
+.modal-form-group-announce label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.modal-form-group-announce input,
+.modal-form-group-announce select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.modal-form-group-announce select, .datetimeinput{
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006400' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+}
+
+.modal-form-group-announce select:hover, .datetimeinput:hover {
+  border-color: #006400;
+}
+
+.modal-form-group-announce select:focus, .datetimeinput:focus{
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+.modal-form-group-announce select option, .datetimeinput option{
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.modal-form-group-announce select option:disabled {
+  color: #999999;
+}
+
+.modal-form-group-announce select option:hover {
+  background-color: #e8f5e9;
+}
+
+.modal-form-group-announce textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #333333;
+  height: 10vh;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.custom-file-upload-announce {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.file-label-announce {
+  background-color: #fff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.no-attachment {
+  background-color: #fff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.file-label-announce:hover {
+  background-color: #e7f3ec;
+}
+
+.custom-file-upload-announce input[type="file"] {
+  display: none;
+}
+
+.modal-row-announce {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-row-announce > div {
+  flex: 1;
+}
+
+.modal-actions-announce-1 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.cancel-btn-announce,
+.publish-btn-announce {
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+  min-width: 110px;
+  border: 1px solid #006400;
+}
+
+.cancel-btn-announce {
+  background-color: #ffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.cancel-btn-announce:hover {
+  background-color: #e7f3ec;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.publish-btn-announce {
+  background-color: #006400;
+  color: #ffff;
+}
+
+.publish-btn-announce:hover {
+  background-color: #003800;
+  color: #fff;
+  border: 1px solid #006400;
+}
+
+.modal-announce-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-announce-1 {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content-announce-1 h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content-announce-1 p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+
+/* Attachment button styling */
+.attachment-btn-announce {
+  background-color: #e7f3ec;
+  color: #005b2e;
+  margin: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.attachment-btn-announce:hover {
+  background-color: #d0e9d9;
+}
+
+/* Attachment modal styling */
+.attachment-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 120px;
+  margin: 0 5px;
+}
+
+/* View attachment in modal */
+.view-attachment {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.view-attachment a {
+  color: #006400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-attachment a:hover {
+  text-decoration: underline;
+}
+
+/* SMS status notification */
+.sms-status-notification {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sms-status-notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.sms-status-notification.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.sms-status-notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* SMS notification info in modal */
+.sms-notification-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+  margin-top: 10px;
+  border-top: 1px dashed #ccc;
+  padding-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Additional button styles for consistency */
+.announcement-excel-button {
+  background-color: #fff;
+  color: #1D6F42;
+  border: 1px solid #1D6F42;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-excel-button:hover {
+  background-color: #e8f4ea;
+  color: #1D6F42;
+  border: solid 1px #1D6F42;
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container-announce {
+    padding: 0.1rem;
+    margin-top: 5rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+  }
+  
+  .title-announce {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container-announce {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-input-announce-1 {
+    width: 100%;
+    padding: 0.55rem;
+    font-size: 12px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .search-input-announce-1::placeholder {
+    font-size: 11px;
+    font-family: poppins;
+  }
+  
+  .date-filter-announce {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 1px;
+  }
+  
+  .date-filter-announce label {
+    font-size: 12px;
+    white-space: nowrap;
+    color: #003800;
+  }
+  
+  .date-input-announce {
+    font-size: 10px;
+    padding: 5px;
+    height: 25px;
+    width: 130px;
+  }
+  
+  .add-btn-announce {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  
+  .announcement-table-container {
+    margin-top: 10px;
+  }
+  
+  .announcement-table-announce {
+    min-width: 500px;
+  }
+  
+  .announcement-table-announce th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-announce td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-announce th:nth-child(5),
+  .announcement-table-announce td:nth-child(5) {
+    min-width: 200px;
+  }
+  
+  .action-btn-announce {
+    gap: 4px;
+  }
+  
+  .view-btn-announce,
+  .edit-btn-announce,
+  .delete-btn-announce,
+  .attachment-btn-announce {
+    padding: 4px 6px;
+    font-size: 8px;
+    gap: 2px;
+  }
+  
+  .modal-content-announce {
+    padding: 30px;
+    width: 95%;
+    margin-top: 50px;
+    max-height: 75vh;
+  }
+  
+  .modal-content-announce h3 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-form-announce {
+    gap: 0.5rem;
+  }
+  
+  .modal-form-group-announce label {
+    font-size: 12px;
+  }
+  
+  .modal-form-group-announce input,
+  .modal-form-group-announce select,
+  .modal-form-group-announce textarea {
+    font-size: 12px;
+    padding: 0.4rem;
+    margin-bottom: 8px;
+  }
+  
+  .modal-form-group-announce textarea {
+    height: 8vh;
+  }
+  
+  .cancel-btn-announce,
+  .publish-btn-announce {
+    padding: 8px 15px;
+    font-size: 12px;
+    min-width: 80px;
+  }
+  
+  .modal-content-announce-1 {
+    padding: 1.5rem;
+    width: 90%;
+  }
+  
+  .modal-content-announce-1 h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content-announce-1 p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .announcement-excel-button {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+
+  .sms-status-notification {
+    margin: 5px 0;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .sms-notification-info p {
+    font-size: 12px;
+  }
+}
+
+/* Large Mobile Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container-announce {
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .title-announce {
+    margin-top: 40px;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .filter-container-announce {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .search-input-announce-1 {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.6rem;
+    font-size: 14px;
+    margin-right: 15px;
+    box-sizing: border-box;
+  }
+  
+  .search-input-announce-1::placeholder {
+    font-size: 12px;
+  }
+  
+  .date-filter-announce {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-filter-announce label {
+    font-size: 14px;
+  }
+  
+  .date-input-announce {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  .add-btn-announce {
+    font-size: 14px;
+    padding: 10px 15px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-container {
+    margin-top: 15px;
+  }
+  
+  .announcement-table-announce {
+    min-width: 600px;
+  }
+  
+  .announcement-table-announce th {
+    font-size: 12px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-announce td {
+    font-size: 11px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-announce th:nth-child(5),
+  .announcement-table-announce td:nth-child(5) {
+    min-width: 240px;
+  }
+  
+  .action-btn-announce {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .view-btn-announce,
+  .edit-btn-announce,
+  .delete-btn-announce,
+  .attachment-btn-announce {
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+  
+  .modal-content-announce {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 40px;
+    max-height: 85vh;
+  }
+  
+  .modal-content-announce h3 {
+    font-size: 18px;
+  }
+  
+  .modal-form-group-announce label {
+    font-size: 14px;
+  }
+  
+  .modal-form-group-announce input,
+  .modal-form-group-announce select,
+  .modal-form-group-announce textarea {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+  
+  .cancel-btn-announce,
+  .publish-btn-announce {
+    min-width: 100px;
+    font-size: 14px;
+  }
+  
+  .modal-content-announce-1 {
+    width: 85%;
+  }
+  
+  .modal-content-announce-1 h3 {
+    font-size: 22px;
+  }
+
+  .announcement-excel-button {
+    font-size: 14px;
+    padding: 0.55rem 1.2rem;
+  }
+
+  .sms-status-notification {
+    font-size: 14px;
+  }
+  
+  .sms-notification-info p {
+    font-size: 13px;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-announce {
+    padding: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .title-announce {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .filter-container-announce {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-input-announce-1 {
+    flex: 1;
+    max-width: 500px;
+    padding: 0.7rem;
+    font-size: 15px;
+    margin-right: 20px;
+    box-sizing: border-box;
+  }
+  
+  .search-input-announce-1::placeholder {
+    font-size: 13px;
+  }
+  
+  .date-filter-announce {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-filter-announce label {
+    font-size: 15px;
+  }
+  
+  .date-input-announce {
+    font-size: 15px;
+    padding: 7px 12px;
+  }
+  
+  .add-btn-announce {
+    font-size: 15px;
+    padding: 12px 20px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-container {
+    margin-top: 20px;
+  }
+  
+  .announcement-table-announce th {
+    font-size: 13px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+  
+  .announcement-table-announce td {
+    font-size: 12px;
+    padding: 14px 10px;
+    white-space: nowrap;
+  }
+  
+  .view-btn-announce,
+  .edit-btn-announce,
+  .delete-btn-announce,
+  .attachment-btn-announce {
+    font-size: 11px;
+    padding: 9px;
+  }
+  
+  .modal-content-announce {
+    width: 650px;
+    padding: 2.5rem;
+    margin-top: 40px;
+    max-height: 85vh;
+  }
+  
+  .modal-content-announce h3 {
+    font-size: 22px;
+  }
+  
+  .modal-form-group-announce label {
+    font-size: 16px;
+  }
+  
+  .modal-form-group-announce input,
+  .modal-form-group-announce select,
+  .modal-form-group-announce textarea {
+    font-size: 16px;
+    padding: 0.6rem;
+  }
+  
+  .cancel-btn-announce,
+  .publish-btn-announce {
+    min-width: 120px;
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+  
+  .modal-content-announce-1 {
+    width: 600px;
+  }
+
+  .announcement-excel-button {
+    font-size: 15px;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .sms-status-notification {
+    font-size: 15px;
+  }
+  
+  .sms-notification-info p {
+    font-size: 14px;
+  }
+}
+
+/* Small Laptops (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .container-announce {
+    padding: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .title-announce {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .filter-container-announce {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-input-announce-1 {
+    width: 600px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .date-filter-announce label {
+    font-size: 14px;
+  }
+  
+  .date-input-announce {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .add-btn-announce {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+  .announcement-table-announce th {
+    font-size: 12px;
+    padding: 13px;
+  }
+  
+  .announcement-table-announce td {
+    font-size: 11px;
+    padding: 13px;
+  }
+  
+  .view-btn-announce,
+  .edit-btn-announce,
+  .delete-btn-announce,
+  .attachment-btn-announce {
+    font-size: 11px;
+  }
+  
+  .modal-content-announce {
+    width: 700px;
+    padding: 2.5rem;
+  }
+  
+  .modal-content-announce h3 {
+    font-size: 22px;
+  }
+  
+  .modal-form-group-announce label {
+    font-size: 15px;
+  }
+  
+  .modal-form-group-announce input,
+  .modal-form-group-announce select,
+  .modal-form-group-announce textarea {
+    font-size: 15px;
+    padding: 0.5rem;
+  }
+  
+  .cancel-btn-announce,
+  .publish-btn-announce {
+    min-width: 115px;
+    font-size: 15px;
+  }
+
+  .announcement-excel-button {
+    font-size: 15px;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .sms-status-notification {
+    font-size: 15px;
+  }
+  
+  .sms-notification-info p {
+    font-size: 14px;
+  }
+}
+
+/* Loading and Error Messages */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Responsive Loading and Error Messages */
+@media (max-width: 768px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-indicator,
+  .error-message {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+/* Scrollbar styling for webkit browsers */
+.container-announce::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.container-announce::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.container-announce::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}

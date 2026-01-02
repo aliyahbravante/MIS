@@ -1,0 +1,752 @@
+/* Application Container */
+.admin-faculty-container-fac {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 10px;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff; /* White background */
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 1px;
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.admin-faculty-header-fac{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-faculty-title-fac {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+  margin: 0;
+}
+
+.admin-faculty-top-controls-fac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.admin-faculty-search-bar-fac{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-faculty-search-bar-fac input {
+  flex: 1;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.admin-faculty-total-fac {
+  font-size: 35px;
+  color: #333333;
+}
+
+.admin-faculty-count-total-fac{
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.admin-faculty-name-total-fac {
+  font-size: 35px;
+  color: #333333;
+}
+
+.admin-faculty-add-button-fac {
+  background-color: #006400;
+  color: #ffff;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.admin-faculty-add-button-fac:hover {
+  background-color: #004d33;
+}
+
+.admin-faculty-pdf-button-fac, .admin-faculty-excel-button-fac  {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.admin-faculty-pdf-button-fac:hover, .admin-faculty-excel-button-fac:hover  {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+.admin-faculty-table-container-fac{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar {
+  height: 1px; /* height for horizontal scrollbar */
+  width: 1px;
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 1px;
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* thumb color */
+  border-radius: 1px;
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+
+.admin-faculty-table-fac {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-faculty-table-fac th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.admin-faculty-table-fac td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-faculty-table-fac td:last-child,
+.admin-faculty-table-fac td:nth-last-child(2) {
+  text-align: center;
+}
+
+.admin-faculty-table-fac tr:hover {
+  background-color: #f9f9f9;
+}
+
+.admin-faculty-modal-fac {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-faculty-modal-content-fac {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-faculty-modal-content-fac h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-faculty-modal-content-fac label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 500;
+  display: block;
+}
+
+.admin-faculty-modal-content-fac input,
+.admin-faculty-modal-content-fac select {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #333333;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.admin-fac-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.admin-faculty-save-button-fac {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 110px;
+}
+
+.admin-faculty-cancel-button-fac {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 110px;
+}
+
+.admin-faculty-cancel-button-fac:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+.admin-faculty-save-button-fac:hover {
+  background-color: #004d33;
+}
+
+.admin-delete-icon-faculty-fac {
+  font-size: 16px;
+  cursor: pointer;
+  color: #B22222;
+}
+
+input.error, select.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.admin-faculty-general-error-message-fac {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.admin-faculty-export-message-fac {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .admin-faculty-container-fac {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .admin-faculty-header-fac {
+    margin-top: 40px;
+  }
+  
+  .admin-faculty-title-fac {
+    font-size: 30px;
+  }
+  
+  .admin-faculty-total-fac {
+    font-size: 30px;
+  }
+  
+  .admin-faculty-count-total-fac {
+    font-size: 30px;
+  }
+  
+  .admin-faculty-name-total-fac {
+    font-size: 30px;
+  }
+  
+  .admin-faculty-top-controls-fac {
+    gap: 1rem;
+  }
+  
+  .admin-faculty-search-bar-fac {
+    width: 100%;
+  }
+  
+  .admin-faculty-search-bar-fac input {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .admin-faculty-add-button-fac {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .admin-faculty-table-fac th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .admin-faculty-table-fac td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .admin-faculty-modal-content-fac {
+    width: 85%;
+    padding: 1.5rem;
+    margin-top: 40px;
+    max-height: 85vh;
+  }
+  
+  .admin-faculty-modal-content-fac h3 {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .admin-faculty-modal-content-fac label {
+    font-size: 14px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .admin-faculty-modal-content-fac input,
+  .admin-faculty-modal-content-fac select {
+    padding: 0.6rem;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .admin-fac-btn-group {
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+  
+  .admin-faculty-save-button-fac,
+  .admin-faculty-cancel-button-fac {
+    font-size: 14px;
+    min-width: 100px;
+  }
+  
+  .admin-faculty-general-error-message-fac {
+    font-size: 15px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .admin-faculty-export-message-fac {
+    font-size: 15px;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .admin-faculty-container-fac {
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .admin-faculty-title-fac {
+    font-size: 24px;
+  }
+  
+  .admin-faculty-total-fac {
+    font-size: 24px;
+  }
+  
+  .admin-faculty-count-total-fac {
+    font-size: 24px;
+  }
+  
+  .admin-faculty-name-total-fac {
+    font-size: 24px;
+  }
+  
+  .admin-faculty-top-controls-fac {
+    gap: 0.8rem;
+  }
+  
+  .admin-faculty-search-bar-fac input {
+    max-width: 800px;
+  }
+  
+  .admin-faculty-add-button-fac {
+    font-size: 12px;
+    padding: 0.4rem 1rem;
+  }
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    font-size: 12px;
+    padding: 0.4rem 10px;
+  }
+  
+  .admin-faculty-table-fac th {
+    font-size: 9px;
+    padding: 10px 6px;
+    white-space: nowrap;
+  }
+  
+  .admin-faculty-table-fac td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .admin-faculty-modal-content-fac {
+    width: 90%;
+    padding: 1.2rem;
+  }
+  
+  .admin-faculty-modal-content-fac h3 {
+    font-size: 18px;
+  }
+  
+  .admin-faculty-modal-content-fac label {
+    font-size: 13px;
+  }
+  
+  .admin-faculty-modal-content-fac input,
+  .admin-faculty-modal-content-fac select {
+    font-size: 13px;
+    padding: 0.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .admin-fac-btn-group {
+    gap: 0.8rem;
+  }
+  
+  .admin-faculty-save-button-fac,
+  .admin-faculty-cancel-button-fac {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .admin-faculty-container-fac {
+    padding: 0.1rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+    
+  .admin-faculty-header-fac {
+    gap: 0.3rem;
+  }
+  .admin-faculty-title-fac {
+    font-size: 20px;
+  }
+  
+  .admin-faculty-total-fac {
+    font-size: 20px;
+  }
+  
+  .admin-faculty-count-total-fac {
+    font-size: 20px;
+  }
+  
+  .admin-faculty-name-total-fac {
+    font-size: 20px;
+  }
+  
+  .admin-faculty-top-controls-fac {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  }
+  
+  .admin-faculty-search-bar-fac {
+    gap: 10px;
+  }
+  
+  .admin-faculty-search-bar-fac input {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .admin-faculty-search-bar-fac input::placeholder {
+    font-size: 11px;
+  }
+  
+  .admin-faculty-add-button-fac {
+    font-size: 12px;
+    padding: 0.4rem 2rem;
+    width: 100%;
+  }
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+    justify-content: center;
+  }
+  
+  .admin-faculty-table-fac th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .admin-faculty-table-fac td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .admin-faculty-modal-content-fac {
+    width: 95%;
+    padding: 30px;
+    max-height: 85vh;
+  }
+  
+  .admin-faculty-modal-content-fac h3 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  
+  .admin-faculty-modal-content-fac label {
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .admin-faculty-modal-content-fac input,
+  .admin-faculty-modal-content-fac select {
+    padding: 0.5rem;
+    font-size: 12px;
+    margin-bottom: 10px;
+    height: 35px;
+  }
+  
+  .admin-fac-btn-group {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .admin-faculty-save-button-fac,
+  .admin-faculty-cancel-button-fac {
+    width: 100%;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .admin-faculty-general-error-message-fac {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .admin-faculty-export-message-fac {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  .admin-delete-icon-faculty-fac{
+    font-size: 10px;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .admin-faculty-container-fac {
+    padding: 0.5rem;
+    margin-bottom: 6rem;
+  }
+  
+  .admin-faculty-title-fac {
+    font-size: 18px;
+  }
+  
+  .admin-faculty-total-fac {
+    font-size: 18px;
+  }
+  
+  .admin-faculty-count-total-fac {
+    font-size: 18px;
+  }
+  
+  .admin-faculty-name-total-fac {
+    font-size: 18px;
+  }
+  
+  .admin-faculty-search-bar-fac input {
+    padding: 6px;
+    font-size: 11px;
+  }
+  
+  .admin-faculty-add-button-fac {
+    font-size: 8px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    font-size: 8px;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .admin-faculty-table-fac th {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+  
+  .admin-faculty-table-fac td {
+    font-size: 7px;
+    padding: 6px 3px;
+  }
+  
+  .admin-faculty-modal-content-fac {
+    width: 95%;
+    padding: 0.8rem;
+  }
+  
+  .admin-faculty-modal-content-fac h3 {
+    font-size: 14px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .admin-faculty-modal-content-fac label {
+    font-size: 11px;
+    margin-bottom: 0.2rem;
+  }
+  
+  .admin-faculty-modal-content-fac input,
+  .admin-faculty-modal-content-fac select {
+    padding: 0.4rem;
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .admin-faculty-save-button-fac,
+  .admin-faculty-cancel-button-fac {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .admin-faculty-general-error-message-fac {
+    font-size: 12px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .admin-faculty-export-message-fac {
+    font-size: 12px;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Additional responsive fixes for better alignment */
+@media (max-width: 768px) {
+  .admin-faculty-search-bar-fac {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    flex: 1;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .admin-faculty-pdf-button-fac,
+  .admin-faculty-excel-button-fac {
+    max-width: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .admin-faculty-container-fac {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .admin-faculty-top-controls-fac {
+    display: none;
+  }
+  
+  .admin-faculty-table-fac {
+    font-size: 12px;
+  }
+  
+  .admin-faculty-table-fac th,
+  .admin-faculty-table-fac td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .admin-faculty-edit-icon-fac,
+  .admin-delete-icon-faculty-fac {
+    display: none;
+  }
+}

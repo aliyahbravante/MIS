@@ -1,0 +1,566 @@
+.auditlogs-container-al {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  overflow-y: auto;
+}
+
+.auditlogs-container-al::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.auditlogs-container-al::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 1px;
+}
+
+.auditlogs-container-al::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.header-auditlogs-al {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.auditlogs-title-al {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-auditlogs-al {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-and-controls-auditlogs-al {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.search-input-auditlogs-al {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 1rem;
+}
+
+.auditlogs-filter-al {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+}
+
+.auditlogs-filter-al:hover {
+  background-color: #f8f8f8;
+}
+
+.auditlogs-date-filter-al {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 160px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.auditlogs-date-filter-al:hover {
+  background-color: #f8f8f8;
+}
+
+/* Style the calendar icon */
+.auditlogs-date-filter-al::-webkit-calendar-picker-indicator {
+  filter: invert(38%) sepia(79%) saturate(433%) hue-rotate(73deg) brightness(90%) contrast(90%);
+  cursor: pointer;
+}
+
+.auditlogs-date-filter-al:focus {
+  border-color: #006400;
+  box-shadow: 0 0 5px rgba(0, 100, 0, 0.5);
+  outline: none;
+}
+
+.auditlogs-pdf-button-al {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auditlogs-pdf-button-al:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.auditlogs-summary-al {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 14px;
+}
+
+.auditlogs-table-container-al {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.auditlogs-table-container-al::-webkit-scrollbar {
+  height: 3px;
+}
+
+.auditlogs-table-container-al::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.auditlogs-table-container-al::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.auditlogs-table-container-al::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.auditlogs-table-al {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.auditlogs-table-al th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.auditlogs-table-al td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.auditlogs-table-al tr:hover {
+  background-color: #f9f9f9;
+}
+
+.action-badge-al {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Updated action badge styles with light highlight colors */
+.action-export-al {
+  background-color: #fce4ec;
+  color: #c2185b;
+  border: 1px solid #f8bbd9;
+}
+
+.action-generate-al {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+  border: 1px solid #ce93d8;
+}
+
+.action-view-al {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #90caf9;
+}
+
+.action-create-al {
+  background-color: #e8f5e8;
+  color: #388e3c;
+  border: 1px solid #a5d6a7;
+}
+
+.action-update-al {
+  background-color: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #ffb74d;
+}
+
+.action-delete-al {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ef9a9a;
+}
+
+/* Keep old styles for backward compatibility */
+.action-report-al {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.action-print-al {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.no-data-al {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  padding: 2rem;
+}
+
+.loading-al {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.error-message-al {
+  color: red;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border: 1px solid #ffcdd2;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .auditlogs-container-al {
+    padding: 0.1rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+  }
+
+  .header-auditlogs-al {
+    margin-top: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .auditlogs-title-al {
+    font-size: 20px;
+    z-index: 1000;
+  }
+
+  .top-controls-auditlogs-al {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  }
+
+  .search-and-controls-auditlogs-al {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .search-input-auditlogs-al {
+    width: 100%;
+    margin-right: 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .search-input-auditlogs-al::placeholder {
+    font-size: 12px;
+  }
+  .export-buttons{
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .auditlogs-filter-al {
+    font-size: 12px;
+    padding: 0.1rem 0.1rem;
+    width: 30%;
+      height: 30px;
+  }
+
+  .auditlogs-date-filter-al {
+    font-size: 12px;
+    padding: 0.1rem;
+    color: #004d33;
+  width: 35%;  
+  height: 30px;
+}
+
+  .auditlogs-pdf-button-al {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+    width: 23%;
+    height: 32px;
+  
+  }
+
+  .auditlogs-table-al {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .auditlogs-table-al th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+
+  .auditlogs-table-al td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+
+  .action-badge-al {
+    font-size: 7px;
+    padding: 2px 4px;
+    min-width: 40px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .auditlogs-container-al {
+    padding: 1rem;
+    margin-top: 0;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .header-auditlogs-al {
+    margin-top: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .auditlogs-title-al {
+    font-size: 24px;
+    margin-bottom: 10px;
+    z-index: 1000;
+  }
+
+  .top-controls-auditlogs-al {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 10px;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .search-and-controls-auditlogs-al {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-input-auditlogs-al {
+    width: 250px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 14px;
+  }
+
+  .search-input-auditlogs-al::placeholder {
+    font-size: 12px;
+  }
+
+  .auditlogs-filter-al {
+    font-size: 14px;
+    width: 105px;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .auditlogs-date-filter-al {
+    font-size: 13px;
+    width: 130px;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .auditlogs-pdf-button-al {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .auditlogs-table-al {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .auditlogs-table-al th {
+    font-size: 11px;
+    padding: 12px;
+    white-space: nowrap;
+  }
+
+  .auditlogs-table-al td {
+    font-size: 10px;
+    padding: 12px;
+    word-break: break-word;
+  }
+
+  .action-badge-al {
+    font-size: 9px;
+    padding: 3px 6px;
+    min-width: 50px;
+  }
+}
+
+/* Large Tablet/Small Laptop Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .auditlogs-container-al {
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-auditlogs-al {
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .auditlogs-title-al {
+    font-size: 35px;
+    margin-bottom: 15px;
+    z-index: 1000;
+  }
+
+  .top-controls-auditlogs-al {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-and-controls-auditlogs-al {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input-auditlogs-al {
+    width: 550px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 16px;
+  }
+
+  .search-input-auditlogs-al::placeholder {
+    font-size: 14px;
+  }
+
+  .auditlogs-filter-al {
+    font-size: 16px;
+    width: 130px;
+    padding: 0.6rem 1rem;
+  }
+
+  .auditlogs-date-filter-al {
+    font-size: 15px;
+    width: 160px;
+    padding: 0.5rem 1rem;
+  }
+
+  .auditlogs-pdf-button-al {
+    font-size: 16px;
+    padding: 0.55rem 1.5rem;
+  }
+
+  .auditlogs-table-al {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .auditlogs-table-al th {
+    font-size: 13px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+
+  .auditlogs-table-al td {
+    font-size: 12px;
+    padding: 15px;
+    word-break: break-word;
+  }
+
+  .action-badge-al {
+    font-size: 10px;
+    padding: 4px 8px;
+    min-width: 60px;
+  }
+}

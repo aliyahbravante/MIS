@@ -1,0 +1,1065 @@
+/* Container Styling */
+.strands-container-str {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0px;
+  overflow-y: auto;
+  margin-top: 2rem;
+}
+
+.strands-container-str::-webkit-scrollbar {
+  width: 0px;
+  background-color: #ffffff;
+}
+
+.strands-container-str::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 1px;
+}
+
+.strands-container-str::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* Header */
+.strands-header-str {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.strands-title-str {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+/* Top Controls with Inline Buttons */
+.top-controls-strands-str {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-and-add-strands-str {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.search-input-strands-str {
+  flex: 1;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-button-strands-str {
+  padding: 0.6rem 2rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.add-button-strands-str:hover {
+  background-color: #004d33;
+}
+
+.strands-filter-str {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 130px;
+  box-sizing: border-box;
+}
+
+.strands-filter-str:hover {
+  background-color: #f8f8f8;
+}
+
+.strands-pdf-button-str,
+.strands-excel-button-str {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.strands-pdf-button-str:hover,
+.strands-excel-button-str:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+/* Table Styling */
+.strands-table-container-str {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strands-table-container-str::-webkit-scrollbar {
+  height: 3px;
+}
+
+.strands-table-container-str::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+.strands-table-container-str::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1px;
+}
+
+.strands-table-container-str::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.strands-table-str {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.strands-table-str th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.strands-table-str td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.strands-table-str td:last-child,
+.strands-table-str td:nth-last-child(2) {
+  text-align: center;
+}
+
+.strands-table-str tr:hover {
+  background-color: #f9f9f9;
+}
+
+.strands-edit-icon-str,
+.strands-delete-icon-str {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.strands-edit-icon-str {
+  color: #006400;
+}
+
+.strands-delete-icon-str {
+  color: #B22222;
+}
+
+/* Modal Styling */
+.strands-modal-stra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.strands-modal-content-stra {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 700px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.strands-modal-content-stra::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.strands-modal-content-stra::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.strands-modal-content-stra::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.strands-export-modal-content-stra {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.strands-modal-title-stra {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.strands-modal-form-stra {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.strands-form-group-stra {
+  gap: 0.5rem;
+}
+
+.strands-form-group-stra.full-width {
+  grid-column: span 2;
+}
+
+.strands-modal-form-stra label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Improved Date Input Styling */
+.strands-modal-form-stra input[type="date"] {
+  padding: 0.75rem;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.strands-modal-form-stra input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  margin-left: 4px;
+}
+
+.strands-modal-form-stra input[type="date"]::-webkit-datetime-edit-text,
+.strands-modal-form-stra input[type="date"]::-webkit-datetime-edit-month-field,
+.strands-modal-form-stra input[type="date"]::-webkit-datetime-edit-day-field,
+.strands-modal-form-stra input[type="date"]::-webkit-datetime-edit-year-field {
+  font-size: 14px;
+  padding: 2px;
+}
+
+/* Select and Dropdown Styling */
+.strands-modal-form-stra select,
+.strands-drop-sel {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006400' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+}
+
+.strands-modal-form-stra select:hover,
+.strands-drop-sel:hover,
+.strands-modal-form-stra input[type="date"]:hover {
+  border-color: #006400;
+}
+
+.strands-modal-form-stra select:focus,
+.strands-drop-sel:focus,
+.strands-modal-form-stra input:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+.strands-modal-form-stra select option,
+.strands-drop-sel option {
+  padding: 0.75rem;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+}
+
+.strands-modal-form-stra select option:disabled,
+.strands-drop-sel option:disabled {
+  color: #999999;
+}
+
+.strands-modal-form-stra select option:hover,
+.strands-drop-sel option:hover {
+  background-color: #e8f5e9;
+}
+
+/* Error Highlighting */
+input[style*="border-color: red"],
+select[style*="border-color: red"] {
+  border-color: red;
+}
+
+span {
+  font-size: 12px;
+  color: red;
+}
+
+/* Modal Buttons */
+.strands-modal-buttons-stra {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.strands-save-button-stra,
+.strands-cancel-button-stra {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.strands-save-button-stra {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+}
+
+.strands-save-button-stra:hover {
+  background-color: #004d33;
+}
+
+.strands-cancel-button-stra {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+
+.strands-cancel-button-stra:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.strands-export-message-stra {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Loading and Error Messages */
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+  .strands-container-str {
+    padding: 1.5rem;
+  }
+  
+  .strands-header-str {
+    margin-top: 40px;
+  }
+  
+  .strands-title-str {
+    font-size: 30px;
+  }
+  
+  .top-controls-strands-str {
+    gap: 1rem;
+  }
+  
+  .search-and-add-strands-str {
+    width: 100%;
+  }
+  
+  .search-input-strands-str {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .strands-filter-str {
+    width: auto;
+    min-width: 120px;
+    font-size: 12px;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .add-button-strands-str {
+    font-size: 12px;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .strands-table-str th {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .strands-table-str td {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  
+  .strands-edit-icon-str,
+  .strands-delete-icon-str {
+    font-size: 14px;
+  }
+  
+  .strands-modal-content-stra {
+    width: 85%;
+    padding: 1.5rem;
+    margin-top: 40px;
+    max-height: 85vh;
+  }
+  
+  .strands-export-modal-content-stra {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  
+  .strands-modal-title-stra {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 15px;
+  }
+  
+  .strands-modal-form-stra {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .strands-modal-form-stra label {
+    font-size: 14px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .strands-modal-form-stra input,
+  .strands-modal-form-stra select {
+    padding: 0.7rem;
+    font-size: 14px;
+  }
+  
+  .strands-modal-buttons-stra {
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+  
+  .strands-save-button-stra,
+  .strands-cancel-button-stra {
+    font-size: 14px;
+    min-width: 100px;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .loading-indicator,
+  .error-message {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .strands-container-str {
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .strands-title-str {
+    font-size: 24px;
+  }
+  
+  .top-controls-strands-str {
+    gap: 0.8rem;
+  }
+  
+  .search-input-strands-str {
+    max-width: 800px;
+  }
+  
+  .add-button-strands-str {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    width: 90px;
+  }
+  
+  .strands-filter-str {
+    font-size: 12px;
+    padding: 0.5rem;
+    min-width: 100px;
+  }
+  
+  .strands-table-str th {
+    font-size: 9px;
+    padding: 10px 6px;
+    white-space: nowrap;
+  }
+  
+  .strands-table-str td {
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+  
+  .strands-edit-icon-str,
+  .strands-delete-icon-str {
+    font-size: 12px;
+  }
+  
+  .strands-modal-content-stra {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .strands-export-modal-content-stra {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .strands-modal-title-stra {
+    font-size: 20px;
+  }
+  
+  .strands-modal-form-stra label {
+    font-size: 14px;
+  }
+  
+  .strands-modal-form-stra input,
+  .strands-modal-form-stra select {
+    font-size: 14px;
+    padding: 0.7rem;
+  }
+  
+  .strands-modal-buttons-stra {
+    gap: 1rem;
+  }
+  
+  .strands-save-button-stra,
+  .strands-cancel-button-stra {
+    font-size: 13px;
+    padding: 0.65rem 1.5rem;
+    min-width: 100px;
+  }
+}
+
+/* Mobile Portrait (481px to 480px) */
+@media (max-width: 480px) and (min-width: 320px) {
+  .strands-container-str {
+    padding: 0.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 6rem;
+  }
+  
+  .strands-header-str {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .strands-title-str {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: -5px;
+  }
+  
+  .top-controls-strands-str {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .search-and-add-strands-str {
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .search-input-strands-str {
+    padding: 6px;
+    width: 100%;
+  }
+  
+  .search-input-strands-str::placeholder {
+    font-size: 10px;
+  }
+  
+  .export-buttons {
+    width: 100%;
+    gap: 8px;
+  }
+  
+  .add-button-strands-str {
+    font-size: 13px;
+    padding: 0.5rem 1.2rem;
+    width: 100%;
+  }
+  
+  .strands-filter-str {
+    font-size: 12px;
+    padding: 0.4rem;
+    height: 32px;
+    width: 130px;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    font-size: 12px;
+    padding: 0.35rem;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .strands-table-str th {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .strands-table-str td {
+    font-size: 10px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  
+  .strands-edit-icon-str,
+  .strands-delete-icon-str {
+    font-size: 11px;
+  }
+  
+  .strands-modal-content-stra {
+    width: 95%;
+    padding: 2rem 2.5rem;
+    max-height: 75vh;
+  }
+  
+  .strands-export-modal-content-stra {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .strands-modal-title-stra {
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 14px;
+  }
+  
+  .strands-modal-form-stra {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .strands-modal-form-stra label {
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .strands-modal-form-stra input,
+  .strands-modal-form-stra select {
+    padding: 1px 15px;
+    font-size: 12px;
+    height: 35px;
+  }
+  
+  .strands-modal-form-stra input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 10px;
+  }
+  
+  .strands-modal-buttons-stra {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .strands-save-button-stra,
+  .strands-cancel-button-stra {
+    width: 100%;
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+  
+  .loading-indicator,
+  .error-message {
+    font-size: 13px;
+    padding: 1rem;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 319px) {
+  .strands-container-str {
+    padding: 0.5rem;
+    margin-top: 3rem;
+  }
+  
+  .strands-header-str {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .strands-title-str {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: -5px;
+  }
+  
+  .top-controls-strands-str {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .search-and-add-strands-str {
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .search-input-strands-str {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .search-input-strands-str::placeholder {
+    font-size: 11px;
+  }
+  
+  .export-buttons {
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .add-button-strands-str {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  
+  .strands-filter-str {
+    font-size: 11px;
+    padding: 0.5rem;
+    width: 110px;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    font-size: 11px;
+    padding: 0.5rem;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .strands-table-str th {
+    font-size: 7px;
+    padding: 6px 3px;
+    white-space: nowrap;
+  }
+  
+  .strands-table-str td {
+    font-size: 7px;
+    padding: 6px 3px;
+    white-space: nowrap;
+  }
+  
+  .strands-edit-icon-str,
+  .strands-delete-icon-str {
+    font-size: 10px;
+  }
+  
+  .strands-modal-content-stra {
+    width: 95%;
+    padding: 1.2rem;
+    max-height: 75vh;
+  }
+  
+  .strands-export-modal-content-stra {
+    width: 95%;
+    padding: 1.2rem;
+  }
+  
+  .strands-modal-title-stra {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 13px;
+  }
+  
+  .strands-modal-form-stra {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .strands-modal-form-stra label {
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .strands-modal-form-stra input,
+  .strands-modal-form-stra select {
+    padding: 0.65rem;
+    font-size: 13px;
+  }
+  
+  .strands-modal-form-stra input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+  }
+  
+  .strands-modal-buttons-stra {
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+  
+  .strands-save-button-stra,
+  .strands-cancel-button-stra {
+    width: 100%;
+    font-size: 13px;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .strands-export-message-stra {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .loading-indicator,
+  .error-message {
+    font-size: 12px;
+    padding: 0.8rem;
+  }
+}
+
+/* Additional responsive fixes for better alignment */
+@media (max-width: 768px) {
+  .search-and-add-strands-str {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    flex: 1;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-controls-strands-str {
+    align-items: stretch;
+  }
+  
+  .search-and-add-strands-str {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .strands-pdf-button-str,
+  .strands-excel-button-str {
+    max-width: none;
+  }
+}
+
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .strands-modal-content-stra {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .strands-modal-form-stra {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.strands-modal-form-stra input:focus,
+.strands-modal-form-stra select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+/* Better placeholder styling */
+.strands-modal-form-stra input::placeholder,
+.strands-modal-form-stra select::placeholder {
+  color: #999;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.strands-modal-form-stra input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.strands-modal-form-stra input::-moz-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.strands-modal-form-stra input:-ms-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Smooth transitions */
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Disabled state styling */
+.strands-modal-form-stra input:disabled,
+.strands-modal-form-stra select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Print styles */
+@media print {
+  .strands-container-str {
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .top-controls-strands-str {
+    display: none;
+  }
+  
+  .strands-table-str {
+    font-size: 12px;
+  }
+  
+  .strands-table-str th,
+  .strands-table-str td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
+  
+  .strands-edit-icon-str,
+  .strands-delete-icon-str {
+    display: none;
+  }
+}

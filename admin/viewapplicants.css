@@ -1,0 +1,493 @@
+/* Container for the review form */
+.viewapplicants-container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto; /* Enables vertical scrolling */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  /* Custom Scrollbar for Webkit Browsers (Chrome, Safari) */
+  .viewapplicants-container::-webkit-scrollbar {
+    width: 0px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .viewapplicants-container::-webkit-scrollbar-thumb {
+    background-color: #e6f5e9; /* Light grey color for the thumb */
+    border-radius: 1px;
+  }
+  
+  .viewapplicants-container::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  .viewapplicants-container h4{
+    color: #1d563f;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .header-vp {
+    display: flex;
+    align-items: center; /* Vertically aligns items in the center */
+    gap: 0.3rem; /* Adds minimal spacing between items */
+    color: #333333;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Breadcrumb button styling */
+  .breadcrumb-button {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #555; /* Initial color */
+    cursor: pointer;
+    font-size: inherit; /* Matches parent font size */
+    text-decoration: none; /* Removes underline */
+    padding: 0; /* Removes extra space */
+  }
+  
+  /* Breadcrumb button hover effect */
+  .breadcrumb-button:hover {
+    color: #333; /* Darker color on hover */
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 5px;
+    color: #555;
+  }
+  
+  
+  .application-title-vp {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #006400;
+  }
+  .applicant-name {
+    font-weight: bold; /* Makes the text bold */
+    color: #006400; /* Green color */
+    margin-left: 0;
+    margin-top: 10px; /* Ensures no additional margin */
+    font-size: 18px;
+  }
+
+  .applicant-name-vp {
+    font-weight: bold; /* Makes the text bold */
+    color: #006400; /* Green color */
+    margin-left: 0; /* Ensures no additional margin */
+    font-size: 18px;
+    padding-top: 30px;
+  }
+
+  /* Layout for image and form fields */
+  .image-and-form-container-vp {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  
+  /* Left side image container */
+  .image-upload-container-vp {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  
+  .box-decoration-vp {
+    border: 1px dashed #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  
+  }
+  
+  .img-display-before-vp,
+  .img-display-after-vp {
+    margin-top: 1rem;
+    height: 200px;
+    width: 200px;
+    border-radius: 15%;
+  }
+  
+  /* Right side form fields container */
+  .form-fields-container-vp {
+    flex: 1.5;
+  }
+  
+  /* Styling the form rows to align elements */
+  .form-row-vp, .form-row-fb-vp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling individual form groups */
+  .form-group-vp {
+    flex: 1;
+  }
+  
+  .form-group-vp-vp {
+    flex: 0.45;
+  }
+  .form-group-vp-bp {
+    flex: 1.5;
+  }
+  
+  .form-group-fb-fb-vp{
+    flex: 0.5;
+  }
+  .form-group-fb-vp{
+    flex: 0.65;
+  }
+
+
+  .form-group-fb-parents-vp {
+    flex: 1.25;
+  }
+  
+  .form-group-fb-pwdip-vp {
+    flex: 1;
+  }
+  .form-group-vp label, .form-group-vp-vp label, .form-group-fb-vp label, .form-group-fb-parents-vp label, .form-group-fb-pwdip-vp label, .form-group-vp-bp label, .form-group-fb-fb-vp label {
+    color: #333;
+    font-size: 12px;
+  }
+  .form-group-vp input,
+  .form-group-vp select, .form-group-vp-vp input,
+  .form-group-vp-vp select, .form-group-fb-vp input,
+  .form-group-fb-vp select, .form-group-fb-parents-vp input,
+  .form-group-fb-parents-vp select, .form-group-fb-pwdip-vp input,
+  .form-group-fb-pwdip-vp select, .form-group-vp-bp select, .form-group-vp-bp input, .form-group-fb-fb-vp input,
+  .form-group-fb-fb-vp select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+  }
+
+  .separator {
+    border: none;
+    border-top: 1px solid #636161;
+  }
+  /* Image upload label styling */
+  .image-upload-label {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ffff;
+    color: #006400;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Buttons section */
+  /* Button group container */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;      /* Optional: Adds space above the buttons */
+  }
+  .button-container-vapp {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+  }
+  
+  /* Save button */
+  .update-button-vp {
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Centered button hover effects */
+  .reject-button-vp:hover {
+    background-color: #e6f5e9;
+  }
+  
+  .update-button:hover {
+    background-color: #004d33;
+  }
+  
+  .requirement-container-vp {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    gap: 10px; /* Add space between each requirement item */
+}
+
+.requirements-section {
+  margin: 20px 0;
+}
+
+.requirement-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.requirement-label {
+  flex: 1;
+  margin-right: 10px;
+  color: #000;
+  font-weight: 400;
+}
+
+.requirement-status-dropdown {
+  padding: 5px;
+  width: 150px;
+}
+.update-button {
+  position: right;
+  bottom: 50px;
+ 
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: darkgreen;
+}
+/* Modal Overlay */
+.modal-overlay-fss {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content-fss {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+/* Modal Actions */
+.modal-actions-fss{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 10px;
+}
+.modal-content-fss h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.confirm-button-fss {
+  background-color: #006400;
+  border: 1px solid #006400;
+  color: #ffff;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 150px;
+}
+.cancel-button-fss{
+  background-color: #ffff;
+  border: 1px solid #006400;
+  color: #006400;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 150px;
+}
+
+.confirm-button-fss:hover {
+  background-color: #003800;
+  border: 1px solid #006400;
+  color: #fff;
+}
+
+.cancel-button-fss:hover {
+  background-color: #e7f3ec;
+  border: 1px solid #006400;
+  color: #006400;
+}
+
+@media (max-width: 480px) {
+  .viewapplicants-container {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+    }
+    .header-vp {
+      margin-top: 70px; /* Adjust this if needed */
+      display: flex; /* Corrected */
+      justify-content: flex-start;
+      align-items: center; /* Align elements vertically */
+      width: 100%;
+      font-size: 14px;
+    }
+    .viewapplicants-container h4{
+      margin-bottom: 1px; /* Removes default browser margin */
+      padding: 0;
+    }
+    .applicant-name {
+      font-weight: bold; /* Makes the text bold */
+      color: #006400; /* Green color */
+      margin-left: 0; /* Ensures no additional margin */
+      font-size: 14px;
+    }
+      
+  .application-title-vp {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  .image-and-form-container-vp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.image-upload-container-vp {
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+.img-display-before-vp,
+.img-display-after-vp {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+  object-fit: cover;
+}
+
+.form-fields-container-vp {
+  width: 100%;
+  margin-right: 50px;
+}
+
+.form-row-vp, .form-row-fb-vp {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-left: 15px;
+}
+.form-group-vp{
+  width: 90%;
+}
+.form-group-vp label, .form-group-vp-vp label, .form-group-fb-vp label, .form-group-fb-parents-vp label, .form-group-fb-pwdip-vp label, .form-group-vp-bp label, .form-group-fb-fb-vp label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.form-group-vp input,
+.form-group-vp select, .form-group-vp-vp input,
+.form-group-vp-vp select, .form-group-fb-vp input,
+.form-group-fb-vp select, .form-group-fb-parents-vp input,
+.form-group-fb-parents-vp select, .form-group-fb-pwdip-vp input,
+.form-group-fb-pwdip-vp select, .form-group-vp-bp select, .form-group-vp-bp input, .form-group-fb-fb-vp input,
+.form-group-fb-fb-vp select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: Inter;
+  font-size: 14px;
+}
+.button-container-vapp {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+}
+
+.update-button-vp {
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 100px;
+
+}
+
+}
+@media (min-width:481px) and (max-width:768px){
+  
+  .header-vp {
+    margin-top: 30px; /* Adjust this if needed */
+  }
+  .image-and-form-container-vp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+  .img-display-before-vp,
+.img-display-after-vp {
+  height: 250px;
+  width: 250px;
+  border-radius: 15%;
+  object-fit: cover;
+}
+.form-fields-container-vp {
+  width: 100%;
+  margin-right: 50px;
+}
+}
+@media (min-width:481px) and (max-width:1024px){
+  .viewapplicants-container {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 5rem;
+    width: 100vw;
+    }
+}

@@ -1,0 +1,359 @@
+/* Container for the review form */
+.profile-enrolled-students-container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto; /* Enables vertical scrolling */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  /* Custom Scrollbar for Webkit Browsers (Chrome, Safari) */
+  .profile-enrolled-students-container::-webkit-scrollbar {
+    width: 0px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .profile-enrolled-students-container::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Light grey color for the thumb */
+    border-radius: 1px;
+  }
+  
+  .profile-enrolled-students-container::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  .profile-enrolled-students-container h4{
+    color: #1d563f;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .header-pes {
+    display: flex;
+    align-items: center; /* Vertically aligns items in the center */
+    gap: 0.3rem; /* Adds minimal spacing between items */
+    color: #333333;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .breadcrumb-pes-button {
+    background: none;
+    margin-bottom: 30px;
+    border: none;
+    color: #555; /* Initial color */
+    cursor: pointer;
+    font-size: inherit; /* Matches parent font size */
+    text-decoration: none; /* Removes underline */
+    padding: 0; /* Removes extra space */
+  }
+  
+  .breadcrumb-pes-button:hover {
+    color: #3333;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 5px;
+    color: #555;
+  }
+  
+  
+  .application-title-pes {
+    font-size: 35px;
+    font-weight: bold;
+    color: #006400;
+  }
+
+.applicant-name-pes{
+    font-weight: bold; /* Makes the text bold */
+    color: #006400; /* Green color */
+    margin-left: 0; /* Ensures no additional margin */
+    font-size: 18px;
+  }
+
+  /* Layout for image and form fields */
+  .image-and-form-container-pes {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-left: 20px;
+
+  }
+  
+  /* Left side image container */
+  .image-upload-container-pes {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .box-decoration-pes {
+    border: 1px dashed #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  
+  }
+  
+  .img-display-before-pes,
+  .img-display-after-pes {
+    margin-top: 1rem;
+    height: 250px;
+    width: 250px;
+    border-radius: 15%;
+  }
+  
+  /* Right side form fields container */
+  .form-fields-container-pes {
+    flex: 1.5;
+  }
+  
+  /* Styling the form rows to align elements */
+  .form-row-pes, .form-row-fb-pes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling individual form groups */
+  .form-group-pes {
+    flex: 1;
+  }
+  
+  .form-group-pes-pes {
+    flex: 0.45;
+  }
+  .form-group-vp-bp {
+    flex: 1.5;
+  }
+  
+  .form-group-fb-fb-vp{
+    flex: 0.5;
+  }
+  .form-group-fb-vp{
+    flex: 0.65;
+  }
+
+
+  .form-group-fb-parents-vp {
+    flex: 1.25;
+  }
+  
+  .form-group-fb-pwdip-vp {
+    flex: 1;
+  }
+  .form-group-pes label, .form-group-vp-vp label, .form-group-fb-vp label, .form-group-fb-parents-vp label, .form-group-fb-pwdip-vp label, .form-group-vp-bp label, .form-group-fb-fb-vp label {
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .form-group-pes input,
+  .form-group-pes select, .form-group-vp-vp input,
+  .form-group-vp-vp select, .form-group-fb-vp input,
+  .form-group-fb-vp select, .form-group-fb-parents-vp input,
+  .form-group-fb-parents-vp select, .form-group-fb-pwdip-vp input,
+  .form-group-fb-pwdip-vp select, .form-group-vp-bp select, .form-group-vp-bp input, .form-group-fb-fb-vp input,
+  .form-group-fb-fb-vp select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: Inter;
+  }
+
+  .separator {
+    border: none;
+    border-top: 1px solid #636161;
+  }
+  /* Image upload label styling */
+  .image-upload-label {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ffff;
+    color: #006400;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Buttons section */
+  /* Button group container */
+  .button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;     /* Center the buttons vertically if needed */
+    gap: 1.5rem;               /* Optional: Adds space between buttons */
+    margin-top: 2rem;        /* Optional: Adds space above the buttons */
+  }
+  
+  /* Discard button */
+  .reject-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+  }
+  
+  /* Save button */
+  .approve-button {
+    background-color: #1d563f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 2.2rem;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+  }
+  
+  /* Centered button hover effects */
+  .reject-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .save-button:hover {
+    background-color: #144d32;
+  }
+  
+  @media (max-width: 480px) {
+    .profile-enrolled-students-container {
+      padding-top: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+      overflow-x: hidden;
+      margin-bottom: 6rem;
+    }
+  
+    .header-pes {
+      margin-top: 50px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .profile-enrolled-students-container h4 {
+      margin-bottom: 1px;
+      padding: 0;
+    }
+  
+    .applicant-name-pes {
+      font-weight: bold;
+      color: #006400;
+      margin-left: 0;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  
+    .application-title-pes {
+      font-size: 20px;
+      margin-top: 0;
+    }
+  
+    .image-and-form-container-pes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+    }
+  
+    .image-upload-container-pes {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+    }
+  
+    .img-display-before-pes,
+    .img-display-after-pes {
+      height: 250px;
+      width: 250px;
+      border-radius: 15%;
+      object-fit: cover;
+    }
+  
+    .form-fields-container-pes {
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .form-row-pes,
+    .form-row-fb-pes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+  
+    .form-group-pes {
+      width: 100%;
+    }
+  
+    .form-group-pes label {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  
+    .form-group-pes input,
+    .form-group-pes select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+      font-family: Inter;
+      font-size: 14px;
+    }
+  }
+  
+@media (min-width:481px) and (max-width:768px){
+  .profile-enrolled-students-container{
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100vw;
+    margin-bottom: 5rem;
+    }
+    .header-pes{
+      margin-top: 20px;
+      margin-bottom: -50px;
+    }
+}
+@media (min-width:481px) and (max-width:1024px){
+  .profile-enrolled-students-container{
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100vw;
+    margin-bottom: 5rem;
+    }
+    .applicant-name-pes{
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+
+}
